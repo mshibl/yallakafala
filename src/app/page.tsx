@@ -1,5 +1,5 @@
 import { Typography } from "@mui/material";
-import AppFooter from "../components/AppFooter";
+import AppFooter from "../components/footer/index";
 
 const Home = () => {
   return (

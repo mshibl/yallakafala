@@ -2,7 +2,12 @@ import { Typography } from "@mui/material";
 import Grid from "@mui/material/Grid";
 const AppFooter: React.FC = () => {
   return (
-    <Grid container>
+    <Grid
+      container
+      sx={{
+        bgcolor: "primary.main",
+      }}
+    >
       <Grid
         sx={{
           bgcolor: "#787542",
