@@ -1,83 +1,61 @@
-import { Typography } from "@mui/material";
 import Grid from "@mui/material/Grid";
+import QuickLinksList from "./QuickLinksList";
+import ContactList from "./ContactList";
+import { Typography } from "@mui/material";
+import NewsletterList from "./NewsletterList";
 const AppFooter: React.FC = () => {
   return (
     <Grid
       container
       sx={{
         bgcolor: "primary.main",
+        paddingX: { xs: "40px", md: "90px" },
+        paddingTop: { xs: "34px", md: "68px" },
+        paddingBottom: { xs: "20px", md: "30px" },
       }}
     >
       <Grid
         sx={{
-          bgcolor: "#787542",
+          marginBottom: { xs: "60px", md: "0px" },
         }}
         container
+        direction={"column"}
         item
-        xs={4}
+        xs={12}
+        md={4}
       >
-        <Grid item xs={12}>
-          One
-        </Grid>
-        <Grid item xs={12}>
-          Two
-        </Grid>
-        <Grid item xs={12}>
-          Three
-        </Grid>
+        <QuickLinksList />
       </Grid>
       <Grid
         sx={{
-          bgcolor: "#af8729",
+          marginBottom: { xs: "60px", md: "0px" },
         }}
         container
+        direction={"column"}
         item
-        xs={4}
+        xs={12}
+        md={4}
       >
-        <Grid item xs={12}>
-          One
-        </Grid>
-        <Grid item xs={12}>
-          Two
-        </Grid>
-        <Grid item xs={12}>
-          Three
-        </Grid>
+        <ContactList />
       </Grid>
+
       <Grid
-        sx={{
-          bgcolor: "#ac4123",
-        }}
-        item
         container
-        xs={4}
+        justifyContent="flex-start"
+        direction={"column"}
+        item
+        xs={12}
+        md={4}
       >
-        <Grid item xs={12}>
-          One
-        </Grid>
-        <Grid item xs={12}>
-          Two
-        </Grid>
-        <Grid item xs={12}>
-          Three
-        </Grid>
+        <NewsletterList />
       </Grid>
-      <Grid
-        sx={{
-          bgcolor: "#aa12ae",
-        }}
-        item
-        container
-        xs={8}
-      >
-        <Grid item xs={4}>
-          One
-        </Grid>
-        <Grid item xs={4}>
-          Two
-        </Grid>
-        <Grid item xs={4}>
-          Three
+      <Grid item container md={8} xs={12}>
+        <Grid item xs={12}>
+          <Typography variant="subtitle1">
+            Copyright © 2023. All rights reserved | Yalla Kafala USA is a
+            registered 501c3 nonprofit organization. All donations are tax
+            deductible. EIN: 85-3323627
+          </Typography>
         </Grid>
       </Grid>
     </Grid>
