@@ -7,7 +7,7 @@ const NewsletterForm = () => {
     <Box component="form" noValidate autoComplete="off">
       <TextField
         sx={{
-          marginBottom: "7px",
+          mb: 3.5,
           bgcolor: "#FFFFFF",
           borderRadius: "4px",
           borderColor: "#AFB6C0",

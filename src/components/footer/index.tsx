@@ -9,14 +9,14 @@ const AppFooter: React.FC = () => {
       container
       sx={{
         bgcolor: "primary.main",
-        paddingX: { xs: "40px", md: "90px" },
-        paddingTop: { xs: "34px", md: "68px" },
-        paddingBottom: { xs: "20px", md: "30px" },
+        px: { xs: 20, md: 45 },
+        pt: { xs: 17, md: 34 },
+        pb: { xs: 10, md: 15 },
       }}
     >
       <Grid
         sx={{
-          marginBottom: { xs: "60px", md: "0px" },
+          mb: { xs: 30, md: 0 },
         }}
         container
         direction={"column"}
@@ -28,7 +28,7 @@ const AppFooter: React.FC = () => {
       </Grid>
       <Grid
         sx={{
-          marginBottom: { xs: "60px", md: "0px" },
+          mb: { xs: 30, md: 0 },
         }}
         container
         direction={"column"}

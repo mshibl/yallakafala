@@ -10,13 +10,13 @@ const NewsletterList = () => {
       <Grid
         item
         sx={{
-          paddingBottom: "26px",
+          pb: 13,
         }}
       >
         <Box>
           <Typography
             sx={{
-              paddingBottom: "7px",
+              pb: 3.5,
             }}
             variant="h4"
           >
@@ -28,13 +28,13 @@ const NewsletterList = () => {
       <Grid
         item
         sx={{
-          paddingBottom: "26px",
+          pb: 13,
         }}
       >
         <Box>
           <Typography
             sx={{
-              paddingRight: "7px",
+              paddingRight: 3.5,
             }}
             variant="h4"
           >
@@ -44,7 +44,7 @@ const NewsletterList = () => {
             <Grid
               item
               sx={{
-                paddingRight: "7px",
+                pr: 3.5,
               }}
             >
               <Link href="/">
@@ -54,7 +54,7 @@ const NewsletterList = () => {
             <Grid
               item
               sx={{
-                paddingRight: "10px",
+                pr: 3.5,
               }}
             >
               <Link href="/">
@@ -64,7 +64,7 @@ const NewsletterList = () => {
             <Grid
               item
               sx={{
-                paddingRight: "7px",
+                pr: 3.5,
               }}
             >
               <Link href="/">
@@ -74,7 +74,7 @@ const NewsletterList = () => {
             <Grid
               item
               sx={{
-                paddingRight: "7px",
+                pr: 3.5,
               }}
             >
               <Link href="/">
@@ -87,7 +87,7 @@ const NewsletterList = () => {
       <Grid
         item
         sx={{
-          paddingBottom: "26px",
+          pb: 13,
         }}
       >
         <Box

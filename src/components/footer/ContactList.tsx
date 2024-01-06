@@ -9,7 +9,7 @@ const ContactList = () => {
       <Grid
         item
         sx={{
-          paddingBottom: "26px",
+          pb: 13,
         }}
       >
         <Typography variant="h4">Contact Us</Typography>
@@ -18,12 +18,12 @@ const ContactList = () => {
         item
         container
         sx={{
-          paddingBottom: "30px",
+          pb: 15,
         }}
       >
         <Grid
           sx={{
-            marginRight: "10px",
+            marginRight: 5,
           }}
           item
         >
@@ -38,13 +38,13 @@ const ContactList = () => {
       <Grid
         item
         sx={{
-          paddingBottom: "21px",
+          pb: 10.5,
         }}
       >
         <Box>
           <Typography
             sx={{
-              paddingBottom: "7px",
+              pb: 3.5,
             }}
             variant="h5"
           >
@@ -59,13 +59,13 @@ const ContactList = () => {
       <Grid
         item
         sx={{
-          paddingBottom: "21px",
+          pb: 10.5,
         }}
       >
         <Box>
           <Typography
             sx={{
-              paddingBottom: "7px",
+              pb: 3.5,
             }}
             variant="h5"
           >

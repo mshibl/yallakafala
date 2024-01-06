@@ -48,7 +48,7 @@ const QuickLinksList = () => {
       <Grid
         item
         sx={{
-          paddingBottom: "12px",
+          pb: 6,
         }}
       >
         <Typography variant="h4">Quick Links</Typography>
@@ -56,7 +56,7 @@ const QuickLinksList = () => {
       <Grid item>
         <List
           sx={{
-            padding: 0,
+            p: 0,
           }}
         >
           {quickLinks.map((quickLink, index) => (

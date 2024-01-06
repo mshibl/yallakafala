@@ -10,8 +10,8 @@ const AppListItem: React.FC<AppListItemProps> = ({ title, url }) => {
   return (
     <ListItem
       sx={{
-        padding: 0,
-        paddingBottom: "10px",
+        p: 0,
+        pb: 5,
       }}
     >
       <Link href={url}>
