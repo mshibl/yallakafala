@@ -2,11 +2,14 @@ import { Typography } from "@mui/material";
 import ListItem from "@mui/material/ListItem";
 import Link from "next/link";
 
-interface AppListItemProps {
+interface QuickLinksListItemProps {
   title: string;
   url: string;
 }
-const AppListItem: React.FC<AppListItemProps> = ({ title, url }) => {
+const QuickLinksListItem: React.FC<QuickLinksListItemProps> = ({
+  title,
+  url,
+}) => {
   return (
     <ListItem
       sx={{
@@ -21,4 +24,4 @@ const AppListItem: React.FC<AppListItemProps> = ({ title, url }) => {
   );
 };
 
-export default AppListItem;
+export default QuickLinksListItem;
