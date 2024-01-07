@@ -1,5 +1,6 @@
-import { CssBaseline } from "@mui/material";
+import { CssBaseline, ThemeProvider } from "@mui/material";
 import type { Metadata } from "next";
+import AppTheme from "../utils/AppTheme";
 
 export const metadata: Metadata = {
   title: "Yalla Kafala",
@@ -13,9 +14,10 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body>
-        <CssBaseline />
-        {children}</body>
+      <CssBaseline />
+      <ThemeProvider theme={AppTheme}>
+        <body>{children}</body>
+      </ThemeProvider>
     </html>
   );
 }
