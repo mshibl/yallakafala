@@ -129,9 +129,14 @@ function ResponsiveAppBar() {
 
         <Box sx={{ flexGrow: 0 }}>
           <Tooltip title="Switch to Arabic">
-            <IconButton onClick={handleOpenUserMenu} sx={{ p: 0, color: "#1E3050" }}>
-              <LanguageIcon  />
-              <Box ml={0.5}  fontWeight={400} fontSize="16px">ع</Box>
+            <IconButton
+              onClick={handleOpenUserMenu}
+              sx={{ p: 0, color: "#1E3050" }}
+            >
+              <LanguageIcon />
+              <Box ml={0.5} fontWeight={400} fontSize="16px">
+                ع
+              </Box>
             </IconButton>
           </Tooltip>
           <Menu
