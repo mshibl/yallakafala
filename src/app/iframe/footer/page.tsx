@@ -1,5 +1,5 @@
-import Footer from "@/src/components/Footer";
+import AppFooter from "@/src/components/AppFooter";
 
-export default function FooterPage() {
-  return <Footer />;
+export default function AppFooterPage() {
+  return <AppFooter />;
 }

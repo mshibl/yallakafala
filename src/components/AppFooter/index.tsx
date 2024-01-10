@@ -4,7 +4,7 @@ import ContactList from "./contact/ContactList";
 import NewsletterList from "./newsletter/NewsletterList";
 import CopyrightStatement from "./CopyrightStatement";
 
-const Footer: React.FC = () => {
+const AppFooter: React.FC = () => {
   return (
     <Grid
       container
@@ -23,4 +23,4 @@ const Footer: React.FC = () => {
   );
 };
 
-export default Footer;
+export default AppFooter;
