@@ -1,11 +1,11 @@
 import { Typography } from "@mui/material";
-import AppFooter from "../components/AppFooter";
+import Footer from "../components/Footer";
 
 const Home = () => {
   return (
     <>
       <Typography variant="body1">Homepage</Typography>
-      <AppFooter />
+      <Footer />
     </>
   );
 };
