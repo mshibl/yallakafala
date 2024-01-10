@@ -1,14 +1,13 @@
-import Box from "@mui/material/Box";
 import Grid from "@mui/material/Grid";
 import Link from "next/link";
 
 interface SocialMediaListItemProps {
-  src: string;
   url: string;
+  icon: any;
 }
 const SocialMediaListItem: React.FC<SocialMediaListItemProps> = ({
-  src,
   url,
+  icon,
 }) => {
   return (
     <Grid
@@ -18,7 +17,7 @@ const SocialMediaListItem: React.FC<SocialMediaListItemProps> = ({
       }}
     >
       <Link href={url}>
-        <Box component="img" src={src} />
+        {icon}
       </Link>
     </Grid>
   );
