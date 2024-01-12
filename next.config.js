@@ -18,7 +18,7 @@ const nextConfig = {
   async headers() {
     return [
       {
-        source: "/iframe/*",
+        source: "/iframe/:slug*",
         headers: [
           {
             key: 'Content-Security-Policy',
