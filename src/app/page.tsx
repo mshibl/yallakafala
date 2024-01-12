@@ -1,5 +1,11 @@
-import { Typography } from "@mui/material";
+import { CssBaseline, Typography } from "@mui/material";
+import React from "react";
 
 export default function Home() {
-  return <Typography variant="body1">Hello World</Typography>;
+  return (
+    <React.Fragment>
+      {/* <CssBaseline /> */}
+      <Typography variant="body1">Hello World</Typography>
+    </React.Fragment>
+  );
 }

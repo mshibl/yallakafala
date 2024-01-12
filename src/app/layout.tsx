@@ -1,6 +1,9 @@
-import { CssBaseline, ThemeProvider } from "@mui/material";
+import { AppRouterCacheProvider } from "@mui/material-nextjs/v14-appRouter";
+import { ThemeProvider } from "@mui/material/styles";
+import CssBaseline from "@mui/material/CssBaseline";
 import type { Metadata } from "next";
 import AppTheme from "../utils/AppTheme";
+import React from "react";
 
 export const metadata: Metadata = {
   title: "Yalla Kafala",
@@ -14,10 +17,12 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <CssBaseline />
-      <ThemeProvider theme={AppTheme}>
-        <body>{children}</body>
-      </ThemeProvider>
+      <body>
+        <AppRouterCacheProvider options={{ enableCssLayer: true }}>
+          <CssBaseline />
+          <ThemeProvider theme={AppTheme}>{children}</ThemeProvider>
+        </AppRouterCacheProvider>
+      </body>
     </html>
   );
 }
