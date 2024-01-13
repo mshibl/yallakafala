@@ -1,5 +1,39 @@
 {
-  "Index": {
-    "title": "Hello world!"
+  "AppFooter": {
+    "quickLinks": {
+      "title": "Quick Links",
+      "one": {
+        "title": "What is Kafala?",
+        "url": "/"
+      },
+      "two": {
+        "title": "Kafala Steps",
+        "url": "/"
+      },
+      "three": {
+        "title": "About us",
+        "url": "/"
+      },
+      "four": {
+        "title": "Frequent asked questions",
+        "url": "/"
+      },
+      "five": {
+        "title": "Yalla Kafala Partners",
+        "url": "/"
+      },
+      "six": {
+        "title": "Our campaigns",
+        "url": "/"
+      },
+      "seven": {
+        "title": "Our brochure",
+        "url": "/"
+      },
+      "eight": {
+        "title": "Volunteer",
+        "url": "/"
+      }
+    }
   }
 }

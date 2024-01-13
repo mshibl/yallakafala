@@ -2,48 +2,21 @@ import List from "@mui/material/List";
 import QuickLinksListItem from "./QuickLinksListItem";
 import { Typography } from "@mui/material";
 import Grid from "@mui/material/Grid";
-
-interface QuickLink {
-  title: string;
-  url: string;
-}
-
-const quickLinks: QuickLink[] = [
-  {
-    title: "What is Kafala?",
-    url: "/",
-  },
-  {
-    title: "Kafala Steps",
-    url: "/",
-  },
-  {
-    title: "About us",
-    url: "/",
-  },
-  {
-    title: "Frequent asked questions",
-    url: "/",
-  },
-  {
-    title: "Yalla Kafala Partners",
-    url: "/",
-  },
-  {
-    title: "Our campaigns",
-    url: "/",
-  },
-  {
-    title: "Our brochure",
-    url: "/",
-  },
-  {
-    title: "Volunteer",
-    url: "/",
-  },
-];
+import { useTranslations } from "next-intl";
 
 const QuickLinksList = () => {
+  const t = useTranslations("AppFooter.quickLinks");
+  const keys = [
+    "one",
+    "two",
+    "three",
+    "four",
+    "five",
+    "six",
+    "seven",
+    "eight",
+  ] as const;
+
   return (
     <>
       <Grid
@@ -62,7 +35,7 @@ const QuickLinksList = () => {
             pb: 6,
           }}
         >
-          <Typography variant="h4">Quick Links</Typography>
+          <Typography variant="h4">{t("title")}</Typography>
         </Grid>
         <Grid item>
           <List
@@ -70,11 +43,11 @@ const QuickLinksList = () => {
               p: 0,
             }}
           >
-            {quickLinks.map((quickLink, index) => (
+            {keys.map((key) => (
               <QuickLinksListItem
-                key={index}
-                title={quickLink.title}
-                url={quickLink.url}
+                key={key}
+                title={t(`${key}.title`)}
+                url={t(`${key}.url`)}
               ></QuickLinksListItem>
             ))}
           </List>
