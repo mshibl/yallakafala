@@ -45,7 +45,6 @@ function ResponsiveAppBar() {
       position="static"
       sx={{
         backgroundColor: "#FFFFFF",
-        // backgroundColor: "yellow",
         boxShadow: "none",
         borderBottom: "1px solid #D1D1D1",
       }}
