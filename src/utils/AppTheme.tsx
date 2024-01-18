@@ -17,6 +17,22 @@ const AppTheme = createTheme({
       main: "#2194BC",
     },
   },
+  components: {
+    MuiButton: {
+      styleOverrides: {
+        root: {
+          textTransform: "none",
+        },
+      },
+    },
+    MuiButtonBase: {
+      styleOverrides: {
+        root: {
+          fontFamily: almarai.style.fontFamily,
+        },
+      },
+    },
+  },
   typography: {
     fontFamily: almarai.style.fontFamily,
     h4: {
