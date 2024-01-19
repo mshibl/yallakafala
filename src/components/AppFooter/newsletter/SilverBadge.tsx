@@ -3,8 +3,10 @@ import Box from "@mui/material/Box";
 import Grid from "@mui/material/Grid";
 import Image from "next/image";
 import Link from "next/link";
+import { useTranslations } from "next-intl";
 
 const SilverBadge = () => {
+  const t = useTranslations("AppFooter.newsletter");
   return (
     <Grid
       item
@@ -19,12 +21,7 @@ const SilverBadge = () => {
       >
         <Link href="/">
           <Grid container direction="row">
-            <Grid
-              sx={{
-                paddingRight: "11px",
-              }}
-              item
-            >
+            <Grid item>
               <Image
                 src="/images/GuideStarIcon.svg"
                 alt="GuideStar Silver Level"
@@ -32,12 +29,19 @@ const SilverBadge = () => {
                 height={87}
               />
             </Grid>
-            <Grid item xs={8}>
+            <Grid
+              item
+              xs={8}
+              sx={{
+                marginX: "11px",
+              }}
+            >
               <Typography variant="subtitle1">
-                Yalla Kafala is a silver-level <br /> GuideStar participant,
+                {t("silverBadge.description.lineOne")} <br />{" "}
+                {t("silverBadge.description.lineTwo")}
                 <br />
-                demonstrating its commitment to
-                <br /> transparency.
+                {t("silverBadge.description.lineThree")}
+                <br /> {t("silverBadge.description.lineFour")}
               </Typography>
             </Grid>
           </Grid>

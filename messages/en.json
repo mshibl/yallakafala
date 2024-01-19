@@ -2,38 +2,73 @@
   "AppFooter": {
     "quickLinks": {
       "title": "Quick Links",
-      "one": {
+      "linkOne": {
         "title": "What is Kafala?",
         "url": "/"
       },
-      "two": {
+      "linkTwo": {
         "title": "Kafala Steps",
         "url": "/"
       },
-      "three": {
+      "linkThree": {
         "title": "About us",
         "url": "/"
       },
-      "four": {
+      "linkFour": {
         "title": "Frequent asked questions",
         "url": "/"
       },
-      "five": {
+      "linkFive": {
         "title": "Yalla Kafala Partners",
         "url": "/"
       },
-      "six": {
+      "linkSix": {
         "title": "Our campaigns",
         "url": "/"
       },
-      "seven": {
+      "linkSeven": {
         "title": "Our brochure",
         "url": "/"
       },
-      "eight": {
+      "linkEight": {
         "title": "Volunteer",
         "url": "/"
       }
-    }
+    },
+    "contactUs": {
+      "title": "Contact us",
+      "email": "Email us",
+      "egyptAddressTitle": "Egypt address",
+      "egyptAddress": {
+        "lineOne": "El Lasilky Street, New Maadi, Cairo",
+        "lineTwo": "Address on ",
+        "lineThree": "Google maps"
+      },
+      "usAddressTitle": "America - PO Box",
+      "usAddress": {
+        "lineOne": "15 Onondaga Ave, San Francisco,",
+        "lineTwo": "CA, United States",
+        "lineThree": "T: (415) 246-5007"
+      }
+    },
+    "newsletter": {
+      "newsletterForm": {
+        "title": "Subscribe to our newsletter",
+        "inputPlaceholder": "Email address",
+        "buttonText": "Sign Up"
+      },
+      "socialMediaList": {
+        "title": "Follow us"
+      },
+      "silverBadge": {
+        "description": {
+          "lineOne": "Yalla Kafala is a silver-level",
+          "lineTwo": "GuideStar participant,",
+          "lineThree": "demonstrating its commitment to",
+          "lineFour": "transparency."
+        }
+      }
+    },
+    "copyRight": "Copyright © 2023. All rights reserved | Yalla Kafala USA is a registered 501c3 nonprofit organization. All donations are tax deductible. EIN: 85-3323627"
   }
 }

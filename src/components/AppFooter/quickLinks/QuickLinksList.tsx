@@ -7,14 +7,14 @@ import { useTranslations } from "next-intl";
 const QuickLinksList = () => {
   const t = useTranslations("AppFooter.quickLinks");
   const keys = [
-    "one",
-    "two",
-    "three",
-    "four",
-    "five",
-    "six",
-    "seven",
-    "eight",
+    "linkOne",
+    "linkTwo",
+    "linkThree",
+    "linkFour",
+    "linkFive",
+    "linkSix",
+    "linkSeven",
+    "linkEight",
   ] as const;
 
   return (

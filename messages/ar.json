@@ -3,38 +3,73 @@
     "quickLinks": {
       "title": "روابط سريعة",
 
-      "one": {
+      "linkOne": {
         "title": "ما هي الكفالة؟",
         "url": "/"
       },
-      "two": {
+      "linkTwo": {
         "title": "خطوات الكفالة",
         "url": "/"
       },
-      "three": {
+      "linkThree": {
         "title": "من نحن؟",
         "url": "/"
       },
-      "four": {
+      "linkFour": {
         "title": "اسئلة متكررة",
         "url": "/"
       },
-      "five": {
+      "linkFive": {
         "title": "شركائنا",
         "url": "/"
       },
-      "six": {
+      "linkSix": {
         "title": "حملاتنا",
         "url": "/"
       },
-      "seven": {
+      "linkSeven": {
         "title": "منشورنا",
         "url": "/"
       },
-      "eight": {
+      "linkEight": {
         "title": "تطوع معنا",
         "url": "/"
       }
-    }
+    },
+    "contactUs": {
+      "title": "تواصل معنا",
+      "email": "ارسل لنا عبر البريد الإلكتروني",
+      "egyptAddressTitle": "العنوان في مصر",
+      "egyptAddress": {
+        "lineOne": "شارع اللاسلكي، المعادي الجديدة. القاهرة",
+        "lineTwo": "العنوان على ",
+        "lineThree": "خرائط جوجل"
+      },
+      "usAddressTitle": "العنوان في امريكا",
+      "usAddress": {
+        "lineOne": "15 Onondaga Ave, San Francisco,",
+        "lineTwo": "CA, United States",
+        "lineThree": "T: (415) 246-5007"
+      }
+    },
+    "newsletter": {
+      "newsletterForm": {
+        "title": "اشترك بنشرتنا الإخبارية",
+        "inputPlaceholder": "البريد الإلكتروني",
+        "buttonText": "اشتراك"
+      },
+      "socialMediaList": {
+        "title": "تابعنا على "
+      },
+      "silverBadge": {
+        "description": {
+          "lineOne": "يلا كفالة هو أحد المشاركين في ",
+          "lineTwo": "برنامج GuideStar ذو المستوى ",
+          "lineThree": "الفضي، مما يدل على التزامه ",
+          "lineFour": "بالشفافية"
+        }
+      }
+    },
+    "copyRight": "© جميع الحقوق محفوظة ٢٠٢٣ ، تأسست  يلا كفالة في عام ٢٠٢١ برقم إشهار ( ٩٩٠)"
   }
 }

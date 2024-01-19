@@ -2,26 +2,28 @@ import { Typography } from "@mui/material";
 import Grid from "@mui/material/Grid";
 import EmailUs from "./EmailUs";
 import Address from "./Address";
-
-const egyptAddress = (
-  <Typography variant="body1">
-    El Lasilky Street, New Maadi, Cairo <br />
-    Address on{" "}
-    <a style={{ textDecoration: "underline" }} href="/">
-      Google maps
-    </a>
-  </Typography>
-);
-const americaPOBox = (
-  <Typography variant="body1">
-    15 Onondaga Ave, San Francisco,
-    <br /> CA, United States
-    <br />
-    T: (415) 246-5007
-  </Typography>
-);
+import { useTranslations } from "next-intl";
 
 const ContactList = () => {
+  const t = useTranslations("AppFooter.contactUs");
+  const egyptAddress = (
+    <Typography variant="body1">
+      {t("egyptAddress.lineOne")} <br />
+      {t("egyptAddress.lineTwo")}
+      <a style={{ textDecoration: "underline" }} href="/">
+        {t("egyptAddress.lineThree")}
+      </a>
+    </Typography>
+  );
+
+  const usAddress = (
+    <Typography variant="body1">
+      {t("usAddress.lineOne")}
+      <br /> {t("usAddress.lineTwo")}
+      <br />
+      {t("usAddress.lineThree")}
+    </Typography>
+  );
   return (
     <>
       <Grid
@@ -40,11 +42,11 @@ const ContactList = () => {
             pb: 13,
           }}
         >
-          <Typography variant="h4">Contact Us</Typography>
+          <Typography variant="h4">{t("title")}</Typography>
         </Grid>
         <EmailUs />
-        <Address title="Egypt address" content={egyptAddress} />
-        <Address title="America - PO Box" content={americaPOBox} />
+        <Address title={t("egyptAddressTitle")} content={egyptAddress} />
+        <Address title={t("usAddressTitle")} content={usAddress} />
       </Grid>
     </>
   );

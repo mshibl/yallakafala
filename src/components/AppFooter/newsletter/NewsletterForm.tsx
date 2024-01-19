@@ -3,8 +3,11 @@ import Grid from "@mui/material/Grid";
 import Button from "@mui/material/Button";
 import TextField from "@mui/material/TextField";
 import Typography from "@mui/material/Typography";
+import { useTranslations } from "next-intl";
 
 const NewsletterForm = () => {
+  const t = useTranslations("AppFooter.newsletter");
+
   return (
     <Grid
       item
@@ -19,7 +22,7 @@ const NewsletterForm = () => {
           }}
           variant="h4"
         >
-          Subscribe to our newsletter
+          {t("newsletterForm.title")}
         </Typography>
         <Box component="form" noValidate autoComplete="off">
           <TextField
@@ -35,12 +38,12 @@ const NewsletterForm = () => {
             }}
             size="small"
             id="outlined-basic"
-            placeholder="Email"
+            placeholder={t("newsletterForm.inputPlaceholder")}
             variant="outlined"
           />
           <br />
           <Button color="secondary" disableElevation variant="contained">
-            Submit
+            {t("newsletterForm.buttonText")}
           </Button>
         </Box>
       </Box>
