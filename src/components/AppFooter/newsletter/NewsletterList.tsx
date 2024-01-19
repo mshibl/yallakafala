@@ -1,5 +1,5 @@
 import Grid from "@mui/material/Grid";
-import NewsletterForm from "./NewsletterForm";
+import NewsletterFormContainer from "./NewsletterFormContainer";
 import SocialMediaList from "./SocialMediaList";
 import SilverBadge from "./SilverBadge";
 
@@ -14,7 +14,7 @@ const NewsletterList = () => {
         xs={12}
         md={4}
       >
-        <NewsletterForm />
+        <NewsletterFormContainer />
         <SocialMediaList />
         <SilverBadge />
       </Grid>

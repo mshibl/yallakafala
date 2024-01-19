@@ -19,33 +19,33 @@ const SilverBadge = () => {
           maxHeight: { xs: "75px", md: "60px" }, // To force box to take children hight
         }}
       >
-        <Link href="/">
-          <Grid container direction="row">
-            <Grid item>
+        <Grid container direction="row">
+          <Grid item>
+            <Link href="https://www.guidestar.org/profile/85-3323627">
               <Image
                 src="/images/GuideStarIcon.svg"
                 alt="GuideStar Silver Level"
                 width={87}
                 height={87}
               />
-            </Grid>
-            <Grid
-              item
-              xs={8}
-              sx={{
-                marginX: "11px",
-              }}
-            >
-              <Typography variant="subtitle1">
-                {t("silverBadge.description.lineOne")} <br />{" "}
-                {t("silverBadge.description.lineTwo")}
-                <br />
-                {t("silverBadge.description.lineThree")}
-                <br /> {t("silverBadge.description.lineFour")}
-              </Typography>
-            </Grid>
+            </Link>
           </Grid>
-        </Link>
+          <Grid
+            item
+            xs={8}
+            sx={{
+              marginX: "11px",
+            }}
+          >
+            <Typography variant="subtitle1">
+              {t("silverBadge.description.lineOne")} <br />{" "}
+              {t("silverBadge.description.lineTwo")}
+              <br />
+              {t("silverBadge.description.lineThree")}
+              <br /> {t("silverBadge.description.lineFour")}
+            </Typography>
+          </Grid>
+        </Grid>
       </Box>
     </Grid>
   );

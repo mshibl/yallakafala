@@ -1,6 +1,5 @@
 import { Typography } from "@mui/material";
 import ListItem from "@mui/material/ListItem";
-import Link from "next/link";
 
 interface QuickLinksListItemProps {
   title: string;
@@ -17,9 +16,9 @@ const QuickLinksListItem: React.FC<QuickLinksListItemProps> = ({
         pb: 5,
       }}
     >
-      <Link href={url}>
+      <a href={url}>
         <Typography variant="h6">{title}</Typography>
-      </Link>
+      </a>
     </ListItem>
   );
 };

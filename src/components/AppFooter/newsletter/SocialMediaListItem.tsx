@@ -19,19 +19,19 @@ const SocialMediaListItem: React.FC<SocialMediaListItemProps> = ({
   let icon: any;
   switch (name) {
     case "facebook":
-      url = "https://www.facebook.com";
+      url = "https://www.facebook.com/YallaKafala";
       icon = <FacebookRoundedIcon fontSize="small" htmlColor="#ffffff" />;
       break;
     case "instagram":
-      url = "https://www.instagram.com";
+      url = "https://www.instagram.com/yallakafala";
       icon = <Instagram fontSize="small" htmlColor="#ffffff" />;
       break;
     case "youtube":
-      url = "https://www.youtube.com";
+      url = "https://www.youtube.com/Yalla%20Kafala";
       icon = <YouTube fontSize="small" htmlColor="#ffffff" />;
       break;
     case "twitter":
-      url = "https://www.twitter.com";
+      url = "https://twitter.com/yallakafala";
       icon = <X fontSize="small" htmlColor="#ffffff" />;
       break;
     default:

@@ -10,7 +10,10 @@ const ContactList = () => {
     <Typography variant="body1">
       {t("egyptAddress.lineOne")} <br />
       {t("egyptAddress.lineTwo")}
-      <a style={{ textDecoration: "underline" }} href="/">
+      <a
+        style={{ textDecoration: "underline" }}
+        href="https://maps.app.goo.gl/d24Rt7cnGfYYkSyq8?g_st=ic"
+      >
         {t("egyptAddress.lineThree")}
       </a>
     </Typography>
