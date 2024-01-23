@@ -1,5 +1,13 @@
-import AppFooter from "@/src/components/AppFooter";
+import { Typography } from "@mui/material";
+import AppFooter from "../../components/AppFooter";
 
-export default function AppFooterPage() {
-  return <AppFooter />;
-}
+const Home = () => {
+  return (
+    <>
+      <Typography variant="body1">Homepage</Typography>
+      <AppFooter />
+    </>
+  );
+};
+
+export default Home;
