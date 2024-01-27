@@ -1,0 +1,74 @@
+{
+  "AppFooter": {
+    "quickLinks": {
+      "title": "Quick Links",
+      "linkOne": {
+        "title": "What is Kafala?",
+        "url": "https://www.yallakafala.org/adoption-process/what-is-kafala"
+      },
+      "linkTwo": {
+        "title": "Kafala Steps",
+        "url": "https://www.yallakafala.org/adoption-process/adoption-process"
+      },
+      "linkThree": {
+        "title": "About us",
+        "url": "https://www.yallakafala.org/about/about-us"
+      },
+      "linkFour": {
+        "title": "Frequent asked questions",
+        "url": "https://www.yallakafala.org/faqs"
+      },
+      "linkFive": {
+        "title": "Yalla Kafala Partners",
+        "url": "https://www.yallakafala.org/partners"
+      },
+      "linkSix": {
+        "title": "Our campaigns",
+        "url": "https://www.yallakafala.org/campaigns"
+      },
+      "linkSeven": {
+        "title": "Our brochure",
+        "url": "https://www.yallakafala.org/adoption-process/brochure"
+      },
+      "linkEight": {
+        "title": "Volunteer",
+        "url": "/"
+      }
+    },
+    "contactUs": {
+      "title": "Contact us",
+      "email": "Email us",
+      "egyptAddressTitle": "Egypt address",
+      "egyptAddress": {
+        "lineOne": "El Lasilky Street, New Maadi, Cairo",
+        "lineTwo": "Address on ",
+        "lineThree": "Google maps"
+      },
+      "usAddressTitle": "America - PO Box",
+      "usAddress": {
+        "lineOne": "15 Onondaga Ave, San Francisco,",
+        "lineTwo": "CA, United States",
+        "lineThree": "T: (415) 246-5007"
+      }
+    },
+    "newsletter": {
+      "newsletterForm": {
+        "title": "Subscribe to our newsletter",
+        "inputPlaceholder": "Email address",
+        "buttonText": "Sign Up"
+      },
+      "socialMediaList": {
+        "title": "Follow us"
+      },
+      "silverBadge": {
+        "description": {
+          "lineOne": "Yalla Kafala is a silver-level",
+          "lineTwo": "GuideStar participant,",
+          "lineThree": "demonstrating its commitment to",
+          "lineFour": "transparency."
+        }
+      }
+    },
+    "copyRight": "Copyright © 2023. All rights reserved | Yalla Kafala USA is a registered 501c3 nonprofit organization. All donations are tax deductible. EIN: 85-3323627"
+  }
+}

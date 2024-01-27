@@ -1,10 +1,13 @@
-import { ThemeProvider, Typography } from "@mui/material";
-import AppTheme from "../utils/AppTheme";
+import { Typography } from "@mui/material";
+import AppFooter from "../components/AppFooter";
 
-export default function Home() {
+const Home = () => {
   return (
-    <ThemeProvider theme={AppTheme}>
-      <Typography variant="body1">Hello World</Typography>
-    </ThemeProvider>
+    <>
+      <Typography variant="body1">Homepage</Typography>
+      <AppFooter />
+    </>
   );
-}
+};
+
+export default Home;
