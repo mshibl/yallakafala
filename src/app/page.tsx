@@ -1,11 +1,15 @@
 import { Container } from "@mui/material";
 import React from "react";
 import Navbar from "../components/Navbar";
+import AppFooter from "../components/AppFooter";
 
-export default function Home() {
+const Home = () => {
   return (
     <Container maxWidth="xl">
       <Navbar />
+      <AppFooter />
     </Container>
   );
-}
+};
+
+export default Home;
