@@ -20,20 +20,24 @@ const settings = ["Profile", "Account", "Dashboard", "Logout"];
 
 const pages = [
   {
-    name: "About Us",
-    link: "/about_us",
+    name: "مركز المعرفة",
+    link: "/kafala_stories",
   },
   {
-    name: "What is Kafala",
+    name: "قصص الكفالة",
+    link: "/kafala_stories",
+  },
+  {
+    name: "ما هى الكفالة؟",
     link: "/what_is_kafala",
   },
   {
-    name: "Kafala Stories",
-    link: "/kafala_stories",
+    name: "عن المؤسسة",
+    link: "/about_us",
   },
 ];
 
-function ResponsiveAppBar() {
+function Navbar() {
   const [anchorElNav, setAnchorElNav] = React.useState<null | HTMLElement>(
     null
   );
@@ -118,7 +122,7 @@ function ResponsiveAppBar() {
             <Link
               key={page.name}
               href={page.link}
-              style={{ textDecoration: "none" }}
+              style={{ textDecoration: "none", marginLeft: "60px" }}
               // onClick={handleCloseNavMenu}
             >
               <Button
@@ -138,8 +142,37 @@ function ResponsiveAppBar() {
           ))}
         </Box>
 
+        {/* Donate Button */}
+        <Box
+          sx={{
+            display: { xs: "none", md: "flex" },
+            // justifyContent: "flex-end",
+            marginLeft: "36px",
+          }}
+        >
+          <Button
+            variant="contained"
+            sx={{
+              backgroundColor: "#87226C",
+              color: "#FFFFFF",
+              fontSize: "14px",
+              borderRadius: "24px",
+              // my: 2,
+              textTransform: "none",
+            }}
+          >
+            تبرع الآن
+          </Button>
+        </Box>
+
         {/* Locale */}
-        <Box>
+        <Box
+          sx={{
+            // display: { xs: "none", md: "flex" },
+            // justifyContent: "flex-end",
+            marginLeft: "36px",
+          }}
+        >
           <Tooltip title="Switch to Arabic">
             <IconButton
               onClick={handleOpenUserMenu}
@@ -227,4 +260,4 @@ function ResponsiveAppBar() {
     </AppBar>
   );
 }
-export default ResponsiveAppBar;
+export default Navbar;

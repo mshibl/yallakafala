@@ -1,11 +1,11 @@
-import { CssBaseline, Typography } from "@mui/material";
+import { Container } from "@mui/material";
 import React from "react";
+import Navbar from "../components/Navbar";
 
 export default function Home() {
   return (
-    <React.Fragment>
-      {/* <CssBaseline /> */}
-      <Typography variant="body1">Hello World</Typography>
-    </React.Fragment>
+    <Container maxWidth="xl">
+      <Navbar />
+    </Container>
   );
 }
