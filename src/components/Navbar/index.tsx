@@ -15,8 +15,9 @@ import LanguageIcon from "@mui/icons-material/Language";
 import Image from "next/image";
 import Link from "next/link";
 import { useLocale, useTranslations } from "next-intl";
-import { useRouter } from "next/navigation";
 import { HIGHLIGHTED_PAGES } from "@/src/constants/pages";
+import { usePathname, useRouter, useSearchParams } from "next/navigation";
+// import { useRouter } from "next/router";
 
 // const pages = ["Products", "Pricing", "Blog"];
 const settings = ["Profile", "Account", "Dashboard", "Logout"];
@@ -45,6 +46,9 @@ function Navbar() {
 
   const locale = useLocale();
   const router = useRouter();
+  const pathname = usePathname() || "/";
+  console.log("pathname", pathname);
+  const query = useSearchParams();
 
   const [anchorElNav, setAnchorElNav] = React.useState<null | HTMLElement>(
     null
@@ -61,7 +65,22 @@ function Navbar() {
   };
 
   const switchLang = () => {
-    router.push(locale === "en" ? "/ar" : "/en");
+    // const { asPath } = router;
+    // // change just the locale and maintain all other route information including href's query
+    // router.push(pathname || "/", {
+    //   locale: locale === "en" ? "ar" : "en",
+    // });
+
+    const newLocale = locale === "en" ? "ar" : "en";
+    const updatedPathname = pathname.replace(`/${locale}`, `/${newLocale}`);
+    router.push(updatedPathname);
+
+    // router.replace(pathname || "/", {
+    //   locale: locale === "en" ? "ar" : "en",
+    // });
+
+    // router.replace(pathname || "/", { locale: locale === "en" ? "ar" : "en" });
+    // router.push(locale === "en" ? "/ar" : "/en");
   };
 
   const handleCloseNavMenu = () => {
