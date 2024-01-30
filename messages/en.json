@@ -1,4 +1,40 @@
 {
+  "Navbar": {
+    "logo": {
+      "alt": "Yalla Kafala Logo",
+      "link": "/"
+    },
+    "donateButton": {
+      "text": "Donate",
+      "link": "/donate"
+    },
+    "pages": {
+      "home": {
+        "name": "Home",
+        "link": "https://www.yallakafala.org/"
+      },
+      "about_us": {
+        "name": "About us",
+        "link": "/about_us"
+      },
+      "knowledge_center": {
+        "name": "Knowledge Center",
+        "link": "/knowledge_center"
+      },
+      "kafala_stories": {
+        "name": "Kafala Stories",
+        "link": "/kafala_stories"
+      },
+      "what_is_kafala": {
+        "name": "What is Kafala?",
+        "link": "/what_is_kafala"
+      },
+      "donate": {
+        "name": "Donate",
+        "link": "/donate"
+      }
+    }
+  },
   "AppFooter": {
     "quickLinks": {
       "title": "Quick Links",

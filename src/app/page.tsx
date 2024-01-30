@@ -1,15 +1,6 @@
-import { Container } from "@mui/material";
-import React from "react";
-import Navbar from "../components/Navbar";
-import AppFooter from "../components/AppFooter";
+import {redirect} from 'next/navigation';
 
-const Home = () => {
-  return (
-    <Container maxWidth="xl">
-      <Navbar />
-      <AppFooter />
-    </Container>
-  );
-};
-
-export default Home;
+// This page only renders when the app is built statically (output: 'export')
+export default function RootPage() {
+  redirect('/en');
+}

@@ -1,12 +1,9 @@
 import AppFooter from "@/src/components/AppFooter";
 import Navbar from "@/src/components/Navbar";
-import { Container } from "@mui/material";
+import { Box, Container } from "@mui/material";
 
-export default function AppFooterPage() {
-  return (
-    <Container maxWidth="xl">
-      <Navbar />
-      <AppFooter />
-    </Container>
-  );
-}
+const Home = () => {
+  return <Box height="500px"></Box>;
+};
+
+export default Home;

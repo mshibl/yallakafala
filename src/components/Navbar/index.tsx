@@ -14,6 +14,9 @@ import MenuItem from "@mui/material/MenuItem";
 import LanguageIcon from "@mui/icons-material/Language";
 import Image from "next/image";
 import Link from "next/link";
+import { useLocale, useTranslations } from "next-intl";
+import { useRouter } from "next/navigation";
+import { HIGHLIGHTED_PAGES } from "@/src/constants/pages";
 
 // const pages = ["Products", "Pricing", "Blog"];
 const settings = ["Profile", "Account", "Dashboard", "Logout"];
@@ -38,6 +41,11 @@ const pages = [
 ];
 
 function Navbar() {
+  const t = useTranslations("Navbar");
+
+  const locale = useLocale();
+  const router = useRouter();
+
   const [anchorElNav, setAnchorElNav] = React.useState<null | HTMLElement>(
     null
   );
@@ -52,6 +60,10 @@ function Navbar() {
     setAnchorElUser(event.currentTarget);
   };
 
+  const switchLang = () => {
+    router.push(locale === "en" ? "/ar" : "/en");
+  };
+
   const handleCloseNavMenu = () => {
     setAnchorElNav(null);
   };
@@ -64,6 +76,7 @@ function Navbar() {
     <AppBar
       position="static"
       sx={{
+        direction: "ltr", // Navbar should always be LTR
         backgroundColor: "#FFFFFF",
         boxShadow: "none",
         borderBottom: "1px solid #D1D1D1",
@@ -82,17 +95,16 @@ function Navbar() {
         >
           <Box sx={{ position: "relative", width: 50, height: 50 }}>
             <Image
+              priority={true}
               src="/images/yk_logo.svg"
-              alt="logo"
+              alt={t("logo.alt")}
               fill={true}
-              objectFit="contain"
+              style={{ objectFit: "contain" }}
             />
           </Box>
           <Box
-            component="a"
-            href="#app-bar-with-responsive-menu"
             sx={{
-              ml: 1,
+              ml: 4,
               fontWeight: 500,
               color: "#000000",
               textDecoration: "none",
@@ -110,7 +122,7 @@ function Navbar() {
           </Box>
         </Box>
 
-        {/* Desktop */}
+        {/* Desktop Links */}
         <Box
           sx={{
             flexGrow: 1,
@@ -118,16 +130,14 @@ function Navbar() {
             justifyContent: "flex-end",
           }}
         >
-          {pages.map((page) => (
+          {HIGHLIGHTED_PAGES.map((pageName) => (
             <Link
-              key={page.name}
-              href={page.link}
-              style={{ textDecoration: "none", marginLeft: "60px" }}
-              // onClick={handleCloseNavMenu}
+              key={pageName}
+              href={t(`pages.${pageName}.link`)}
+              style={{ textDecoration: "none", marginLeft: "30px" }}
             >
               <Button
-                key={page.name}
-                onClick={handleCloseNavMenu}
+                key={pageName}
                 sx={{
                   color: "#000000",
                   fontSize: "16px",
@@ -136,7 +146,7 @@ function Navbar() {
                   textTransform: "none",
                 }}
               >
-                {page.name}
+                {t(`pages.${pageName}.name`)}
               </Button>
             </Link>
           ))}
@@ -146,46 +156,44 @@ function Navbar() {
         <Box
           sx={{
             display: { xs: "none", md: "flex" },
-            // justifyContent: "flex-end",
             marginLeft: "36px",
           }}
         >
           <Button
             variant="contained"
             sx={{
+              fontWeight: 600,
               backgroundColor: "#87226C",
               color: "#FFFFFF",
               fontSize: "14px",
               borderRadius: "24px",
-              // my: 2,
               textTransform: "none",
             }}
           >
-            تبرع الآن
+            {t("donateButton.text")}
           </Button>
         </Box>
 
         {/* Locale */}
         <Box
           sx={{
-            // display: { xs: "none", md: "flex" },
-            // justifyContent: "flex-end",
             marginLeft: "36px",
           }}
         >
-          <Tooltip title="Switch to Arabic">
-            <IconButton
-              onClick={handleOpenUserMenu}
-              sx={{ p: 0, color: "#1E3050" }}
-            >
+          <Tooltip
+            title={
+              locale === "en" ? "استخدم اللغة العربية" : "Switch to English"
+            }
+          >
+            <IconButton onClick={switchLang} sx={{ color: "#1E3050" }}>
               <LanguageIcon />
               <Box
-                alignSelf="flex-start"
                 ml={0.5}
+                alignSelf={locale === "en" ? "flex-start" : "center"}
                 fontWeight={400}
                 fontSize="16px"
               >
-                ع
+                {locale === "en" ? "ع" : "EN"}
               </Box>
             </IconButton>
           </Tooltip>
