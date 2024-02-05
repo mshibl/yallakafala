@@ -1,4 +1,3 @@
-import "@/src/utils/global.css";
 import AppTheme from "@/src/utils/AppTheme";
 import type { Metadata } from "next";
 import ThemeProvider from "@mui/material/styles/ThemeProvider";
