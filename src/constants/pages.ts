@@ -1,0 +1,48 @@
+export const HOME_PAGE = "home";
+export const ABOUT_US_PAGE = "about_us";
+export const KAFALA_STORIES_PAGE = "kafala_stories";
+export const WHAT_IS_KAFALA_PAGE = "what_is_kafala";
+export const DONATE_PAGE = "donate";
+export const FAQS_PAGE = "faqs";
+export const KAFALA_STEPS_PAGE = "kafala_steps";
+export const KAFALA_PARTNERS_PAGE = "kafala_partners";
+export const NEWS_AND_UPDATES_PAGE = "kafala_news";
+export const CAMPAIGNS_PAGE = "kafala_campaigns";
+export const SERVICES_PAGE = "kafala_services";
+export const NEWSLETTER_SIGN_UP_PAGE = "newsletter_signup";
+export const CONTACT_US_PAGE = "contact_us";
+export const VOLUNTEER_PAGE = "volunteer";
+
+export const PAGE_PATHNAMES: { [key: string]: string } = {
+  [HOME_PAGE]: "/home",
+  [ABOUT_US_PAGE]: "/about_us",
+  [KAFALA_STORIES_PAGE]: "/kafala_stories",
+  [WHAT_IS_KAFALA_PAGE]: "/what_is_kafala",
+  [DONATE_PAGE]: "/donate",
+  [FAQS_PAGE]: "/faqs",
+  [KAFALA_STEPS_PAGE]: "/kafala_steps",
+  [KAFALA_PARTNERS_PAGE]: "/kafala_partners",
+  [NEWS_AND_UPDATES_PAGE]: "/kafala_news",
+  [CAMPAIGNS_PAGE]: "/kafala_campaigns",
+  [SERVICES_PAGE]: "/kafala_services",
+  [NEWSLETTER_SIGN_UP_PAGE]: "/newsletter_signup",
+  [CONTACT_US_PAGE]: "/contact_us",
+  [VOLUNTEER_PAGE]: "/volunteer",
+};
+
+export const ALL_PAGES = [
+  HOME_PAGE,
+  ABOUT_US_PAGE,
+  KAFALA_STORIES_PAGE,
+  WHAT_IS_KAFALA_PAGE,
+  DONATE_PAGE,
+  FAQS_PAGE,
+  KAFALA_STEPS_PAGE,
+  KAFALA_PARTNERS_PAGE,
+  NEWS_AND_UPDATES_PAGE,
+  CAMPAIGNS_PAGE,
+  SERVICES_PAGE,
+  NEWSLETTER_SIGN_UP_PAGE,
+  CONTACT_US_PAGE,
+  VOLUNTEER_PAGE,
+];

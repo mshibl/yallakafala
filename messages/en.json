@@ -1,0 +1,118 @@
+{
+  "Navbar": {
+    "logo": {
+      "alt": "Yalla Kafala Logo"
+    },
+    "donateButton": {
+      "text": "Donate"
+    },
+    "pages": {
+      "home": {
+        "name": "Home"
+      },
+      "about_us": {
+        "name": "About us"
+      },
+      "kafala_stories": {
+        "name": "Kafala Stories"
+      },
+      "what_is_kafala": {
+        "name": "What is Kafala?"
+      },
+      "donate": {
+        "name": "Donate"
+      },
+      "faqs": {
+        "name": "Frequently Asked Questions"
+      },
+      "kafala_steps": {
+        "name": "Kafala Steps"
+      },
+      "kafala_partners": {
+        "name": "Kafala Partners"
+      },
+      "kafala_news": {
+        "name": "Kafala News"
+      },
+      "kafala_campaigns": {
+        "name": "Kafala Campaigns"
+      },
+      "kafala_services": {
+        "name": "Kafala Services"
+      },
+      "newsletter_signup": {
+        "name": "Our Newsletter"
+      },
+      "contact_us": {
+        "name": "Contact Us"
+      },
+      "volunteer": {
+        "name": "Volunteer"
+      }
+    }
+  },
+  "AppFooter": {
+    "quickLinks": {
+      "title": "Quick Links",
+      "what_is_kafala": {
+        "title": "What is Kafala?"
+      },
+      "kafala_steps": {
+        "title": "Kafala Steps"
+      },
+      "about_us": {
+        "title": "About us"
+      },
+      "faqs": {
+        "title": "Frequent asked questions"
+      },
+      "kafala_partners": {
+        "title": "Yalla Kafala Partners"
+      },
+      "kafala_campaigns": {
+        "title": "Our campaigns"
+      },
+      "kafala_services": {
+        "title": "Our services"
+      },
+      "volunteer": {
+        "title": "Volunteer"
+      }
+    },
+    "contactUs": {
+      "title": "Contact us",
+      "email": "Email us",
+      "egyptAddressTitle": "Egypt address",
+      "egyptAddress": {
+        "lineOne": "El Lasilky Street, New Maadi, Cairo",
+        "lineTwo": "Address on ",
+        "lineThree": "Google maps"
+      },
+      "usAddressTitle": "America - PO Box",
+      "usAddress": {
+        "lineOne": "15 Onondaga Ave, San Francisco,",
+        "lineTwo": "CA, United States",
+        "lineThree": "T: (415) 246-5007"
+      }
+    },
+    "newsletter": {
+      "newsletterForm": {
+        "title": "Subscribe to our newsletter",
+        "inputPlaceholder": "Email address",
+        "buttonText": "Sign Up"
+      },
+      "socialMediaList": {
+        "title": "Follow us"
+      },
+      "silverBadge": {
+        "description": {
+          "lineOne": "Yalla Kafala is a silver-level",
+          "lineTwo": "GuideStar participant,",
+          "lineThree": "demonstrating its commitment to",
+          "lineFour": "transparency."
+        }
+      }
+    },
+    "copyRight": "Copyright © 2023. All rights reserved | Yalla Kafala USA is a registered 501c3 nonprofit organization. All donations are tax deductible. EIN: 85-3323627"
+  }
+}

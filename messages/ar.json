@@ -1,0 +1,119 @@
+{
+  "Navbar": {
+    "logo": {
+      "alt": "شعار يلا كفالة"
+    },
+    "donateButton": {
+      "text": "تبرع الآن"
+    },
+    "pages": {
+      "home": {
+        "name": "الرئيسية"
+      },
+      "about_us": {
+        "name": "عن المؤسسة"
+      },
+      "kafala_stories": {
+        "name": "قصص الكفالة"
+      },
+      "what_is_kafala": {
+        "name": "ما هى الكفالة؟"
+      },
+      "donate": {
+        "name": "تبرع الآن"
+      },
+      "faqs": {
+        "name": "أسئلة متكررة"
+      },
+      "kafala_steps": {
+        "name": "خطوات الكفالة"
+      },
+      "kafala_partners": {
+        "name": "شركاء يلا كفالة"
+      },
+      "kafala_news": {
+        "name": "اخبار يلا كفالة"
+      },
+      "kafala_campaigns": {
+        "name": "حملات يلا كفالة"
+      },
+      "kafala_services": {
+        "name": "خدمات يلا كفالة"
+      },
+      "newsletter_signup": {
+        "name": "النشرة الالكترونية"
+      },
+      "contact_us": {
+        "name": "اتصل بنا"
+      },
+      "volunteer": {
+        "name": "تطوع معنا"
+      }
+    }
+  },
+  "AppFooter": {
+    "quickLinks": {
+      "title": "روابط سريعة",
+
+      "what_is_kafala": {
+        "title": "ما هى الكفالة"
+      },
+      "kafala_steps": {
+        "title": "خطوات الكفالة"
+      },
+      "about_us": {
+        "title": "عن المؤسسة"
+      },
+      "faqs": {
+        "title": "أسئلة متكررة"
+      },
+      "kafala_partners": {
+        "title": "شركاء يلا كفالة"
+      },
+      "kafala_campaigns": {
+        "title": "حملات يلا كفالة"
+      },
+      "kafala_services": {
+        "title": "خدمات يلا كفالة"
+      },
+      "volunteer": {
+        "title": "تطوع معنا"
+      }
+    },
+    "contactUs": {
+      "title": "تواصل معنا",
+      "email": "ارسل لنا عبر البريد الإلكتروني",
+      "egyptAddressTitle": "العنوان في مصر",
+      "egyptAddress": {
+        "lineOne": "شارع اللاسلكي، المعادي الجديدة. القاهرة",
+        "lineTwo": "العنوان على ",
+        "lineThree": "خرائط جوجل"
+      },
+      "usAddressTitle": "العنوان في امريكا",
+      "usAddress": {
+        "lineOne": "15 Onondaga Ave, San Francisco,",
+        "lineTwo": "CA, United States",
+        "lineThree": "T: (415) 246-5007"
+      }
+    },
+    "newsletter": {
+      "newsletterForm": {
+        "title": "اشترك بنشرتنا الإخبارية",
+        "inputPlaceholder": "البريد الإلكتروني",
+        "buttonText": "اشتراك"
+      },
+      "socialMediaList": {
+        "title": "تابعنا على "
+      },
+      "silverBadge": {
+        "description": {
+          "lineOne": "يلا كفالة هو أحد المشاركين في ",
+          "lineTwo": "برنامج GuideStar ذو المستوى ",
+          "lineThree": "الفضي، مما يدل على التزامه ",
+          "lineFour": "بالشفافية"
+        }
+      }
+    },
+    "copyRight": "© جميع الحقوق محفوظة ٢٠٢٣ ، تأسست  يلا كفالة في عام ٢٠٢١ برقم إشهار ( ٩٩٠)"
+  }
+}

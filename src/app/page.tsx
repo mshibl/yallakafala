@@ -1,11 +1,6 @@
-import { CssBaseline, Typography } from "@mui/material";
-import React from "react";
+import {redirect} from 'next/navigation';
 
-export default function Home() {
-  return (
-    <React.Fragment>
-      {/* <CssBaseline /> */}
-      <Typography variant="body1">Hello World</Typography>
-    </React.Fragment>
-  );
+// This page only renders when the app is built statically (output: 'export')
+export default function RootPage() {
+  redirect('/en');
 }
