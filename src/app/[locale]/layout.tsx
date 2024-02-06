@@ -6,6 +6,7 @@ import { Container, CssBaseline } from "@mui/material";
 import { NextIntlClientProvider, useMessages } from "next-intl";
 import Navbar from "@/src/components/Navbar";
 import AppFooter from "@/src/components/AppFooter";
+import Head from "next/head";
 
 export const metadata: Metadata = {
   title: "Yalla Kafala",
@@ -23,6 +24,9 @@ const LocaleLayout = ({
 
   return (
     <html dir={locale === "en" ? "ltr" : "rtl"} lang={locale}>
+      <Head>
+        <link rel="icon" href="/favicon.ico" sizes="any" />
+      </Head>
       <body>
         <AppRouterCacheProvider options={{ enableCssLayer: true }}>
           <NextIntlClientProvider messages={messages}>
