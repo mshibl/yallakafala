@@ -1,70 +1,82 @@
 {
   "Navbar": {
     "logo": {
-      "alt": "Yalla Kafala Logo",
-      "link": "/"
+      "alt": "Yalla Kafala Logo"
     },
     "donateButton": {
-      "text": "Donate",
-      "link": "/donate"
+      "text": "Donate"
     },
     "pages": {
       "home": {
-        "name": "Home",
-        "link": "https://www.yallakafala.org/"
+        "name": "Home"
       },
       "about_us": {
-        "name": "About us",
-        "link": "/about_us"
+        "name": "About us"
       },
       "kafala_stories": {
-        "name": "Kafala Stories",
-        "link": "/kafala_stories"
+        "name": "Kafala Stories"
       },
       "what_is_kafala": {
-        "name": "What is Kafala?",
-        "link": "/what_is_kafala"
+        "name": "What is Kafala?"
       },
       "donate": {
-        "name": "Donate",
-        "link": "/donate"
+        "name": "Donate"
+      },
+      "faqs": {
+        "name": "Frequently Asked Questions"
+      },
+      "kafala_steps": {
+        "name": "Kafala Steps"
+      },
+      "kafala_partners": {
+        "name": "Kafala Partners"
+      },
+      "kafala_news": {
+        "name": "Kafala News"
+      },
+      "kafala_campaigns": {
+        "name": "Kafala Campaigns"
+      },
+      "kafala_services": {
+        "name": "Kafala Services"
+      },
+      "newsletter_signup": {
+        "name": "Our Newsletter"
+      },
+      "contact_us": {
+        "name": "Contact Us"
+      },
+      "volunteer": {
+        "name": "Volunteer"
       }
     }
   },
   "AppFooter": {
     "quickLinks": {
       "title": "Quick Links",
-      "linkOne": {
-        "title": "What is Kafala?",
-        "url": "https://www.yallakafala.org/adoption-process/what-is-kafala"
+      "what_is_kafala": {
+        "title": "What is Kafala?"
       },
-      "linkTwo": {
-        "title": "Kafala Steps",
-        "url": "https://www.yallakafala.org/adoption-process/adoption-process"
+      "kafala_steps": {
+        "title": "Kafala Steps"
       },
-      "linkThree": {
-        "title": "About us",
-        "url": "https://www.yallakafala.org/about/about-us"
+      "about_us": {
+        "title": "About us"
       },
-      "linkFour": {
-        "title": "Frequent asked questions",
-        "url": "https://www.yallakafala.org/faqs"
+      "faqs": {
+        "title": "Frequent asked questions"
       },
-      "linkFive": {
-        "title": "Yalla Kafala Partners",
-        "url": "https://www.yallakafala.org/partners"
+      "kafala_partners": {
+        "title": "Yalla Kafala Partners"
       },
-      "linkSix": {
-        "title": "Our campaigns",
-        "url": "https://www.yallakafala.org/campaigns"
+      "kafala_campaigns": {
+        "title": "Our campaigns"
       },
-      "linkSeven": {
-        "title": "Our brochure",
-        "url": "https://www.yallakafala.org/adoption-process/brochure"
+      "kafala_services": {
+        "title": "Our services"
       },
-      "linkEight": {
-        "title": "Volunteer",
-        "url": "/"
+      "volunteer": {
+        "title": "Volunteer"
       }
     },
     "contactUs": {

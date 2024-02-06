@@ -6,8 +6,16 @@ import { ArrowDropDown } from "@mui/icons-material";
 import Link from "next/link";
 import {
   ABOUT_US_PAGE,
-  ALL_PAGES,
+  CAMPAIGNS_PAGE,
+  CONTACT_US_PAGE,
+  KAFALA_PARTNERS_PAGE,
+  KAFALA_STEPS_PAGE,
   KAFALA_STORIES_PAGE,
+  NEWSLETTER_SIGN_UP_PAGE,
+  NEWS_AND_UPDATES_PAGE,
+  PAGE_PATHNAMES,
+  SERVICES_PAGE,
+  VOLUNTEER_PAGE,
   WHAT_IS_KAFALA_PAGE,
 } from "@/src/constants/pages";
 
@@ -15,6 +23,17 @@ const DESKTOP_HIGHLIGHTED_PAGES = [
   KAFALA_STORIES_PAGE,
   WHAT_IS_KAFALA_PAGE,
   ABOUT_US_PAGE,
+];
+
+const KNOWLEDGE_CENTER_PAGES = [
+  KAFALA_STEPS_PAGE,
+  KAFALA_PARTNERS_PAGE,
+  NEWS_AND_UPDATES_PAGE,
+  CAMPAIGNS_PAGE,
+  SERVICES_PAGE,
+  NEWSLETTER_SIGN_UP_PAGE,
+  CONTACT_US_PAGE,
+  VOLUNTEER_PAGE,
 ];
 
 function DesktopLinks({
@@ -28,10 +47,6 @@ function DesktopLinks({
 }) {
   const t = useTranslations("Navbar");
   const locale = useLocale();
-
-  const knowledgeCenterPages = ALL_PAGES.filter((pageName) =>
-    DESKTOP_HIGHLIGHTED_PAGES.includes(pageName)
-  );
 
   return (
     <Box
@@ -60,7 +75,7 @@ function DesktopLinks({
         {DESKTOP_HIGHLIGHTED_PAGES.map((pageName) => (
           <Link
             key={pageName}
-            href={t(`pages.${pageName}.link`)}
+            href={`/${locale}${PAGE_PATHNAMES[pageName]}`}
             style={{ textDecoration: "none", marginLeft: "30px" }}
           >
             <Button
@@ -93,7 +108,7 @@ function DesktopLinks({
           open={Boolean(anchorKnowledgeCenter)}
           onClose={handleCloseKnowledgeCenterMenu}
         >
-          {knowledgeCenterPages.map((pageName) => (
+          {KNOWLEDGE_CENTER_PAGES.map((pageName) => (
             <MenuItem
               sx={{ minWidth: "150px" }}
               key={pageName}

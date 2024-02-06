@@ -1,9 +1,9 @@
 import * as React from "react";
 import Box from "@mui/material/Box";
-import { useTranslations } from "next-intl";
+import { useLocale, useTranslations } from "next-intl";
 import { IconButton, Menu, MenuItem, Typography } from "@mui/material";
 import MenuIcon from "@mui/icons-material/Menu";
-import { ALL_PAGES } from "@/src/constants/pages";
+import { ALL_PAGES, PAGE_PATHNAMES } from "@/src/constants/pages";
 import Link from "next/link";
 
 function MobileLinks({
@@ -16,6 +16,7 @@ function MobileLinks({
   handleClosePagesMenu: (e: React.MouseEvent<HTMLElement>) => void;
 }) {
   const t = useTranslations("Navbar");
+  const locale = useLocale();
 
   return (
     <Box sx={{ display: { xs: "flex", lg: "none" } }}>
@@ -54,7 +55,7 @@ function MobileLinks({
           >
             <Link
               key={pageName}
-              href={t(`pages.${pageName}.link`)}
+              href={`/${locale}${PAGE_PATHNAMES[pageName]}`}
               style={{ textDecoration: "none" }}
             >
               <Typography color="#000000" textAlign="center">

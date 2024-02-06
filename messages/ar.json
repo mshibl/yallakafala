@@ -1,33 +1,53 @@
 {
   "Navbar": {
     "logo": {
-      "alt": "شعار يلا كفالة",
-      "link": "/"
+      "alt": "شعار يلا كفالة"
     },
     "donateButton": {
-      "text": "تبرع الآن",
-      "link": "/donate"
+      "text": "تبرع الآن"
     },
     "pages": {
       "home": {
-        "name": "الرئيسية",
-        "link": "https://www.yallakafala.org/"
+        "name": "الرئيسية"
       },
       "about_us": {
-        "name": "عن المؤسسة",
-        "link": "/about_us"
+        "name": "عن المؤسسة"
       },
       "kafala_stories": {
-        "name": "قصص الكفالة",
-        "link": "/kafala_stories"
+        "name": "قصص الكفالة"
       },
       "what_is_kafala": {
-        "name": "ما هى الكفالة؟",
-        "link": "/what_is_kafala"
+        "name": "ما هى الكفالة؟"
       },
       "donate": {
-        "name": "تبرع الآن",
-        "link": "/donate"
+        "name": "تبرع الآن"
+      },
+      "faqs": {
+        "name": "أسئلة متكررة"
+      },
+      "kafala_steps": {
+        "name": "خطوات الكفالة"
+      },
+      "kafala_partners": {
+        "name": "شركاء يلا كفالة"
+      },
+      "kafala_news": {
+        "name": "اخبار يلا كفالة"
+      },
+      "kafala_campaigns": {
+        "name": "حملات يلا كفالة"
+      },
+      "kafala_services": {
+        "name": "خدمات يلا كفالة"
+      },
+      "newsletter_signup": {
+        "name": "النشرة الالكترونية"
+      },
+      "contact_us": {
+        "name": "اتصل بنا"
+      },
+      "volunteer": {
+        "name": "تطوع معنا"
       }
     }
   },
@@ -35,37 +55,29 @@
     "quickLinks": {
       "title": "روابط سريعة",
 
-      "linkOne": {
-        "title": "ما هي الكفالة؟",
-        "url": "https://www.yallakafala.org/adoption-process/what-is-kafala-ar"
+      "what_is_kafala": {
+        "title": "ما هى الكفالة"
       },
-      "linkTwo": {
-        "title": "خطوات الكفالة",
-        "url": "https://www.yallakafala.org/adoption-process/adoption-process-ar"
+      "kafala_steps": {
+        "title": "خطوات الكفالة"
       },
-      "linkThree": {
-        "title": "من نحن؟",
-        "url": "https://www.yallakafala.org/about/about-us-ar"
+      "about_us": {
+        "title": "عن المؤسسة"
       },
-      "linkFour": {
-        "title": "اسئلة متكررة",
-        "url": "https://www.yallakafala.org/faqs-ar"
+      "faqs": {
+        "title": "أسئلة متكررة"
       },
-      "linkFive": {
-        "title": "شركائنا",
-        "url": "https://www.yallakafala.org/partners"
+      "kafala_partners": {
+        "title": "شركاء يلا كفالة"
       },
-      "linkSix": {
-        "title": "حملاتنا",
-        "url": "https://www.yallakafala.org/campaigns-ar"
+      "kafala_campaigns": {
+        "title": "حملات يلا كفالة"
       },
-      "linkSeven": {
-        "title": "دليلنا",
-        "url": "https://www.yallakafala.org/adoption-process/brochure-ar"
+      "kafala_services": {
+        "title": "خدمات يلا كفالة"
       },
-      "linkEight": {
-        "title": "تطوع معنا",
-        "url": "/"
+      "volunteer": {
+        "title": "تطوع معنا"
       }
     },
     "contactUs": {
