@@ -78,7 +78,6 @@ const MailchimpForm: React.FC<Props> = ({ placeholder, submitText }) => {
               <input
                 type="text"
                 name="b_24bb16c53dccaf6efb1b67784_35198fff85"
-                value=""
               />
             </div>
             <div className="optionalParent">

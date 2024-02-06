@@ -4,7 +4,7 @@ import FAQs from "@/src/components/FAQs";
 const FAQsPage = () => {
   return (
     <>
-      <FAQs />;
+      <FAQs />
       <AppFooter />;
     </>
   );

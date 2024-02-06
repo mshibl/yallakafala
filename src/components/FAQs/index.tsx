@@ -1,6 +1,6 @@
 import React from "react";
 import Grid from "@mui/material/Grid";
-import AppAccordionList from "./appAccordionList";
+import AppAccordionList from "./FaqsList";
 
 const FAQs = () => {
   return (
