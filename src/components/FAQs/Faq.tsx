@@ -1,4 +1,3 @@
-"use client";
 import { Typography } from "@mui/material";
 import Accordion from "@mui/material/Accordion";
 import AccordionDetails from "@mui/material/AccordionDetails";
@@ -6,14 +5,13 @@ import Grid from "@mui/material/Grid";
 import AccordionSummary from "@mui/material/AccordionSummary";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 import React from "react";
-import stripHtmlTags from "@/src/utils/stripHtmlTags";
 
-interface AppAccordionProps {
+interface FaqProps {
   question: string;
   answer: string;
 }
 
-const AppAccordion: React.FC<AppAccordionProps> = ({ question, answer }) => {
+const Faq: React.FC<FaqProps> = ({ question, answer }) => {
   return (
     <Grid item xs={8}>
       <Accordion
@@ -28,12 +26,12 @@ const AppAccordion: React.FC<AppAccordionProps> = ({ question, answer }) => {
           id="panel1-header"
         >
           <Typography color="primary.main" variant="h5">
-            {stripHtmlTags(question)}
+            {question}
           </Typography>
         </AccordionSummary>
         <AccordionDetails>
           <Typography color="black" variant="body1">
-            {stripHtmlTags(answer)}
+            {answer}
           </Typography>
         </AccordionDetails>
       </Accordion>
@@ -41,4 +39,4 @@ const AppAccordion: React.FC<AppAccordionProps> = ({ question, answer }) => {
   );
 };
 
-export default AppAccordion;
+export default Faq;
