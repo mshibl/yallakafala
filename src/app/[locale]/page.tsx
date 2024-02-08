@@ -1,13 +1,7 @@
-import { Typography } from "@mui/material";
-import AppFooter from "../../components/AppFooter";
+import { Box } from "@mui/material";
 
 const Home = () => {
-  return (
-    <>
-      <Typography variant="body1">Homepage</Typography>
-      <AppFooter />
-    </>
-  );
+  return <Box height="500px"></Box>;
 };
 
 export default Home;

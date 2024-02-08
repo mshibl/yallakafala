@@ -2,20 +2,33 @@ import List from "@mui/material/List";
 import QuickLinksListItem from "./QuickLinksListItem";
 import { Typography } from "@mui/material";
 import Grid from "@mui/material/Grid";
-import { useTranslations } from "next-intl";
+import { useLocale, useTranslations } from "next-intl";
+import {
+  ABOUT_US_PAGE,
+  CAMPAIGNS_PAGE,
+  FAQS_PAGE,
+  KAFALA_PARTNERS_PAGE,
+  KAFALA_STEPS_PAGE,
+  PAGE_PATHNAMES,
+  SERVICES_PAGE,
+  VOLUNTEER_PAGE,
+  WHAT_IS_KAFALA_PAGE,
+} from "@/src/constants/pages";
+
+const QUICK_LINKS = [
+  WHAT_IS_KAFALA_PAGE,
+  KAFALA_STEPS_PAGE,
+  ABOUT_US_PAGE,
+  FAQS_PAGE,
+  KAFALA_PARTNERS_PAGE,
+  CAMPAIGNS_PAGE,
+  SERVICES_PAGE,
+  VOLUNTEER_PAGE,
+];
 
 const QuickLinksList = () => {
   const t = useTranslations("AppFooter.quickLinks");
-  const keys = [
-    "linkOne",
-    "linkTwo",
-    "linkThree",
-    "linkFour",
-    "linkFive",
-    "linkSix",
-    "linkSeven",
-    "linkEight",
-  ] as const;
+  const locale = useLocale();
 
   return (
     <>
@@ -43,11 +56,11 @@ const QuickLinksList = () => {
               p: 0,
             }}
           >
-            {keys.map((key) => (
+            {QUICK_LINKS.map((link) => (
               <QuickLinksListItem
-                key={key}
-                title={t(`${key}.title`)}
-                url={t(`${key}.url`)}
+                key={link}
+                title={t(`${link}.title`)}
+                url={`/${locale}${PAGE_PATHNAMES[link]}`}
               ></QuickLinksListItem>
             ))}
           </List>

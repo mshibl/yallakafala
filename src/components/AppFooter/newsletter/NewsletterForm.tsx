@@ -71,13 +71,11 @@ const MailchimpForm: React.FC<Props> = ({ placeholder, submitText }) => {
                 style={{ display: "none" }}
               ></div>
             </div> */}
-            <div
-              aria-hidden="true"
-              style={{ position: "absolute", left: "-5000px" }}
-            >
+            <div aria-hidden="true" style={{ display: "none" }}>
               <input
                 type="text"
                 name="b_24bb16c53dccaf6efb1b67784_35198fff85"
+                defaultValue=""
               />
             </div>
             <div className="optionalParent">

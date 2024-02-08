@@ -3,6 +3,7 @@ import QuickLinksList from "./quickLinks/QuickLinksList";
 import ContactList from "./contact/ContactList";
 import NewsletterList from "./newsletter/NewsletterList";
 import CopyrightStatement from "./CopyrightStatement";
+import { Box } from "@mui/material";
 
 const AppFooter: React.FC = () => {
   return (
