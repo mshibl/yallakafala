@@ -1,6 +1,6 @@
 import React from "react";
 import Grid from "@mui/material/Grid";
-import AppAccordionList from "./FaqsList";
+import FaqsList from "./FaqsList";
 
 const FAQs = () => {
   return (
@@ -15,7 +15,7 @@ const FAQs = () => {
         pb: { xs: 10, md: 15 },
       }}
     >
-      <AppAccordionList />
+      <FaqsList />
     </Grid>
   );
 };

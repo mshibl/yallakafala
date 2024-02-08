@@ -52,7 +52,7 @@ export const getFaqs = async () => {
     return "Error";
   }
 };
-const AppAccordionList = async () => {
+const FaqsList = async () => {
   const locale = useLocale();
   const faqs = await getFaqs();
   if (!faqs) return <div>loading...</div>;
@@ -76,4 +76,4 @@ const AppAccordionList = async () => {
   );
 };
 
-export default AppAccordionList;
+export default FaqsList;
