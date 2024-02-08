@@ -13,9 +13,11 @@ const Address: React.FC<AddressProps> = ({ title, content }) => {
       sx={{
         pb: 10.5,
       }}
+      color="#ffffff"
     >
       <Box>
         <Typography
+          color="#ffffff"
           sx={{
             pb: 3.5,
           }}

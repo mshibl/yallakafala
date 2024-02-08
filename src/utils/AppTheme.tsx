@@ -40,31 +40,26 @@ const AppTheme = createTheme({
       fontWeight: 700,
       fontSize: "18px",
       lineHeight: "22px",
-      color: "#FFFFFF",
     },
     h5: {
       fontWeight: 700,
       fontSize: "16px",
       lineHeight: "18px",
-      color: "#FFFFFF",
     },
     h6: {
       fontWeight: 400,
       fontSize: "16px",
       lineHeight: "22px",
-      color: "#FFFFFF",
     },
     body1: {
       fontWeight: 400,
       fontSize: "16px",
-      lineHeight: "22px",
-      color: "#FFFFFF",
+      lineHeight: "30px",
     },
     subtitle1: {
       fontWeight: 400,
       fontSize: "12px",
       lineHeight: "18px",
-      color: "#FFFFFF",
     },
   },
 });

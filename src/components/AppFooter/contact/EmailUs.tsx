@@ -27,9 +27,12 @@ const EmailUs = () => {
           marginX: 5,
         }}
         item
+        color="#ffffff"
       >
-        <a href="mailto:info@yallakafala.org">
-          <Typography variant="h5">{t("email")}</Typography>
+        <a style={{ color: "#ffffff", textTransform: "none" }} href="mailto:info@yallakafala.org">
+          <Typography color="#ffffff" variant="h5">
+            {t("email")}
+          </Typography>
         </a>
       </Grid>
     </Grid>

@@ -24,9 +24,6 @@ const LocaleLayout = ({
 
   return (
     <html dir={locale === "en" ? "ltr" : "rtl"} lang={locale}>
-      <Head>
-        <link rel="icon" href="/favicon.ico" sizes="any" />
-      </Head>
       <body>
         <AppRouterCacheProvider options={{ enableCssLayer: true }}>
           <NextIntlClientProvider messages={messages}>
