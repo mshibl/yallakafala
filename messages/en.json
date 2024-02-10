@@ -114,5 +114,54 @@
       }
     },
     "copyRight": "Copyright © 2023. All rights reserved | Yalla Kafala USA is a registered 501c3 nonprofit organization. All donations are tax deductible. EIN: 85-3323627"
+  },
+  "WhatIsKafala": {
+    "IntroParagraphs": {
+      "p1": "Adoption is the formal, permanent transfer of parental rights to a family other than a child’s own and the formal assumption by that family of all parenting duties for the child. In some Islamic countries; including Egypt, the term ‘Kafala’ of Islamic law is used to describe a situation similar to adoption, but not necessarily with the transference of inheritance rights, or the change of the child’s full name.",
+      "p2": "Despite Kafala being strongly encouraged in Islam there have been a misleading CULTURAL perception about its true meaning, practice, and significance. As a result, our innocent children have been under institutionalized care of orphanages rather than being granted a warm family life and home. We created this page to restore back the authentic meaning of Kafala in Islam that was taught by our beloved prophet."
+    },
+    "FirstHadith": {
+      "hadith": "عَنْ سَهْلِ بْنِ سَعْدٍ رضي الله عنه قَالَ: قَالَ رَسُولَ اَللَّهِ صلى الله عليه وسلم: أَنَا وَكَافِلُ الْيَتِيمِ في الْجَنَّةِ هكَذَا، وَأَشَارَ بِالسَّبَّابَةِ وَالْوُسطَى وَفَرَّجَ بَيْنَهُمَا شَيْئاً.",
+      "conclusionParagraph": "From Sahl bin Sa’ad (may Allah be pleased with him), he said: “The Messenger of Allah sallallaahu ‘alaihi wa sallamsaid: “I and the one who looks after an orphan will be like this in Paradise,” showing his middle and index fingers and separating them.” [Sahih al-Bukhari] This great hadith indicates the magnitude and virtue of the person sponsoring orphans, so that Imam al-Bukhari rahimahullaah puts it in the chapter: The Virtue of the People Who Care for the Orphans.",
+      "list": {
+        "listTitle": "Some of the essential phrases contained in this hadith are:",
+        "listItem1": "The meaning of this hadith: the person who sponsors the orphans worldly concerns will occupy a high position in the heaven close to the position of the Prophet sallallaahu ‘alaihi wa sallam [1] .",
+        "listItem2": "The meaning of “caring for the orphans” is to take care of and support all their worldly interests, such as feeding (food and drink), clothing, nurturing and guiding them with proper Islamic education. [2]",
+        "listItem3": "The meaning of an orphan is a person who has lost his father or both his parents before the age of maturity. [3]",
+        "listItem4": "The virtue in this hadith applies to the person who sponsors the orphans from his own property or the orphan’s property if the person is truly the one to whom he is sponsored. [4]",
+        "listItem5": "Similarly, this excellence applies to people who sponsor an orphan having kin relationship with him or with an orphan who has no kinship ties with them. [5]"
+      }
+    },
+    "SecondHadith": {
+      "list": {
+        "listTitle": "There are several points to consider in terms of sponsoring the orphans, which is often the case of “adopted children”, due to some Muslims’ misunderstanding of the rulings of Islamic law. Among them are:",
+        "listItem1": "Prohibition of presenting a foster child / adopted child to other than his biological father, based on the word of Allah:",
+        "listItem2": "ادْعُوهُمْ لِآبَائِهِمْ هُوَ أَقْسَطُ عِندَ اللَّـهِ ۚ فَإِن لَّمْ تَعْلَمُوا آبَاءَهُمْ فَإِخْوَانُكُمْ فِي الدِّينِ وَمَوَالِيكُمْ",
+        "listItem3": "Adopted children are not entitled to the inheritance of the parents who nurtured them, in contrast to the customs of the time of Jahiliyyah who regarded adopted children as biological children who were entitled to inheritance when their adoptive parents died. [6]",
+        "listItem4": "Adopted child is not a mahram [7] , so it is obligatory for parents who nurture him/her and their children to wear a hijab in front of the adoption, as when they are in front of other non-mahram. This is contrary to the customs in the time of Jahiliyyah."
+      }
+    },
+    "Footnote": {
+      "copiedFrom": "[Copied from as-Sunnah magazine (published in Indonesia), 11th Edition / Year XV / Rabi’ul Akhir 1433 AH / 2012. Publisher: Lajnah Istiqomah Foundation Surakarta, Solo-Purwodadi Street km. 8, Selokaton, Gondangrejo, Solo – 57183.]",
+      "list": {
+        "listTitle": "Footnote:",
+        "listItem1": "[1]. See the book ‘Aunul Ma’buud (14/41) and Tuhfatul Ahwadzi (6/39)",
+        "listItem2": "‍[2]. See the book Sharhu Sahiihi Muslim (18/113)",
+        "listItem3": "‍[3]. See the book an-Nihaayah fi Ghariibil Hadiithi wal Atsar (5/689)",
+        "listItem4": "‍[4]. See the book Sharhu Shahiihi Muslim (18/113) and Faidhul Qadiir (3/49)",
+        "listItem5": "‍[5]. Ibid",
+        "listItem6": "‍[6]. As in hadith Sahiih narrated by al-Bukhari (3778), see also the book Tafsiir al-Qurtubi (14/119)",
+        "listItem7": "‍[7]. Mahram is a person who is unlawful to be married forever with a muted cause (allowed in religion). See the book Fathul Baari (4/77)"
+      }
+    },
+    "References": {
+      "source": "Source: https://almanhaj.or.id/3364-keutamaan-menyantuni-anak-yatim.html",
+      "list": {
+        "listTitle": "References:",
+        "listItem1": "1. https://bettercarenetwork.org/library/the-continuum-of-care/adoption-and-kafala",
+        "listItem2": "‍2. Care of Abandoned Children in Sunni Islamic Law: Early Modern Egypt in Theory and Practice. Ahmed Fekry Ibrahim - Filiation and the Protection of Parentless Children. 03 Jul 2019",
+        "listItem3": "‍3. us-Sunnah Foundation: https://www.ussunnah.org/2018/11/28/the-virtue-of-taking-care-of-the-orphans"
+      }
+    }
   }
 }
