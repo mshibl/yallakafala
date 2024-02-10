@@ -1,4 +1,4 @@
-import AppTheme from "@/src/utils/AppTheme";
+import AppTheme from "@/src/lib/AppTheme";
 import type { Metadata } from "next";
 import ThemeProvider from "@mui/material/styles/ThemeProvider";
 import { AppRouterCacheProvider } from "@mui/material-nextjs/v13-appRouter";
@@ -24,18 +24,15 @@ const LocaleLayout = ({
 
   return (
     <html dir={locale === "en" ? "ltr" : "rtl"} lang={locale}>
-      <Head>
-        <link rel="icon" href="/favicon.ico" sizes="any" />
-      </Head>
       <body>
         <AppRouterCacheProvider options={{ enableCssLayer: true }}>
           <NextIntlClientProvider messages={messages}>
             <ThemeProvider theme={AppTheme}>
               <CssBaseline />
-              <Container sx={{ padding: 0, maxWidth: "lg" }}>
-                <Navbar />
+              <Container sx={{ padding: 0, maxWidth: "lg", height: "100%" }}>
+                {/* <Navbar /> */}
                 {children}
-                <AppFooter />
+                {/* <AppFooter /> */}
               </Container>
             </ThemeProvider>
           </NextIntlClientProvider>

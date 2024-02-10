@@ -1,4 +1,4 @@
-import "@/src/utils/global.css";
+import "@/src/lib/global.css";
 import { ReactNode } from "react";
 
 type Props = {
