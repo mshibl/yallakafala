@@ -1,6 +1,17 @@
 import AppAccordion from "./Faq";
 import { useLocale } from "next-intl";
 import { google } from "googleapis";
+import sanitizeHtml from "sanitize-html";
+
+const cleanResponse = (dirty: string) => {
+  return sanitizeHtml(dirty, {
+    allowedTags: [],
+    allowedAttributes: {
+      a: [],
+    },
+    allowedIframeHostnames: [],
+  });
+};
 
 export const getFaqs = async () => {
   try {
@@ -26,12 +37,12 @@ export const getFaqs = async () => {
     const faqs = rawFaqs.map((faq) => {
       return {
         question: {
-          english: faq[0],
-          arabic: faq[1],
+          english: cleanResponse(faq[0]),
+          arabic: cleanResponse(faq[1]),
         },
         answer: {
-          english: faq[2],
-          arabic: faq[3],
+          english: cleanResponse(faq[2]),
+          arabic: cleanResponse(faq[3]),
         },
       };
     });
@@ -41,7 +52,7 @@ export const getFaqs = async () => {
     return "Error";
   }
 };
-const AppAccordionList = async () => {
+const FaqsList = async () => {
   const locale = useLocale();
   const faqs = await getFaqs();
   if (!faqs) return <div>loading...</div>;
@@ -65,4 +76,4 @@ const AppAccordionList = async () => {
   );
 };
 
-export default AppAccordionList;
+export default FaqsList;
