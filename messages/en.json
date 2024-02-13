@@ -114,5 +114,58 @@
       }
     },
     "copyRight": "Copyright © 2023. All rights reserved | Yalla Kafala USA is a registered 501c3 nonprofit organization. All donations are tax deductible. EIN: 85-3323627"
+  },
+  "AboutUs": {
+    "vision": {
+      "title": "🎯 Our Vision",
+      "content": "Building the best possible future for orphans and kafala families."
+    },
+    "message": {
+      "title": "🕊 Our Message",
+      "content": "Enhancing the quality of care provided to orphans through advocacy, education, and resource development for growing families."
+    },
+    "achievements": {
+      "title": "🎖 Our Achievements",
+      "achievementsList": {
+        "one": "Establishing partnerships with directorates of the Ministry of Social Solidarity and joining representatives of Yalla Kafala with local committees in 5 governorates.",
+        "two": "Contributing to the development of general guidelines for the Small Home model in collaboration with the Ministry of Social Solidarity.",
+        "three": "Organizing a community dialogue to discuss the Small Home model with a number of non-profit organizations and representatives of the Ministry of Social Solidarity in collaboration with the Ministry of Social Solidarity."
+      }
+    },
+    "workshops": {
+      "title": "📚 Our Workshops and Trainings",
+      "workshopsList": {
+        "one": "Organizing and conducting numerous mandatory training workshops for families preparing for sponsorship.",
+        "two": "Organizing and conducting numerous positive parenting workshops for kafala families.",
+        "three": "Organizing and conducting a capacity-building workshop for a number of social workers."
+      }
+    },
+    "activities": {
+      "title": "🤝 Our Activities",
+      "activitiesList": {
+        "one": "Organizing and hosting gatherings and celebrations for more than 500 kafala families.",
+        "two": "Launching awareness campaigns about alternative care systems to increase societal acceptance. (Reaching 500,000 in 2022).",
+        "three": "Providing supported resources and donations to hundreds of kafala families.",
+        "four": "Partnering with the Ministry of Health and Population to provide healthcare support to orphans from birth to two years old.",
+        "five": "Providing educational grants to sponsored children in several international nurseries.",
+        "six": "Guiding kafala families through sponsorship procedures. (1000 families in Egypt excluding Egyptian families in the United States)."
+      }
+    },
+    "roles": {
+      "title": "💕 Our Roles",
+      "rolesList": {
+        "one": "Support and influence in decision-making.",
+        "two": "Training sessions and workshops.",
+        "three": "Assisting in sponsorship procedures for kafala families in Egypt and abroad.",
+        "four": "Raising awareness.",
+        "five": "Supporting the kafala care community.",
+        "six": "Educational support.",
+        "seven": "Health support."
+      }
+    },
+    "rasha": {
+      "title": "👩🏻 Rasha Mekky",
+      "content": "Rasha Mekki sponsored her son Mustafa. Her boundless love for her son and her dedication to caring for children, as an expert in child development, inspired her to launch the first dedicated sponsorship website in Egypt and establish the Yalla Kafala Association. This non-profit organization has no political or religious affiliations in Egypt and California."
+    }
   }
 }
