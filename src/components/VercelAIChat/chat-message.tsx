@@ -33,7 +33,7 @@ export function ChatMessage({ message, ...props }: ChatMessageProps) {
         py: 6,
         display: "flex",
         alignItems: "center",
-        mb: 4,
+        // mb: 4,
         ml: 0,
       }}
       {...props}

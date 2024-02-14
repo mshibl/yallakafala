@@ -6,7 +6,7 @@ import { IconRefresh, IconShare, IconStop } from "./ui/icons";
 import { ChatShareDialog } from "./chat-share-dialog";
 import { PromptForm } from "./prompt-form";
 import { FooterText } from "./footer";
-import { Refresh } from "@mui/icons-material";
+import { Refresh, Stop } from "@mui/icons-material";
 
 // import { shareChat } from '@/app/actions'
 // import { Button } from '@/components/ui/button'
@@ -90,9 +90,10 @@ export function ChatPanel({
               onClick={() => stop()}
               // className="bg-background"
             >
-              <IconStop
+              <Stop />
+              {/* <IconStop
               // className="mr-2"
-              />
+              /> */}
               Stop generating
             </Button>
           ) : (
