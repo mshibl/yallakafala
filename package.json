@@ -16,7 +16,6 @@
     "@mui/material-nextjs": "^5.15.3",
     "next": "14.1.0",
     "googleapis": "^131.0.0",
->>>>>>> 2761d6414a71fd2867022c70e62b079f098eaf60
     "next-intl": "^3.4.2",
     "react": "^18",
     "react-dom": "^18",
