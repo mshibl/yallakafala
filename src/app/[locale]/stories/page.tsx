@@ -1,20 +1,22 @@
 import ErrorBoundary from "@/src/components/ErrorBoundary";
 import LoadingFallback from "@/src/components/LoadingFallback";
-import Story from "@/src/components/Stories/Story";
+import StoriesPageHeader from "@/src/components/Stories/StoriesPageHeader";
+import StoryCard from "@/src/components/Stories/StoryCard";
 import { Suspense } from "react";
 
-const StoryPage = ({
-  params: { locale, id },
+const StoriesPage = ({
+  params: { locale },
 }: {
-  params: { locale: string; id: string };
+  params: { locale: string };
 }) => {
   return (
     <ErrorBoundary locale={locale}>
       <Suspense fallback={<LoadingFallback />}>
-        <Story id={id} locale={locale} />
+        <StoriesPageHeader locale={locale} />
+        <StoryCard />
       </Suspense>
     </ErrorBoundary>
   );
 };
 
-export default StoryPage;
+export default StoriesPage;

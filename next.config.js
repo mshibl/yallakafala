@@ -3,7 +3,13 @@ const withNextIntl = require("next-intl/plugin")();
 
 const nextConfig = {
   images: {
-    domains: ["drive.google.com"],
+    remotePatterns: [
+      {
+        protocol: "https",
+        hostname: "drive.google.com",
+        port: "",
+      },
+    ],
   },
 };
 

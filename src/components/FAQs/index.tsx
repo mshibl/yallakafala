@@ -1,6 +1,18 @@
-import React from "react";
+import React, { Suspense } from "react";
 import Grid from "@mui/material/Grid";
 import FaqsList from "./FaqsList";
+import ErrorBoundary from "../ErrorBoundary";
+import { Box } from "@mui/material";
+
+const ErrorFallback = () => {
+  // TODO: Implement error page
+  return <Box>Error</Box>;
+};
+
+const LoadingFallback = () => {
+  // TODO: Implement loading page
+  return <Box height="500px">Loading...</Box>;
+};
 
 const FAQs = () => {
   return (
@@ -15,7 +27,11 @@ const FAQs = () => {
         pb: { xs: 10, md: 15 },
       }}
     >
-      <FaqsList />
+      <ErrorBoundary fallback={<ErrorFallback />}>
+        <Suspense fallback={<LoadingFallback />}>
+          <FaqsList />
+        </Suspense>
+      </ErrorBoundary>
     </Grid>
   );
 };
