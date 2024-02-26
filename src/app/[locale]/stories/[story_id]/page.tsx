@@ -4,14 +4,14 @@ import Story from "@/src/components/Stories/Story";
 import { Suspense } from "react";
 
 const StoryPage = ({
-  params: { locale, id },
+  params: { locale, story_id },
 }: {
-  params: { locale: string; id: string };
+  params: { locale: string; story_id: string };
 }) => {
   return (
     <ErrorBoundary locale={locale}>
       <Suspense fallback={<LoadingFallback />}>
-        <Story id={id} locale={locale} />
+        <Story story_id={story_id} locale={locale} />
       </Suspense>
     </ErrorBoundary>
   );
