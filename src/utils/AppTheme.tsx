@@ -58,6 +58,12 @@ const AppTheme = createTheme({
       fontWeight: 400,
       fontSize: "16px",
       lineHeight: "22px",
+      color: "#000000",
+    },
+    body2: {
+      fontWeight: 400,
+      fontSize: "16px",
+      lineHeight: "22px",
       color: "#FFFFFF",
     },
     subtitle1: {
