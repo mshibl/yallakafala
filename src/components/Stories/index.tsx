@@ -15,10 +15,6 @@ export default async function Stories({
   random?: boolean;
   exclude?: string[];
 }) {
-  if (!cardsPerRow) {
-    cardsPerRow = 2;
-  }
-
   let stories = await fetchAllStories();
 
   if (exclude) {
@@ -34,7 +30,7 @@ export default async function Stories({
       {stories.slice(0, storiesCount).map((story, index) => (
         <Grid
           item
-          md={12 / cardsPerRow}
+          md={12 / (cardsPerRow || 2)} // 2 cards per row by default
           key={story.id}
           sx={{ display: "flex", justifyContent: "center", my: "16px" }}
           width="100%"
