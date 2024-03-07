@@ -61,8 +61,7 @@ export async function fetchAllStories() {
     });
 
     const stories = response
-      .slice(1)
-      .filter((row: any) => row[0] === "TRUE")
+      .slice(1) // remove the header row
       .map((row: any, index: number) => parseStoryData(row, String(index + 2)));
 
     return stories;

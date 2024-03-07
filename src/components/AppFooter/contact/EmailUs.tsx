@@ -14,7 +14,7 @@ const EmailUs = () => {
         pb: 15,
       }}
     >
-      <Grid item>
+      <Grid item display="flex" alignItems="center">
         <Image
           src="/images/EmailIcon.svg"
           alt="Email Us"
@@ -27,12 +27,9 @@ const EmailUs = () => {
           marginX: 5,
         }}
         item
-        color="#ffffff"
       >
-        <a style={{ color: "#ffffff", textTransform: "none" }} href="mailto:info@yallakafala.org">
-          <Typography color="#ffffff" variant="h5">
-            {t("email")}
-          </Typography>
+        <a style={{ textTransform: "none" }} href="mailto:info@yallakafala.org">
+          <Typography variant="h6">{t("email")}</Typography>
         </a>
       </Grid>
     </Grid>

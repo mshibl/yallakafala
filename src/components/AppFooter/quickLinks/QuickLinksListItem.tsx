@@ -17,7 +17,7 @@ const QuickLinksListItem: React.FC<QuickLinksListItemProps> = ({
       }}
     >
       <a href={url}>
-        <Typography color="#ffffff" variant="h6">
+        <Typography color="#ffffff">
           {title}
         </Typography>
       </a>

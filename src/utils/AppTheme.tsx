@@ -36,30 +36,23 @@ const AppTheme = createTheme({
   spacing: 2,
   typography: {
     fontFamily: almarai.style.fontFamily,
+    h1: {
+      margin: "0",
+    },
+    h2: {
+      margin: "0",
+    },
+    h3: {
+      margin: "0",
+    },
     h4: {
-      fontWeight: 700,
-      fontSize: "18px",
-      lineHeight: "22px",
-    },
-    h5: {
-      fontWeight: 700,
-      fontSize: "16px",
-      lineHeight: "18px",
-    },
-    h6: {
-      fontWeight: 400,
-      fontSize: "16px",
-      lineHeight: "22px",
+      margin: "0",
     },
     body1: {
-      fontWeight: 400,
-      fontSize: "16px",
-      lineHeight: "30px",
+      lineHeight: 2,
     },
-    subtitle1: {
-      fontWeight: 400,
-      fontSize: "12px",
-      lineHeight: "18px",
+    body2: {
+      lineHeight: 2,
     },
   },
 });

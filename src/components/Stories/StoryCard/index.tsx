@@ -19,52 +19,53 @@ export default function StoryCard({
 }) {
   return (
     <Card sx={sx}>
-      <Box display="flex">
-        <Box
-          position="relative"
-          textAlign="center"
-          height={{ xs: 150, md: 250 }}
-          width={{ xs: 150, md: 250 }}
-          minHeight="100%"
-          display="flex"
-          alignSelf="center"
-        >
-          <Image
-            fill={true}
-            style={{ objectFit: "cover", minHeight: "100%" }}
-            src={story.image_link}
-            alt={story.title}
-          />
-        </Box>
-        <Box flexBasis={{ xs: "100%", md: "50%" }}>
-          <CardContent>
-            <Typography gutterBottom variant="h5" component="div">
-              {locale === "ar" ? story.arabic_title : story.english_title}
-            </Typography>
-            <Typography
-              variant="body2"
-              color="text.secondary"
-              sx={{
-                WebkitLineClamp: { xs: 2, md: 6 },
-                overflow: "hidden",
-                display: "-webkit-box",
-                WebkitBoxOrient: "vertical",
-              }}
+      <Link href={`/${locale}/stories/${story.id}`}>
+        <Box display="flex">
+          <Button sx={{ textAlign: "initial", p: 0 }}>
+            <Box
+              position="relative"
+              textAlign="center"
+              height={240}
+              width={240}
+              display="flex"
+              alignSelf="center"
             >
-              {locale === "ar"
-                ? story.arabic_description
-                : story.english_description}
-            </Typography>
-          </CardContent>
-          <CardActions>
-            <Link href={`/${locale}/stories/${story.id}`}>
+              <Image
+                fill={true}
+                style={{ objectFit: "cover", minHeight: "100%" }}
+                src={story.image_link}
+                alt={story.title}
+              />
+            </Box>
+          </Button>
+          <Box flexBasis="70%">
+            <CardContent>
+              <Typography gutterBottom variant="body1" fontWeight={600} fontSize="18px"  component="div">
+                {locale === "ar" ? story.arabic_title : story.english_title}
+              </Typography>
+              <Typography
+                variant="body2"
+                color="text.secondary"
+                sx={{
+                  WebkitLineClamp: 4,
+                  overflow: "hidden",
+                  display: "-webkit-box",
+                  WebkitBoxOrient: "vertical",
+                }}
+              >
+                {locale === "ar"
+                  ? story.arabic_description
+                  : story.english_description}
+              </Typography>
               <Button size="small">
-                {locale === "ar" ? "اقرأ المزيد" : "Read More"}
+                {locale === "ar" ? "اقرأ الحكاية" : "Read the story"}
               </Button>
-            </Link>
-          </CardActions>
+            </CardContent>
+            {/* <CardActions>
+            </CardActions> */}
+          </Box>
         </Box>
-      </Box>
+      </Link>
     </Card>
   );
 }

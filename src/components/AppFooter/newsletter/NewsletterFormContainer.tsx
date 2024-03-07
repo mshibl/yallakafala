@@ -21,7 +21,9 @@ const NewsletterFormContainer = () => {
           sx={{
             pb: 3.5,
           }}
-          variant="h4"
+          variant="h6"
+          color="#ffffff"
+          fontWeight={700}
         >
           {t("newsletterForm.title")}
         </Typography>

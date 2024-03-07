@@ -18,7 +18,9 @@ const SocialMediaList = () => {
       }}
     >
       <Box>
-        <Typography variant="h4">{t("socialMediaList.title")}</Typography>
+        <Typography color="#ffffff" variant="h6" fontWeight={700}>
+          {t("socialMediaList.title")}
+        </Typography>
         <Grid justifyContent="flex-start" container sx={{ pt: 4 }}>
           {socialMediaItems.map((item, index) => (
             <SocialMediaListItem key={index} name={item} language={locale} />
