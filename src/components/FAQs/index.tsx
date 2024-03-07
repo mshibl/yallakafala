@@ -14,7 +14,7 @@ const LoadingFallback = () => {
   return <Box height="500px">Loading...</Box>;
 };
 
-const FAQs = () => {
+const FAQs = ({ locale }: { locale: string }) => {
   return (
     <Grid
       spacing={5}
@@ -27,7 +27,7 @@ const FAQs = () => {
         pb: { xs: 10, md: 15 },
       }}
     >
-      <ErrorBoundary fallback={<ErrorFallback />}>
+      <ErrorBoundary locale={locale} fallback={<ErrorFallback />}>
         <Suspense fallback={<LoadingFallback />}>
           <FaqsList />
         </Suspense>
