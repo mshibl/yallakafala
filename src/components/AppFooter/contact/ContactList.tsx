@@ -42,10 +42,12 @@ const ContactList = () => {
         <Grid
           item
           sx={{
-            pb: 13,
+            pb: 6,
           }}
         >
-          <Typography variant="h4">{t("title")}</Typography>
+          <Typography variant="h6" fontWeight={700}>
+            {t("title")}
+          </Typography>
         </Grid>
         <EmailUs />
         <Address title={t("egyptAddressTitle")} content={egyptAddress} />

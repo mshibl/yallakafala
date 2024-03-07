@@ -1,8 +1,20 @@
-import React from "react";
+import React, { Suspense } from "react";
 import Grid from "@mui/material/Grid";
 import FaqsList from "./FaqsList";
+import ErrorBoundary from "../ErrorBoundary";
+import { Box } from "@mui/material";
 
-const FAQs = () => {
+const ErrorFallback = () => {
+  // TODO: Implement error page
+  return <Box>Error</Box>;
+};
+
+const LoadingFallback = () => {
+  // TODO: Implement loading page
+  return <Box height="500px">Loading...</Box>;
+};
+
+const FAQs = ({ locale }: { locale: string }) => {
   return (
     <Grid
       spacing={5}
@@ -15,7 +27,11 @@ const FAQs = () => {
         pb: { xs: 10, md: 15 },
       }}
     >
-      <FaqsList />
+      <ErrorBoundary locale={locale} fallback={<ErrorFallback />}>
+        <Suspense fallback={<LoadingFallback />}>
+          <FaqsList />
+        </Suspense>
+      </ErrorBoundary>
     </Grid>
   );
 };

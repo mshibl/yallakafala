@@ -6,7 +6,6 @@ import { Container, CssBaseline } from "@mui/material";
 import { NextIntlClientProvider, useMessages } from "next-intl";
 import Navbar from "@/src/components/Navbar";
 import AppFooter from "@/src/components/AppFooter";
-import Head from "next/head";
 
 export const metadata: Metadata = {
   title: "Yalla Kafala",
@@ -18,21 +17,18 @@ const LocaleLayout = ({
   params: { locale },
 }: {
   children: React.ReactNode;
-  params: { locale: any };
+  params: { locale: "ar" | "en" };
 }) => {
   const messages = useMessages();
 
   return (
     <html dir={locale === "en" ? "ltr" : "rtl"} lang={locale}>
-      <Head>
-        <link rel="icon" href="/favicon.ico" sizes="any" />
-      </Head>
       <body>
         <AppRouterCacheProvider options={{ enableCssLayer: true }}>
           <NextIntlClientProvider messages={messages}>
             <ThemeProvider theme={AppTheme}>
               <CssBaseline />
-              <Container sx={{ padding: 0, maxWidth: "lg" }}>
+              <Container disableGutters={true} maxWidth="lg">
                 <Navbar />
                 {children}
                 <AppFooter />

@@ -1,39 +1,19 @@
-import AppAccordion from "./Faq";
+import FaqItem from "./FaqItem";
 import { useLocale } from "next-intl";
-import { google } from "googleapis";
-import sanitizeHtml from "sanitize-html";
+import { loadGoogleSheet } from "@/src/utils/google-api";
+import { cleanResponse } from "@/src/utils/string-utils";
+import { Suspense, use, useCallback } from "react";
+import { DATA_SOURCES } from "@/src/constants/data-sources";
 
-const cleanResponse = (dirty: string) => {
-  return sanitizeHtml(dirty, {
-    allowedTags: [],
-    allowedAttributes: {
-      a: [],
-    },
-    allowedIframeHostnames: [],
-  });
-};
-
-export const getFaqs = async () => {
+export const fetchFaqs = async () => {
   try {
-    // Auth
-    const auth = await google.auth.getClient({
-      scopes: ["https://www.googleapis.com/auth/spreadsheets.readonly"],
+    const response = await loadGoogleSheet({
+      spreadsheetId: DATA_SOURCES.FAQs.FAQS_SPREADSHEET_ID,
+      range: DATA_SOURCES.FAQs.FAQS_SHEET_NAME,
     });
 
-    // Google Sheets Instance
-    const sheets = google.sheets({ version: "v4", auth });
-    const range = "FAQs";
+    const rawFaqs = response.slice(1);
 
-    const response = await sheets.spreadsheets.values.get({
-      // spreadsheetId: process.env.SHEET_ID,
-      spreadsheetId: "1JvoZSZAPaRl-UJehW941bgCWUrtE_zHbL8NCCYpmR-E",
-      range,
-    });
-    if (response.status !== 200 || !response.data.values) {
-      return "Error";
-    }
-
-    const rawFaqs = response.data.values.slice(1);
     const faqs = rawFaqs.map((faq) => {
       return {
         question: {
@@ -46,19 +26,19 @@ export const getFaqs = async () => {
         },
       };
     });
+
     return faqs;
   } catch (error) {
-    console.error(error);
-    return "Error";
+    console.error("Error fetching FAQs", error);
+
+    // Rethrow the error so it can be caught by the ErrorBoundary
+    throw error;
   }
 };
-const FaqsList = async () => {
+
+const FaqsList = () => {
   const locale = useLocale();
-  const faqs = await getFaqs();
-  if (!faqs) return <div>loading...</div>;
-  if (faqs === "Error") {
-    return <div>Error</div>;
-  }
+  const faqs = use(fetchFaqs());
 
   return (
     <>
@@ -68,9 +48,7 @@ const FaqsList = async () => {
         const description =
           locale === "en" ? faq.answer.english : faq.answer.arabic;
 
-        return (
-          <AppAccordion key={index} question={title} answer={description} />
-        );
+        return <FaqItem key={index} question={title} answer={description} />;
       })}
     </>
   );
