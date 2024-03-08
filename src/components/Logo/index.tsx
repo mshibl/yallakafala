@@ -36,7 +36,7 @@ function Logo({ noText }: { noText?: boolean }) {
             fontSize: "15px",
           }}
         >
-          <Box sx={{ fontFamily: "inter" }}>Yalla Kafala</Box>
+          <Box>Yalla Kafala</Box>
           <Box>اكفل طفل في بيتك</Box>
         </Box>
       )}

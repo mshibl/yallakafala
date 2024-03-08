@@ -6,7 +6,6 @@ import { Container, CssBaseline } from "@mui/material";
 import { NextIntlClientProvider, useMessages } from "next-intl";
 import Navbar from "@/src/components/Navbar";
 import AppFooter from "@/src/components/AppFooter";
-import Script from "next/script";
 
 export const metadata: Metadata = {
   title: "Yalla Kafala",
@@ -37,7 +36,6 @@ const LocaleLayout = ({
             </ThemeProvider>
           </NextIntlClientProvider>
         </AppRouterCacheProvider>
-        {/* <Script src="https://payments.blackbaud.com/Checkout/bbCheckout.2.0.js"></Script> */}
       </body>
     </html>
   );

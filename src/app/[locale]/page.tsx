@@ -1,51 +1,45 @@
-"use client";
+import { Box, Typography } from "@mui/material";
+import Image from "next/image";
+import QuickDonate from "@/src/components/QuickDonate";
 
-import { loadBlackbaudCheckout } from "@/src/utils/blackbaud-checkout";
-// import { loadBlackbaudCheckout } from "@/src/utils/blackbaud-checkout";
-import { Box } from "@mui/material";
-import { use, useEffect } from "react";
-
-declare global {
-  interface Window {
-    Blackbaud_Init: ({
-      key,
-      payment_configuration_id,
-      transaction_type,
-      amount,
-    }: {
-      key: string;
-      payment_configuration_id: string;
-      transaction_type?: string;
-      amount?: number;
-    }) => void;
-    Blackbaud_Open: ({ amount }: { amount: number }) => void;
-  }
-}
-
-const Home = () => {
-  // loads the Checkout form in the background, but will not display it
-  useEffect(() => {
-    loadBlackbaudCheckout()
-    // setTimeout(() => {
-    //   try {
-    //     window.Blackbaud_Init({
-    //       key: "572a1cea-3682-4cfd-8b8a-39fb0131b093",
-    //       payment_configuration_id: "1198511d-d7ba-429b-9ea5-00ef91fbd0f6",
-    //       // amount: 10.0,
-    //       transaction_type: "card_not_present",
-    //     });
-
-    //     window.Blackbaud_Open({
-    //       amount: 12.0,
-    //     });
-    //   } catch (err) {
-    //     console.error(err);
-    //   }
-    // }, 500);
-  }, []);
-
-
-  return <Box height="500px"></Box>;
+const Home = ({ params: { locale } }: { params: { locale: "ar" | "en" } }) => {
+  return (
+    <Box>
+      <Box display="flex" flexDirection={{ xs: "column-reverse", md: "row" }}>
+        <Box
+          flex={1}
+          bgcolor="primary.main"
+          color="#ffffff"
+          display="flex"
+          alignItems="center"
+          justifyContent="center"
+          flexDirection="column"
+          padding="40px"
+        >
+          <Typography
+            fontSize={{ xs: "30px", md: "40px" }}
+            lineHeight={1.5}
+            paddingBottom="20px"
+          >
+            {locale === "ar"
+              ? "شاركنا فى بناء أفضل مستقبل ممكن لفاقدي الرعاية الأسرية والأسر الكافلة"
+              : "Join us in building a better future for orphans and Kafala families"}
+          </Typography>
+          <QuickDonate locale={locale} />
+        </Box>
+        <Box position="relative" width={500} height={500} maxWidth="100%">
+          <Image
+            src="/images/hero.jpg"
+            alt="Yalla Kafala hero image"
+            style={{ objectFit: "cover" }}
+            fill={true}
+            sizes="100% 100%"
+          />
+        </Box>
+      </Box>
+      <Box height={300} />
+    </Box>
+  );
 };
 
 export default Home;
