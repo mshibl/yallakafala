@@ -13,6 +13,7 @@ function Logo({ noText }: { noText?: boolean }) {
         display: "flex",
         justifyContent: "center",
         alignItems: "center",
+        lineHeight: "18px",
       }}
     >
       <Box sx={{ position: "relative", width: 50, height: 50 }}>

@@ -20,7 +20,7 @@ const SilverBadge = () => {
         }}
       >
         <Grid container direction="row">
-          <Grid item>
+          <Grid item display="flex" alignItems="center">
             <Link href="https://www.guidestar.org/profile/85-3323627">
               <Image
                 src="/images/GuideStarIcon.svg"
@@ -37,7 +37,7 @@ const SilverBadge = () => {
               marginX: "11px",
             }}
           >
-            <Typography variant="subtitle1">
+            <Typography variant="subtitle1" color="#ffffff">
               {t("silverBadge.description.lineOne")} <br />{" "}
               {t("silverBadge.description.lineTwo")}
               <br />

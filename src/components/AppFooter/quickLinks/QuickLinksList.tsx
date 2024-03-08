@@ -48,7 +48,9 @@ const QuickLinksList = () => {
             pb: 6,
           }}
         >
-          <Typography variant="h4">{t("title")}</Typography>
+          <Typography color="#ffffff" variant="h6" fontWeight={700}>
+            {t("title")}
+          </Typography>
         </Grid>
         <Grid item>
           <List

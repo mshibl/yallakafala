@@ -11,6 +11,7 @@ const AppFooter: React.FC = () => {
       container
       sx={{
         bgcolor: "primary.main",
+        color: "#ffffff",
         px: { xs: 20, md: 45 },
         pt: { xs: 17, md: 34 },
         pb: { xs: 10, md: 15 },
