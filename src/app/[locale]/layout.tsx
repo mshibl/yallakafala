@@ -38,7 +38,7 @@ const LocaleLayout = ({
             </ThemeProvider>
           </NextIntlClientProvider>
         </AppRouterCacheProvider>
-        {/* <Script src="https://payments.blackbaud.com/Checkout/bbCheckout.2.0.js"></Script> */}
+        <Script src="https://payments.blackbaud.com/Checkout/bbCheckout.2.0.js"></Script>
       </body>
     </html>
   );

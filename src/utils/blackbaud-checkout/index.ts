@@ -1,20 +1,20 @@
 // Define a callback type for better type checking
-type BlackbaudInitFn = ({
-  key,
-  payment_configuration_id,
-  transaction_type,
-}: {
-  key: string;
-  payment_configuration_id: string;
-  transaction_type: string;
-}) => void;
+// type BlackbaudInitFn = ({
+//   key,
+//   payment_configuration_id,
+//   transaction_type,
+// }: {
+//   key: string;
+//   payment_configuration_id: string;
+//   transaction_type: string;
+// }) => void;
 
-declare global {
-  interface Window {
-    Blackbaud_Init: BlackbaudInitFn;
-    Blackbaud_Open: () => void;
-  }
-}
+// declare global {
+//   interface Window {
+//     Blackbaud_Init: BlackbaudInitFn;
+//     Blackbaud_Open: () => void;
+//   }
+// }
 
 export function loadBlackbaudCheckout(): void {
   const script: HTMLScriptElement = document.createElement("script");
@@ -32,7 +32,9 @@ export function loadBlackbaudCheckout(): void {
       transaction_type: "card_not_present",
     });
 
-    window.Blackbaud_Open();
+    window.Blackbaud_Open({
+        amount: '12.00'
+    });
     // callback();
   };
 

@@ -7,7 +7,7 @@ import { useTranslations } from "next-intl";
 const ContactList = () => {
   const t = useTranslations("AppFooter.contactUs");
   const egyptAddress = (
-    <Typography variant="body1">
+    <>
       {t("egyptAddress.lineOne")} <br />
       {t("egyptAddress.lineTwo")}
       <a
@@ -16,17 +16,18 @@ const ContactList = () => {
       >
         {t("egyptAddress.lineThree")}
       </a>
-    </Typography>
+    </>
   );
 
   const usAddress = (
-    <Typography variant="body1">
+    <>
       {t("usAddress.lineOne")}
       <br /> {t("usAddress.lineTwo")}
       <br />
       {t("usAddress.lineThree")}
-    </Typography>
+    </>
   );
+  
   return (
     <>
       <Grid
