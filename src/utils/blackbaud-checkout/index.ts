@@ -33,7 +33,7 @@ export function loadBlackbaudCheckout(): void {
     });
 
     window.Blackbaud_Open({
-        amount: '12.00'
+      amount: 12,
     });
     // callback();
   };
