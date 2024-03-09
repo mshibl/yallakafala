@@ -17,7 +17,7 @@ const Home = ({ params: { locale } }: { params: { locale: "ar" | "en" } }) => {
           padding="40px"
         >
           <Typography
-            fontSize={{ xs: "30px", md: "40px" }}
+            fontSize={{ xs: "25px", md: "40px" }}
             lineHeight={1.5}
             paddingBottom="20px"
           >
@@ -27,7 +27,15 @@ const Home = ({ params: { locale } }: { params: { locale: "ar" | "en" } }) => {
           </Typography>
           <QuickDonate locale={locale} />
         </Box>
-        <Box position="relative" width={500} height={500} maxWidth="100%">
+        <Box
+          maxWidth="100%"
+          position="relative"
+          width={500}
+          height={{
+            xs: 350,
+            md: 500,
+          }}
+        >
           <Image
             src="/images/hero.jpg"
             alt="Yalla Kafala hero image"

@@ -1,46 +1,107 @@
 "use client";
 
-import { Box, Button, OutlinedInput } from "@mui/material";
-import { useEffect, useState } from "react";
-import PresetAmountButton from "./PresetAmountButton";
-import CustomAmountInput from "./CustomAmountInput";
-import { loadBlackbaudCheckout } from "@/src/utils/blackbaud-checkout";
+import React, { useState } from "react";
 import SubmitDonationButton from "./SubmitDonationButton";
+import Script from "next/script";
+import CloseIcon from "@mui/icons-material/Close";
+import { isUsingMobile } from "@/src/utils/mobile-utils";
+import DialogTransition from "../DialogTransition";
+import {
+  Box,
+  CircularProgress,
+  Dialog,
+  IconButton,
+  Typography,
+} from "@mui/material";
+
+/**
+ * QuickDonate relies on the eTapestry donation form. The form is loaded in an iframe inside a dialog.
+ * "eTapestry" is a third-party service that provides donation processing among other services to Yalla Kafala.
+ */
 
 const QuickDonate = ({ locale }: { locale: "ar" | "en" }) => {
-  useEffect(() => {
-    loadBlackbaudCheckout();
-  }, []);
+  const [donationFormOpen, setDonationFormOpen] = useState(false);
 
-  const [amount, setAmount] = useState(10);
-  const presetAmounts = [10, 25, 50]; // USD
-
-  const handleSubmit = () => {
-    window.Blackbaud_Open({ amount });
+  const openDonationForm = () => {
+    setDonationFormOpen(true);
   };
+
+  const [iframeLoading, setIframeLoading] = useState(true);
+
+  const handleIframeDoneLoading = () => {
+    setIframeLoading(false);
+  };
+
+  const isMobile = isUsingMobile();
 
   return (
     <Box display="flex" width="100%" flexDirection="column">
-      <Box display="flex" flexDirection={{ xs: "column", md: "row" }}>
-        <Box display="flex">
-          {presetAmounts.map((presetAmount) => (
-            <PresetAmountButton
-              key={presetAmount}
-              amount={presetAmount}
-              setAmount={setAmount}
-              selected={amount === presetAmount}
-              locale={locale}
-            />
-          ))}
+      <SubmitDonationButton handleSubmit={openDonationForm} locale={locale} />
+      <Dialog
+        fullWidth
+        keepMounted
+        open={donationFormOpen}
+        onClose={() => setDonationFormOpen(false)}
+        TransitionComponent={DialogTransition}
+        fullScreen={isMobile}
+      >
+        <Box
+          display="flex"
+          justifyContent="space-between"
+          alignItems={"center"}
+          borderBottom={"1px solid #2194BC"}
+          p="10px"
+        >
+          <Typography variant="h6">
+            {locale === "ar" ? "تبرع الى يلا كفالة" : "Donate to Yalla Kafala"}
+          </Typography>
+
+          <IconButton onClick={() => setDonationFormOpen(false)}>
+            <CloseIcon />
+          </IconButton>
         </Box>
-        <CustomAmountInput
-          amount={amount}
-          setAmount={setAmount}
-          presetAmounts={presetAmounts}
-          locale={locale}
-        />
-      </Box>
-      <SubmitDonationButton handleSubmit={handleSubmit} locale={locale} />
+        <Box minHeight="500px" display="flex" flexDirection="column">
+          {iframeLoading && (
+            <Box
+              display="flex"
+              flexDirection="column"
+              alignItems="center"
+              pt="20px"
+            >
+              <CircularProgress />
+              <Typography
+                align="center"
+                pt="20px"
+                pb="20px"
+                fontWeight="bold"
+                color="primary.main"
+              >
+                {locale === "ar"
+                  ? "جاري تحميل نموذج التبرع..."
+                  : "Loading donation form..."}
+              </Typography>
+            </Box>
+          )}
+
+          <Box>
+            <Script
+              type="text/JavaScript"
+              src="//app.etapestry.com/hosted/eTapestry.com/etapEmbedResponsiveResizing.js"
+            ></Script>
+            <iframe
+              id="etapIframe"
+              style={{
+                border: "none",
+                width: "100%",
+                height: "100%",
+                visibility: iframeLoading ? "hidden" : "visible",
+              }}
+              src="https://app.etapestry.com/onlineforms/YallaKafala/website-donation.html"
+              onLoad={handleIframeDoneLoading}
+            ></iframe>
+          </Box>
+        </Box>
+      </Dialog>
     </Box>
   );
 };

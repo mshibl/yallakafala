@@ -1,3 +1,5 @@
+// Work In Progress [TODO: Add explanation]
+
 declare global {
   interface Window {
     Blackbaud_Init: ({
