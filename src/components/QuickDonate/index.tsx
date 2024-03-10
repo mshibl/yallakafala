@@ -60,7 +60,7 @@ const QuickDonate = ({ locale }: { locale: "ar" | "en" }) => {
             <CloseIcon />
           </IconButton>
         </Box>
-        <Box minHeight="500px" display="flex" flexDirection="column">
+        <Box height="100%" minHeight="500px" display="flex" flexDirection="column">
           {iframeLoading && (
             <Box
               display="flex"
@@ -83,7 +83,7 @@ const QuickDonate = ({ locale }: { locale: "ar" | "en" }) => {
             </Box>
           )}
 
-          <Box>
+          <Box height="100%">
             <Script
               type="text/JavaScript"
               src="//app.etapestry.com/hosted/eTapestry.com/etapEmbedResponsiveResizing.js"

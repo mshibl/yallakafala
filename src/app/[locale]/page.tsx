@@ -14,10 +14,10 @@ const Home = ({ params: { locale } }: { params: { locale: "ar" | "en" } }) => {
           alignItems="center"
           justifyContent="center"
           flexDirection="column"
-          padding="40px"
+          padding="30px"
         >
           <Typography
-            fontSize={{ xs: "25px", md: "40px" }}
+            fontSize={{ xs: "30px", md: "40px" }}
             lineHeight={1.5}
             paddingBottom="20px"
           >
