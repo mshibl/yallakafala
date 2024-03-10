@@ -1,4 +1,4 @@
-import { fetchAllStories } from "@/src/utils/kafala-stories";
+import { fetchAllStories } from "@/src/utils/fetch-stories";
 import { Box, Grid } from "@mui/material";
 import StoryCard from "./StoryCard";
 

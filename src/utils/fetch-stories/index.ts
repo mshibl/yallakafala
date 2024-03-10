@@ -1,6 +1,9 @@
 import { DATA_SOURCES } from "@/src/constants/data-sources";
 import { loadGoogleSheet } from "../google-api";
-import { convertGoogleDriveImageUrlToImageSrc } from "../string-utils";
+import {
+  cleanResponse,
+  convertGoogleDriveImageUrlToImageSrc,
+} from "../string-utils";
 
 function parseStoryData(data: any, id: string) {
   const [
@@ -22,13 +25,25 @@ function parseStoryData(data: any, id: string) {
     throw new Error("Story description is missing");
   }
 
+  const cleanArabicTitle = cleanResponse(arabic_title?.trim() || "");
+  const cleanEnglishTitle = cleanResponse(english_title?.trim() || "");
+  const cleanArabicDescription = cleanResponse(
+    arabic_description?.trim() || ""
+  );
+  const cleanEnglishDescription = cleanResponse(
+    english_description?.trim() || ""
+  );
+
+  const arabicDescription = cleanArabicDescription || cleanEnglishDescription;
+  const englishDescription = cleanEnglishDescription || cleanArabicDescription;
+
   return {
     id: id,
-    publish,
+    publish: publish === "TRUE",
     arabic_title: arabic_title || english_title,
     english_title: english_title || arabic_title,
-    arabic_description: arabic_description || english_description,
-    english_description: english_description || arabic_description,
+    arabic_description: arabicDescription,
+    english_description: englishDescription,
     image_link: imageLink,
   };
 }
@@ -64,7 +79,10 @@ export async function fetchAllStories() {
       .slice(1) // remove the header row
       .map((row: any, index: number) => parseStoryData(row, String(index + 2)));
 
-    return stories;
+    // filter out unpublished stories
+    const publishedStories = stories.filter((story) => story.publish);
+
+    return publishedStories;
   } catch (error) {
     console.error("Error fetching stories", error);
 

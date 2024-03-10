@@ -4,7 +4,7 @@ import React, { useState } from "react";
 import SubmitDonationButton from "./SubmitDonationButton";
 import Script from "next/script";
 import CloseIcon from "@mui/icons-material/Close";
-import { isUsingMobile } from "@/src/utils/mobile-utils";
+import useResponsiveBreakpoint from "@/src/utils/mui-utils";
 import DialogTransition from "../DialogTransition";
 import {
   Box,
@@ -29,21 +29,24 @@ const QuickDonate = ({ locale }: { locale: "ar" | "en" }) => {
   const [iframeLoading, setIframeLoading] = useState(true);
 
   const handleIframeDoneLoading = () => {
+    console.log("iframe done loading");
     setIframeLoading(false);
   };
 
-  const isMobile = isUsingMobile();
+  const isMD = useResponsiveBreakpoint("md");
 
   return (
     <Box display="flex" width="100%" flexDirection="column">
       <SubmitDonationButton handleSubmit={openDonationForm} locale={locale} />
       <Dialog
         fullWidth
-        keepMounted
         open={donationFormOpen}
-        onClose={() => setDonationFormOpen(false)}
+        onClose={() => {
+          setDonationFormOpen(false);
+          setIframeLoading(true);
+        }}
         TransitionComponent={DialogTransition}
-        fullScreen={isMobile}
+        fullScreen={!isMD}
       >
         <Box
           display="flex"
@@ -56,11 +59,21 @@ const QuickDonate = ({ locale }: { locale: "ar" | "en" }) => {
             {locale === "ar" ? "تبرع الى يلا كفالة" : "Donate to Yalla Kafala"}
           </Typography>
 
-          <IconButton onClick={() => setDonationFormOpen(false)}>
+          <IconButton
+            onClick={() => {
+              setDonationFormOpen(false);
+              setIframeLoading(true);
+            }}
+          >
             <CloseIcon />
           </IconButton>
         </Box>
-        <Box height="100%" minHeight="500px" display="flex" flexDirection="column">
+        <Box
+          height="100%"
+          minHeight="500px"
+          display="flex"
+          flexDirection="column"
+        >
           {iframeLoading && (
             <Box
               display="flex"
@@ -94,6 +107,7 @@ const QuickDonate = ({ locale }: { locale: "ar" | "en" }) => {
                 border: "none",
                 width: "100%",
                 height: "100%",
+                minHeight: "1407px",
                 visibility: iframeLoading ? "hidden" : "visible",
               }}
               src="https://app.etapestry.com/onlineforms/YallaKafala/website-donation.html"

@@ -1,4 +1,6 @@
-import { isUsingMobile } from "@/src/utils/mobile-utils";
+"use client";
+
+import useResponsiveBreakpoint from "@/src/utils/mui-utils";
 import { Fade, Slide } from "@mui/material";
 import { TransitionProps } from "@mui/material/transitions";
 import React from "react";
@@ -10,9 +12,9 @@ const DialogTransition = React.forwardRef(function Transition(
   ref: React.Ref<unknown>
 ) {
   // If on mobile, the dialog should slide up from the bottom
-  const isMobile = isUsingMobile();
+  const isMD = useResponsiveBreakpoint("md");
 
-  if (isMobile) {
+  if (!isMD) {
     return <Slide direction="up" ref={ref} {...props} />;
   }
 

@@ -1,20 +1,29 @@
-import React, { Suspense } from "react";
-import Grid from "@mui/material/Grid";
-import FaqsList from "./FaqsList";
-import ErrorBoundary from "../ErrorBoundary";
-import { Box } from "@mui/material";
+import React from "react";
+import { Grid } from "@mui/material";
+import { fetchFaqs } from "@/src/utils/fetch-faqs";
+import FaqItem from "./FAQItem";
 
-const ErrorFallback = () => {
-  // TODO: Implement error page
-  return <Box>Error</Box>;
-};
+export default async function FAQs({
+  locale,
+  firstFaqOpen,
+  faqsCount,
+  random,
+}: {
+  locale: string;
+  firstFaqOpen?: boolean;
+  faqsCount?: number;
+  random?: boolean;
+}) {
+  let faqs = await fetchFaqs();
 
-const LoadingFallback = () => {
-  // TODO: Implement loading page
-  return <Box height="500px">Loading...</Box>;
-};
+  if (random) {
+    faqs.sort(() => Math.random() - 0.5);
+  }
 
-const FAQs = ({ locale }: { locale: string }) => {
+  if (faqsCount) {
+    faqs = faqs.slice(0, faqsCount);
+  }
+
   return (
     <Grid
       spacing={5}
@@ -22,18 +31,26 @@ const FAQs = ({ locale }: { locale: string }) => {
       alignContent={"center"}
       container
       sx={{
-        px: { xs: 20, md: 45 },
-        pt: { xs: 17, md: 34 },
+        width: "100%",
+        px: { xs: 10, md: 45 },
         pb: { xs: 10, md: 15 },
       }}
     >
-      <ErrorBoundary locale={locale} fallback={<ErrorFallback />}>
-        <Suspense fallback={<LoadingFallback />}>
-          <FaqsList />
-        </Suspense>
-      </ErrorBoundary>
+      {faqs.map((faq, index) => {
+        const title =
+          locale === "en" ? faq.question.english : faq.question.arabic;
+        const description =
+          locale === "en" ? faq.answer.english : faq.answer.arabic;
+
+        return (
+          <FaqItem
+            defaultExpanded={Boolean(firstFaqOpen && index === 0)}
+            key={index}
+            question={title}
+            answer={description}
+          />
+        );
+      })}
     </Grid>
   );
-};
-
-export default FAQs;
+}

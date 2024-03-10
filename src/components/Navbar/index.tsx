@@ -9,6 +9,7 @@ import DonateButton from "../DonateButton";
 import SwitchLanguageButton from "./SwitchLanguageButton";
 import DesktopLinks from "./DesktopLinks";
 import MobileLinks from "./MobileLinks";
+import Link from "next/link";
 
 function Navbar() {
   const [anchorPagesMenu, setAnchorPagesMenu] =
@@ -37,8 +38,10 @@ function Navbar() {
 
   return (
     <AppBar
-      position="static"
       sx={{
+        position: "sticky",
+        top: 0,
+        zIndex: 1,
         direction: "ltr", // Navbar should always be LTR
         backgroundColor: "#FFFFFF",
         boxShadow: "none",
@@ -48,7 +51,9 @@ function Navbar() {
       <Toolbar sx={{ px: 0 }}>
         {/* Logo */}
         <Box sx={{ ml: "24px", flexGrow: 1 }}>
-          <Logo />
+          <Link href="/">
+            <Logo />
+          </Link>
         </Box>
 
         {/* Desktop Links */}
