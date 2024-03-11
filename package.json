@@ -15,13 +15,10 @@
     "@mui/material": "^5.15.3",
     "@mui/material-nextjs": "^5.15.3",
     "googleapis": "^131.0.0",
-    "markdown-it": "^14.0.0",
-    "marked": "^12.0.1",
     "next": "14.1.0",
     "next-intl": "^3.4.2",
     "react": "^18",
     "react-dom": "^18",
-    "react-markdown": "^9.0.1",
     "sanitize-html": "^2.11.0",
     "sharp": "^0.33.2"
   },
