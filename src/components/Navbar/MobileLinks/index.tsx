@@ -15,6 +15,7 @@ function MobileLinks({
   handleOpenPagesMenu: (e: React.MouseEvent<HTMLElement>) => void;
   handleClosePagesMenu: (e: React.MouseEvent<HTMLElement>) => void;
 }) {
+  
   const t = useTranslations("Navbar");
   const locale = useLocale();
 
