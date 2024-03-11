@@ -49,6 +49,7 @@ export default async function Story({
               style={{ objectFit: "contain" }}
               src={image_link}
               alt={title}
+              sizes="100% 100%"
             />
           </Box>
         )}

@@ -5,6 +5,7 @@ import Grid from "@mui/material/Grid";
 import AccordionSummary from "@mui/material/AccordionSummary";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 import React from "react";
+import { formatText } from "@/src/utils/string-utils";
 
 interface FaqProps {
   question: string;
@@ -32,8 +33,8 @@ const Faq: React.FC<FaqProps> = ({ defaultExpanded, question, answer }) => {
           </Typography>
         </AccordionSummary>
         <AccordionDetails>
-          <Typography color="black" variant="body2">
-            {answer}
+          <Typography color="black" variant="body2" overflow="hidden">
+            {formatText(answer)}
           </Typography>
         </AccordionDetails>
       </Accordion>

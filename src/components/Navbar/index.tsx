@@ -5,7 +5,7 @@ import AppBar from "@mui/material/AppBar";
 import Box from "@mui/material/Box";
 import Toolbar from "@mui/material/Toolbar";
 import Logo from "../Logo";
-import DonateButton from "../DonateButton";
+import NavbarDonateButton from "./NavbarDonateButton";
 import SwitchLanguageButton from "./SwitchLanguageButton";
 import DesktopLinks from "./DesktopLinks";
 import MobileLinks from "./MobileLinks";
@@ -70,7 +70,7 @@ function Navbar() {
             marginLeft: "36px",
           }}
         >
-          <DonateButton />
+          <NavbarDonateButton />
         </Box>
 
         {/* Language Selector */}

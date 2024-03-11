@@ -32,7 +32,8 @@ export default function StoryCard({
                 fill={true}
                 style={{ objectFit: "cover", minHeight: "100%" }}
                 src={story.image_link}
-                alt={story.title}
+                alt={locale === "ar" ? story.arabic_title : story.english_title}
+                sizes="100% 100%"
               />
             </Box>
           </Button>

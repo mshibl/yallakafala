@@ -33,31 +33,20 @@ const QuickLinksList = () => {
   return (
     <>
       <Grid
-        sx={{
-          mb: { xs: 30, md: 0 },
-        }}
+        sx={{ mb: { xs: 30, md: 0 } }}
         container
         direction={"column"}
         item
         xs={12}
         md={4}
       >
-        <Grid
-          item
-          sx={{
-            pb: 6,
-          }}
-        >
+        <Grid item sx={{ pb: 6 }}>
           <Typography color="#ffffff" variant="h6" fontWeight={700}>
             {t("title")}
           </Typography>
         </Grid>
         <Grid item>
-          <List
-            sx={{
-              p: 0,
-            }}
-          >
+          <List sx={{ p: 0 }}>
             {QUICK_LINKS.map((link) => (
               <QuickLinksListItem
                 key={link}

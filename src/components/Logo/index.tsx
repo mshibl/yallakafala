@@ -23,6 +23,7 @@ function Logo({ noText }: { noText?: boolean }) {
           alt={locale === "en" ? "Yalla Kafala Logo" : "شعار يلا كفالة"}
           fill={true}
           style={{ objectFit: "contain" }}
+          sizes="100% 100%"
         />
       </Box>
       {!noText && (

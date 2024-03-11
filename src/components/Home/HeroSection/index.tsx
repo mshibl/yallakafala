@@ -1,6 +1,6 @@
 import { Box, Typography } from "@mui/material";
 import Image from "next/image";
-import QuickDonate from "@/src/components/QuickDonate";
+import QuickDonate from "@/src/components/Home/HeroSection/HeroDonateButton";
 
 const HeroSection = ({ locale }: { locale: "ar" | "en" }) => {
   return (
