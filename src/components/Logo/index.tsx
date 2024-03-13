@@ -23,6 +23,7 @@ function Logo({ noText }: { noText?: boolean }) {
           alt={locale === "en" ? "Yalla Kafala Logo" : "شعار يلا كفالة"}
           fill={true}
           style={{ objectFit: "contain" }}
+          sizes="100% 100%"
         />
       </Box>
       {!noText && (
@@ -36,7 +37,7 @@ function Logo({ noText }: { noText?: boolean }) {
             fontSize: "15px",
           }}
         >
-          <Box sx={{ fontFamily: "inter" }}>Yalla Kafala</Box>
+          <Box>Yalla Kafala</Box>
           <Box>اكفل طفل في بيتك</Box>
         </Box>
       )}

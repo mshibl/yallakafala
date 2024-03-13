@@ -3,55 +3,56 @@ import Grid from "@mui/material/Grid";
 import EmailUs from "./EmailUs";
 import Address from "./Address";
 import { useTranslations } from "next-intl";
+import { headers } from "next/headers";
+import Link from "next/link";
 
 const ContactList = () => {
   const t = useTranslations("AppFooter.contactUs");
+  const country = headers().get("country");
+
   const egyptAddress = (
-    <Typography variant="body1">
+    <>
       {t("egyptAddress.lineOne")} <br />
       {t("egyptAddress.lineTwo")}
-      <a
+      <Link
         style={{ textDecoration: "underline" }}
         href="https://maps.app.goo.gl/d24Rt7cnGfYYkSyq8?g_st=ic"
       >
         {t("egyptAddress.lineThree")}
-      </a>
-    </Typography>
+      </Link>
+    </>
   );
 
   const usAddress = (
-    <Typography variant="body1">
+    <>
       {t("usAddress.lineOne")}
       <br /> {t("usAddress.lineTwo")}
       <br />
       {t("usAddress.lineThree")}
-    </Typography>
+    </>
   );
+
   return (
     <>
       <Grid
-        sx={{
-          mb: { xs: 30, md: 0 },
-        }}
+        sx={{ mb: { xs: 30, md: 0 } }}
         container
         direction={"column"}
         item
         xs={12}
         md={4}
       >
-        <Grid
-          item
-          sx={{
-            pb: 6,
-          }}
-        >
+        <Grid item sx={{ pb: 6 }}>
           <Typography variant="h6" fontWeight={700}>
             {t("title")}
           </Typography>
         </Grid>
         <EmailUs />
-        <Address title={t("egyptAddressTitle")} content={egyptAddress} />
-        <Address title={t("usAddressTitle")} content={usAddress} />
+        {country === "EG" ? (
+          <Address title={t("egyptAddressTitle")} content={egyptAddress} />
+        ) : (
+          <Address title={t("usAddressTitle")} content={usAddress} />
+        )}
       </Grid>
     </>
   );

@@ -20,6 +20,7 @@ import {
 } from "@/src/constants/pages";
 
 const DESKTOP_HIGHLIGHTED_PAGES = [
+  KAFALA_STEPS_PAGE,
   KAFALA_STORIES_PAGE,
   WHAT_IS_KAFALA_PAGE,
   ABOUT_US_PAGE,
@@ -57,7 +58,7 @@ function DesktopLinks({
       }}
     >
       <>
-        <Button
+        {/* <Button
           onClick={(e) => {
             handleOpenKnowledgeCenterMenu(e);
           }}
@@ -70,7 +71,7 @@ function DesktopLinks({
         >
           {locale === "en" ? "Knowledge Center" : "مركز المعرفة"}
           <ArrowDropDown />
-        </Button>
+        </Button> */}
 
         {DESKTOP_HIGHLIGHTED_PAGES.map((pageName) => (
           <Link

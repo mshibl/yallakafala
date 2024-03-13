@@ -49,9 +49,11 @@ const AppTheme = createTheme({
       margin: "0",
     },
     body1: {
+      fontSize: "1.2rem",
       lineHeight: 2,
     },
     body2: {
+      fontSize: "1rem",
       lineHeight: 2,
     },
   },

@@ -15,15 +15,10 @@ const Address: React.FC<AddressProps> = ({ title, content }) => {
       }}
     >
       <Box>
-        <Typography
-          sx={{
-            pb: 3.5,
-          }}
-          variant="h6"
-        >
+        <Typography sx={{ pb: 3.5 }} variant="h6">
           {title}
         </Typography>
-        <Typography>{content}</Typography>
+        <Typography variant="body2">{content}</Typography>
       </Box>
     </Grid>
   );

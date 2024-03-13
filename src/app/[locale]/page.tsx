@@ -1,7 +1,11 @@
-import { Box } from "@mui/material";
+import Home from "@/src/components/Home";
 
-const Home = () => {
-  return <Box height="500px"></Box>;
+const HomePage = ({
+  params: { locale },
+}: {
+  params: { locale: "ar" | "en" };
+}) => {
+  return <Home locale={locale} />;
 };
 
-export default Home;
+export default HomePage;

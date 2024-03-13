@@ -1,12 +1,20 @@
-import createMiddleware from "next-intl/middleware";
+import createIntlMiddleware from "next-intl/middleware";
+import { NextRequest, NextResponse } from "next/server";
 
-export default createMiddleware({
-  // A list of all locales that are supported
-  locales: ["en", "ar"],
+export default function middleware(req: NextRequest) {
+  const country = req.geo?.country || "EG"; // default to Egypt
 
-  // Used when no locale matches
-  defaultLocale: "en",
-});
+  // add country to headers
+  req.headers.set("country", country);
+
+  // handle i18n routing
+  const handleI18nRouting = createIntlMiddleware({
+    locales: ["en", "ar"],
+    defaultLocale: "en",
+  });
+
+  return handleI18nRouting(req);
+}
 
 export const config = {
   // Match only internationalized pathnames

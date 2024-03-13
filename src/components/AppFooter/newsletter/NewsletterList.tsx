@@ -14,7 +14,7 @@ const NewsletterList = () => {
         xs={12}
         md={4}
       >
-        <NewsletterFormContainer />
+        {/* <NewsletterFormContainer /> */}
         <SocialMediaList />
         <SilverBadge />
       </Grid>
