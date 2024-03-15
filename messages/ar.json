@@ -83,13 +83,13 @@
     "contactUs": {
       "title": "تواصل معنا",
       "email": "ارسل لنا عبر البريد الإلكتروني",
-      "egyptAddressTitle": "العنوان في مصر",
+      "egyptAddressTitle": "العنوان",
       "egyptAddress": {
         "lineOne": "شارع اللاسلكي، المعادي الجديدة. القاهرة",
         "lineTwo": "العنوان على ",
         "lineThree": "خرائط جوجل"
       },
-      "usAddressTitle": "العنوان في امريكا",
+      "usAddressTitle": "العنوان",
       "usAddress": {
         "lineOne": "15 Onondaga Ave, San Francisco,",
         "lineTwo": "CA, United States",
@@ -107,7 +107,7 @@
       },
       "silverBadge": {
         "description": {
-          "lineOne": "يلا كفالة هو أحد المشاركين في ",
+          "lineOne": "يلا كفالة أحد المشاركين في ",
           "lineTwo": "برنامج GuideStar ذو المستوى ",
           "lineThree": "الفضي، مما يدل على التزامه ",
           "lineFour": "بالشفافية"

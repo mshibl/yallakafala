@@ -1,9 +1,6 @@
-import FaqItem from "./FaqItem";
-import { useLocale } from "next-intl";
-import { loadGoogleSheet } from "@/src/utils/google-api";
-import { cleanResponse } from "@/src/utils/string-utils";
-import { Suspense, use, useCallback } from "react";
 import { DATA_SOURCES } from "@/src/constants/data-sources";
+import { loadGoogleSheet } from "../google-api";
+import { cleanResponse } from "../string-utils";
 
 export const fetchFaqs = async () => {
   try {
@@ -35,23 +32,3 @@ export const fetchFaqs = async () => {
     throw error;
   }
 };
-
-const FaqsList = () => {
-  const locale = useLocale();
-  const faqs = use(fetchFaqs());
-
-  return (
-    <>
-      {faqs.map((faq, index) => {
-        const title =
-          locale === "en" ? faq.question.english : faq.question.arabic;
-        const description =
-          locale === "en" ? faq.answer.english : faq.answer.arabic;
-
-        return <FaqItem key={index} question={title} answer={description} />;
-      })}
-    </>
-  );
-};
-
-export default FaqsList;

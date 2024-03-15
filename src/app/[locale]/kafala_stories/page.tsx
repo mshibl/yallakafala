@@ -13,10 +13,8 @@ const StoriesPage = ({
   return (
     <ErrorBoundary locale={locale}>
       <Suspense fallback={<LoadingFallback />}>
-        <Box mb="100px">
-          <StoriesPageHeader locale={locale} />
-          <Stories locale={locale} />
-        </Box>
+        <StoriesPageHeader locale={locale} />
+        <Stories locale={locale} />
       </Suspense>
     </ErrorBoundary>
   );

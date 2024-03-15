@@ -16,7 +16,7 @@ const StoryPage = ({
         <Story story_id={story_id} locale={locale} />
         <Box sx={{ p: "16px" }}>
           <Typography variant="h6" fontWeight={700}>
-            {locale === "ar" ? "قصص أخرى" : "Other Stories"}
+            {locale === "ar" ? "قصص الكفالة" : "Kafala Stories"}
           </Typography>
           <Stories
             locale={locale}

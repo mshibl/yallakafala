@@ -1,4 +1,4 @@
-import { fetchStory } from "@/src/utils/kafala-stories";
+import { fetchStory } from "@/src/utils/fetch-stories";
 import { Box } from "@mui/material";
 import Image from "next/image";
 import React from "react";
@@ -49,6 +49,7 @@ export default async function Story({
               style={{ objectFit: "contain" }}
               src={image_link}
               alt={title}
+              sizes="100% 100%"
             />
           </Box>
         )}

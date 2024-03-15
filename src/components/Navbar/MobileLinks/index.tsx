@@ -3,8 +3,21 @@ import Box from "@mui/material/Box";
 import { useLocale, useTranslations } from "next-intl";
 import { IconButton, Menu, MenuItem, Typography } from "@mui/material";
 import MenuIcon from "@mui/icons-material/Menu";
-import { ALL_PAGES, PAGE_PATHNAMES } from "@/src/constants/pages";
+import {
+  ABOUT_US_PAGE,
+  KAFALA_STEPS_PAGE,
+  KAFALA_STORIES_PAGE,
+  PAGE_PATHNAMES,
+  WHAT_IS_KAFALA_PAGE,
+} from "@/src/constants/pages";
 import Link from "next/link";
+
+const MOBILE_LINKS_PAGES = [
+  ABOUT_US_PAGE,
+  KAFALA_STEPS_PAGE,
+  KAFALA_STORIES_PAGE,
+  WHAT_IS_KAFALA_PAGE,
+];
 
 function MobileLinks({
   anchorPagesMenu,
@@ -48,9 +61,9 @@ function MobileLinks({
           display: { xs: "block", lg: "none" },
         }}
       >
-        {ALL_PAGES.map((pageName) => (
+        {MOBILE_LINKS_PAGES.map((pageName) => (
           <MenuItem
-            sx={{ minWidth: "150px" }}
+            sx={{ minWidth: "200px" }}
             key={pageName}
             onClick={handleClosePagesMenu}
           >

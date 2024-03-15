@@ -82,13 +82,13 @@
     "contactUs": {
       "title": "Contact us",
       "email": "Email us",
-      "egyptAddressTitle": "Egypt address",
+      "egyptAddressTitle": "Address",
       "egyptAddress": {
         "lineOne": "El Lasilky Street, New Maadi, Cairo",
         "lineTwo": "Address on ",
         "lineThree": "Google maps"
       },
-      "usAddressTitle": "America - PO Box",
+      "usAddressTitle": "Address - PO Box",
       "usAddress": {
         "lineOne": "15 Onondaga Ave, San Francisco,",
         "lineTwo": "CA, United States",
@@ -165,7 +165,7 @@
     },
     "rasha": {
       "title": "👩🏻 Rasha Mekky",
-      "content": "Rasha Mekki sponsored her son Mustafa. Her boundless love for her son and her dedication to caring for children, as an expert in child development, inspired her to launch the first dedicated sponsorship website in Egypt and establish the Yalla Kafala Association. This non-profit organization has no political or religious affiliations in Egypt and California."
+      "content": "Rasha Mekky (Yalla Kafala's founder) sponsored her son Mustafa. Her boundless love for her son and her dedication to caring for children, as an expert in child development, inspired her to launch the first dedicated sponsorship website in Egypt and establish the Yalla Kafala Association. This non-profit organization has no political or religious affiliations in Egypt and California."
     }
   },
   "WhatIsKafala": {
