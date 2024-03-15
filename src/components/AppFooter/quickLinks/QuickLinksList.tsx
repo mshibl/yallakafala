@@ -5,25 +5,19 @@ import Grid from "@mui/material/Grid";
 import { useLocale, useTranslations } from "next-intl";
 import {
   ABOUT_US_PAGE,
-  CAMPAIGNS_PAGE,
   FAQS_PAGE,
-  KAFALA_PARTNERS_PAGE,
   KAFALA_STEPS_PAGE,
+  KAFALA_STORIES_PAGE,
   PAGE_PATHNAMES,
-  SERVICES_PAGE,
-  VOLUNTEER_PAGE,
   WHAT_IS_KAFALA_PAGE,
 } from "@/src/constants/pages";
 
 const QUICK_LINKS = [
-  WHAT_IS_KAFALA_PAGE,
-  KAFALA_STEPS_PAGE,
   ABOUT_US_PAGE,
+  KAFALA_STEPS_PAGE,
+  KAFALA_STORIES_PAGE,
+  WHAT_IS_KAFALA_PAGE,
   FAQS_PAGE,
-  KAFALA_PARTNERS_PAGE,
-  CAMPAIGNS_PAGE,
-  SERVICES_PAGE,
-  VOLUNTEER_PAGE,
 ];
 
 const QuickLinksList = () => {
@@ -34,11 +28,11 @@ const QuickLinksList = () => {
     <>
       <Grid
         sx={{ mb: { xs: 30, md: 0 } }}
-        container
         direction={"column"}
-        item
+        container
         xs={12}
         md={4}
+        item
       >
         <Grid item sx={{ pb: 6 }}>
           <Typography color="#ffffff" variant="h6" fontWeight={700}>

@@ -5,6 +5,7 @@ import { IconButton, Menu, MenuItem, Typography } from "@mui/material";
 import MenuIcon from "@mui/icons-material/Menu";
 import {
   ABOUT_US_PAGE,
+  FAQS_PAGE,
   KAFALA_STEPS_PAGE,
   KAFALA_STORIES_PAGE,
   PAGE_PATHNAMES,
@@ -17,6 +18,7 @@ const MOBILE_LINKS_PAGES = [
   KAFALA_STEPS_PAGE,
   KAFALA_STORIES_PAGE,
   WHAT_IS_KAFALA_PAGE,
+  FAQS_PAGE,
 ];
 
 function MobileLinks({

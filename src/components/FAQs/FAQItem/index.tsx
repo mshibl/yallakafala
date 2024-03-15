@@ -15,7 +15,7 @@ interface FaqProps {
 
 const Faq: React.FC<FaqProps> = ({ defaultExpanded, question, answer }) => {
   return (
-    <Grid item xs={12} md={8}>
+    <Grid item xs={12} md={10}>
       <Accordion
         defaultExpanded={defaultExpanded}
         sx={{

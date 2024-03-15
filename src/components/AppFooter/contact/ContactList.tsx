@@ -33,28 +33,26 @@ const ContactList = () => {
   );
 
   return (
-    <>
-      <Grid
-        sx={{ mb: { xs: 30, md: 0 } }}
-        container
-        direction={"column"}
-        item
-        xs={12}
-        md={4}
-      >
-        <Grid item sx={{ pb: 6 }}>
-          <Typography variant="h6" fontWeight={700}>
-            {t("title")}
-          </Typography>
-        </Grid>
-        <EmailUs />
-        {country === "EG" ? (
-          <Address title={t("egyptAddressTitle")} content={egyptAddress} />
-        ) : (
-          <Address title={t("usAddressTitle")} content={usAddress} />
-        )}
+    <Grid
+      sx={{ mb: { xs: 30, md: 0 } }}
+      container
+      direction={"column"}
+      item
+      xs={12}
+      md={4}
+    >
+      <Grid item sx={{ pb: 6 }}>
+        <Typography variant="h6" fontWeight={700}>
+          {t("title")}
+        </Typography>
       </Grid>
-    </>
+      <EmailUs />
+      {country === "EG" ? (
+        <Address title={t("egyptAddressTitle")} content={egyptAddress} />
+      ) : (
+        <Address title={t("usAddressTitle")} content={usAddress} />
+      )}
+    </Grid>
   );
 };
 

@@ -1,53 +1,36 @@
 import Typography from "@mui/material/Typography";
 import Box from "@mui/material/Box";
-import Grid from "@mui/material/Grid";
 import Image from "next/image";
 import Link from "next/link";
-import { useTranslations } from "next-intl";
+import { useLocale, useTranslations } from "next-intl";
 
 const SilverBadge = () => {
   const t = useTranslations("AppFooter.newsletter");
+  const locale = useLocale();
+
   return (
-    <Grid
-      item
-      sx={{
-        pb: 13,
-      }}
+    <Box
+      display="flex"
+      flexDirection={{ xs: "column", md: "row" }}
+      // alignItems="center"
+      // justifyContent="center"
     >
-      <Box
-        sx={{
-          maxHeight: { xs: "75px", md: "60px" }, // To force box to take children hight
-        }}
-      >
-        <Grid container direction="row">
-          <Grid item display="flex" alignItems="center">
-            <Link href="https://www.guidestar.org/profile/85-3323627">
-              <Image
-                src="/images/GuideStarIcon.svg"
-                alt="GuideStar Silver Level"
-                width={87}
-                height={87}
-              />
-            </Link>
-          </Grid>
-          <Grid
-            item
-            xs={8}
-            sx={{
-              marginX: "11px",
-            }}
-          >
-            <Typography variant="subtitle1" color="#ffffff">
-              {t("silverBadge.description.lineOne")} <br />{" "}
-              {t("silverBadge.description.lineTwo")}
-              <br />
-              {t("silverBadge.description.lineThree")}
-              <br /> {t("silverBadge.description.lineFour")}
-            </Typography>
-          </Grid>
-        </Grid>
+      <Box mr={locale === "ar" ? 0 : "10px"} ml={locale === "ar" ? "10px" : 0}>
+        <Link href="https://www.guidestar.org/profile/85-3323627">
+          <Image
+            src="/images/GuideStarIcon.svg"
+            alt="GuideStar Silver Level"
+            width={87}
+            height={87}
+          />
+        </Link>
       </Box>
-    </Grid>
+      <Typography color="#ffffff" variant="body2">
+        {locale === "ar"
+          ? "يلا كفالة أحد المشاركين فى برنامج GuideStar الفضى مما يدل على التزام المؤسسة بالشفافية  "
+          : "Yalla Kafala is a Silver Level participant in the GuideStar program, demonstrating our commitment to transparency."}
+      </Typography>
+    </Box>
   );
 };
 
