@@ -16,15 +16,17 @@ const StoryPage = ({
         <Story story_id={story_id} locale={locale} />
         <Box sx={{ p: "16px" }}>
           <Typography variant="h6" fontWeight={700}>
-            {locale === "ar" ? "قصص الكفالة" : "Kafala Stories"}
+            {locale === "ar" ? "المزيد من قصص الكفالة" : "More Kafala Stories"}
           </Typography>
-          <Stories
-            locale={locale}
-            storiesCount={3}
-            cardsPerRow={3}
-            exclude={[story_id]}
-            random={true}
-          />
+          <Suspense fallback={<Box height={{ xs: "1040px", md: "520px" }} />}>
+            <Stories
+              locale={locale}
+              storiesCount={3}
+              cardsPerRow={3}
+              exclude={[story_id]}
+              random={true}
+            />
+          </Suspense>
         </Box>
       </Suspense>
     </ErrorBoundary>

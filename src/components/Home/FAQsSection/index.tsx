@@ -1,6 +1,7 @@
 import { Box, Button, Typography } from "@mui/material";
 import FAQs from "../../FAQs";
 import Link from "next/link";
+import { Suspense } from "react";
 
 const FAQsSection = ({ locale }: { locale: "ar" | "en" }) => {
   return (
@@ -15,7 +16,14 @@ const FAQsSection = ({ locale }: { locale: "ar" | "en" }) => {
         {locale === "ar" ? "الأسئلة الشائعة" : "Frequently Asked Questions"}
       </Typography>
       <Box>
-        <FAQs locale={locale} firstFaqOpen={true} faqsCount={3} random={true} />
+        <Suspense fallback={<Box height={{ xs: "1040px", md: "520px" }} />}>
+          <FAQs
+            locale={locale}
+            firstFaqOpen={true}
+            faqsCount={3}
+            random={true}
+          />
+        </Suspense>
       </Box>
       <Box textAlign="center" padding="20px">
         <Link href={`/${locale}/faqs`}>
