@@ -16,7 +16,7 @@ export default function StoryCard({
 }) {
   return (
     <Card sx={{ height: "100%" }}>
-      <Link href={`/${locale}/stories/${story.id}`}>
+      <Link href={`/${locale}/kafala_stories/${story.id}`}>
         <Box display="flex" height="100%">
           <Button sx={{ textAlign: "initial", p: 0 }}>
             <Box

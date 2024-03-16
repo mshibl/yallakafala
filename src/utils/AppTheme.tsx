@@ -54,7 +54,7 @@ const AppTheme = createTheme({
     },
     body2: {
       fontSize: "1rem",
-      lineHeight: 2,
+      lineHeight: 1.6,
     },
   },
 });

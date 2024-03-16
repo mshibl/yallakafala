@@ -9,12 +9,7 @@ const SilverBadge = () => {
   const locale = useLocale();
 
   return (
-    <Box
-      display="flex"
-      flexDirection={{ xs: "column", md: "row" }}
-      // alignItems="center"
-      // justifyContent="center"
-    >
+    <Box display="flex" flexDirection={{ xs: "column", md: "row" }}>
       <Box mr={locale === "ar" ? 0 : "10px"} ml={locale === "ar" ? "10px" : 0}>
         <Link href="https://www.guidestar.org/profile/85-3323627">
           <Image

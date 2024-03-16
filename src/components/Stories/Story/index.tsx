@@ -1,5 +1,5 @@
 import { fetchStory } from "@/src/utils/fetch-stories";
-import { Box } from "@mui/material";
+import { Box, Typography } from "@mui/material";
 import Image from "next/image";
 import React from "react";
 import StoryPageHeader from "../StoryPageHeader";
@@ -23,15 +23,11 @@ export default async function Story({
 
   return (
     <Box sx={{ padding: "16px" }}>
-      <StoryPageHeader
-        sx={{ mb: "8px", display: { xs: "block", md: "none" } }}
-        locale={locale}
-        title={title}
-      />
+      <StoryPageHeader sx={{ mb: "8px" }} locale={locale} title={title} />
       <Box
         sx={{
           display: "flex",
-          alignItems: "center",
+          alignItems: "flex-start",
           justifyContent: "center",
           flexDirection: { xs: "column", md: "row-reverse" },
         }}
@@ -54,12 +50,7 @@ export default async function Story({
           </Box>
         )}
         <Box flexBasis="150%" pt="8px">
-          <StoryPageHeader
-            sx={{ mb: "8px", display: { xs: "none", md: "block" } }}
-            locale={locale}
-            title={title}
-          />
-          {description}
+          <Typography variant="body2">{description}</Typography>
         </Box>
       </Box>
     </Box>

@@ -12,7 +12,7 @@ function StoryPageHeader({
 }) {
   return (
     <Box sx={sx}>
-      <Link href={`/${locale}/stories`}>
+      <Link href={`/${locale}/kafala_stories`}>
         {locale === "ar" ? "قصص الكفالة" : "Kafala Stories"}
       </Link>
       <Box style={{ fontSize: "1.5rem", fontWeight: "bold" }}>{title}</Box>

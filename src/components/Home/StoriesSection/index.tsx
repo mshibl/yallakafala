@@ -1,6 +1,7 @@
 import { Box, Button, Typography } from "@mui/material";
 import Stories from "../../Stories";
 import Link from "next/link";
+import { Suspense } from "react";
 
 const StoriesSection = ({ locale }: { locale: "ar" | "en" }) => {
   return (
@@ -14,15 +15,17 @@ const StoriesSection = ({ locale }: { locale: "ar" | "en" }) => {
         {locale === "ar" ? "قصص الكفالة" : "Kafala Stories"}
       </Typography>
       <Box>
-        <Stories
-          locale={locale}
-          cardsPerRow={3}
-          storiesCount={3}
-          random={true}
-        />
+        <Suspense fallback={<Box height={{ xs: "1040px", md: "520px" }} />}>
+          <Stories
+            locale={locale}
+            cardsPerRow={3}
+            storiesCount={3}
+            random={true}
+          />
+        </Suspense>
       </Box>
       <Box textAlign="center" padding="20px">
-        <Link href={`/${locale}/stories`}>
+        <Link href={`/${locale}/kafala_stories`}>
           <Button
             variant="text"
             color="primary"

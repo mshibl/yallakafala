@@ -4,7 +4,6 @@ import ContactList from "./contact/ContactList";
 import CopyrightStatement from "./CopyrightStatement";
 import SocialMediaList from "./newsletter/SocialMediaList";
 import SilverBadge from "./newsletter/SilverBadge";
-import { Box } from "@mui/material";
 
 const AppFooter: React.FC = () => {
   return (
@@ -21,13 +20,13 @@ const AppFooter: React.FC = () => {
       <QuickLinksList />
       <ContactList />
       <Grid
-        sx={{ mb: { xs: 30, md: 0 } }}
         container
-        direction={"column"}
         item
+        sx={{ mb: { xs: 30, md: 0 } }}
+        direction={"column"}
         xs={12}
         md={4}
-        >
+      >
         {/* <NewsletterList /> */}
         <SocialMediaList />
         <SilverBadge />

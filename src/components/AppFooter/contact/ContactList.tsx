@@ -1,36 +1,51 @@
-import { Typography } from "@mui/material";
+import { Box, Typography } from "@mui/material";
 import Grid from "@mui/material/Grid";
 import EmailUs from "./EmailUs";
 import Address from "./Address";
-import { useTranslations } from "next-intl";
-import { headers } from "next/headers";
+import { useLocale, useTranslations } from "next-intl";
 import Link from "next/link";
+import { getLocationDataFromCookies } from "@/src/utils/geolocation";
 
 const ContactList = () => {
   const t = useTranslations("AppFooter.contactUs");
-  const country = headers().get("country");
+  const locationData = getLocationDataFromCookies();
+  const locale = useLocale();
 
   const egyptAddress = (
     <>
-      {t("egyptAddress.lineOne")} <br />
-      {t("egyptAddress.lineTwo")}
+      {locale === "ar"
+        ? "شارع اللاسلكي، المعادي الجديدة. القاهرة"
+        : "El Laselki Street, New Maadi, Cairo"}
+      <br />
       <Link
         style={{ textDecoration: "underline" }}
         href="https://maps.app.goo.gl/d24Rt7cnGfYYkSyq8?g_st=ic"
       >
-        {t("egyptAddress.lineThree")}
+        {locale === "ar" ? "العنوان على الخريطة" : "Address on Map"}
       </Link>
     </>
   );
 
   const usAddress = (
-    <>
-      {t("usAddress.lineOne")}
-      <br /> {t("usAddress.lineTwo")}
+    <Box
+      sx={{ direction: "ltr", textAlign: locale === "ar" ? "right" : "left" }}
+    >
+      15 Onondaga Ave
       <br />
-      {t("usAddress.lineThree")}
-    </>
+      San Francisco, California
+      <br />
+      T: (415) 246-5007
+    </Box>
   );
+
+  const country = locationData.country.toLowerCase();
+
+  let EgyptAddressTitle = locale === "ar" ? "العنوان" : "Address";
+  EgyptAddressTitle +=
+    country !== "eg" ? (locale === "ar" ? " فى مصر" : " in Egypt") : "";
+
+  const USAddressTitle =
+    locale === "ar" ? "العنوان فى امريكا" : "Address in USA";
 
   return (
     <Grid
@@ -47,10 +62,9 @@ const ContactList = () => {
         </Typography>
       </Grid>
       <EmailUs />
-      {country === "EG" ? (
-        <Address title={t("egyptAddressTitle")} content={egyptAddress} />
-      ) : (
-        <Address title={t("usAddressTitle")} content={usAddress} />
+      <Address title={EgyptAddressTitle} content={egyptAddress} />
+      {country !== "eg" && (
+        <Address content={usAddress} title={USAddressTitle} />
       )}
     </Grid>
   );
