@@ -1,50 +1,40 @@
 "use client";
 
-import React, { useState } from "react";
-import Script from "next/script";
+import React from "react";
 import CloseIcon from "@mui/icons-material/Close";
 import useResponsiveBreakpoint from "@/src/utils/mui-utils";
 import DialogTransition from "../DialogTransition";
-import {
-  Box,
-  CircularProgress,
-  Dialog,
-  IconButton,
-  Typography,
-} from "@mui/material";
-
-/**
- * DonationDialog relies on the eTapestry donation form. The form is loaded in an iframe inside a dialog.
- * "eTapestry" is a third-party service that provides donation processing among other services to Yalla Kafala.
- */
+import { Box, Dialog, IconButton, Typography } from "@mui/material";
+import ETapestryDonationForm from "../ETapestryDonationForm";
+import { useLocationData } from "@/src/utils/useLocationData";
+import EgyptDonationOptions from "../EgyptDonationOptions";
 
 const DonationDialog = ({
   locale,
   donationFormOpen,
   setDonationFormOpen,
 }: {
-  locale: "ar" | "en";
+  locale: string;
   donationFormOpen: boolean;
   setDonationFormOpen: (open: boolean) => void;
 }) => {
-  const [iframeLoading, setIframeLoading] = useState(true);
-
-  const handleIframeDoneLoading = () => {
-    setIframeLoading(false);
-  };
-
   const isMD = useResponsiveBreakpoint("md");
+
+  const { locationData, loading, error } = useLocationData();
+  if (loading || error || !locationData) return null;
+
+  const country = locationData?.country.toLowerCase();
 
   return (
     <Dialog
       fullWidth
+      keepMounted
       open={donationFormOpen}
-      onClose={() => {
-        setDonationFormOpen(false);
-        setIframeLoading(true);
-      }}
       TransitionComponent={DialogTransition}
       fullScreen={!isMD}
+      onClose={() => {
+        setDonationFormOpen(false);
+      }}
     >
       <Box
         display="flex"
@@ -60,59 +50,19 @@ const DonationDialog = ({
         <IconButton
           onClick={() => {
             setDonationFormOpen(false);
-            setIframeLoading(true);
           }}
         >
           <CloseIcon />
         </IconButton>
       </Box>
-      <Box
-        height="100%"
-        minHeight="500px"
-        display="flex"
-        flexDirection="column"
-      >
-        {iframeLoading && (
-          <Box
-            display="flex"
-            flexDirection="column"
-            alignItems="center"
-            pt="20px"
-          >
-            <CircularProgress />
-            <Typography
-              align="center"
-              pt="20px"
-              pb="20px"
-              fontWeight="bold"
-              color="primary.main"
-            >
-              {locale === "ar"
-                ? "جاري تحميل نموذج التبرع..."
-                : "Loading donation form..."}
-            </Typography>
-          </Box>
-        )}
 
-        <Box height="100%">
-          <Script
-            type="text/JavaScript"
-            src="//app.etapestry.com/hosted/eTapestry.com/etapEmbedResponsiveResizing.js"
-          ></Script>
-          <iframe
-            id="etapIframe"
-            style={{
-              border: "none",
-              width: "100%",
-              height: "100%",
-              minHeight: "1407px",
-              visibility: iframeLoading ? "hidden" : "visible",
-            }}
-            src="https://app.etapestry.com/onlineforms/YallaKafala/website-donation.html"
-            onLoad={handleIframeDoneLoading}
-          ></iframe>
+      {country === "eg" ? (
+        <Box padding="20px">
+          <EgyptDonationOptions locale={locale} />
         </Box>
-      </Box>
+      ) : (
+        <ETapestryDonationForm locale={locale} show={donationFormOpen} />
+      )}
     </Dialog>
   );
 };

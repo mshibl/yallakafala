@@ -1,18 +1,22 @@
+"use client";
+
 import { Box, Typography } from "@mui/material";
 import Grid from "@mui/material/Grid";
 import EmailUs from "./EmailUs";
 import Address from "./Address";
-import { useLocale, useTranslations } from "next-intl";
+import { useLocale } from "next-intl";
 import Link from "next/link";
-import { getLocationDataFromCookies } from "@/src/utils/geolocation";
+import { useLocationData } from "@/src/utils/useLocationData";
 
 const ContactList = () => {
-  const t = useTranslations("AppFooter.contactUs");
-  const locationData = getLocationDataFromCookies();
   const locale = useLocale();
+  const { locationData, loading, error } = useLocationData();
+
+  if (loading) return null;
+  if (!locationData) return null;
 
   const egyptAddress = (
-    <>
+    <Typography variant="body2">
       {locale === "ar"
         ? "شارع اللاسلكي، المعادي الجديدة. القاهرة"
         : "El Laselki Street, New Maadi, Cairo"}
@@ -23,11 +27,12 @@ const ContactList = () => {
       >
         {locale === "ar" ? "العنوان على الخريطة" : "Address on Map"}
       </Link>
-    </>
+    </Typography>
   );
 
   const usAddress = (
-    <Box
+    <Typography
+      variant="body2"
       sx={{ direction: "ltr", textAlign: locale === "ar" ? "right" : "left" }}
     >
       15 Onondaga Ave
@@ -35,7 +40,7 @@ const ContactList = () => {
       San Francisco, California
       <br />
       T: (415) 246-5007
-    </Box>
+    </Typography>
   );
 
   const country = locationData.country.toLowerCase();
@@ -58,7 +63,7 @@ const ContactList = () => {
     >
       <Grid item sx={{ pb: 6 }}>
         <Typography variant="h6" fontWeight={700}>
-          {t("title")}
+          {locale === "ar" ? "تواصل معنا" : "Contact Us"}
         </Typography>
       </Grid>
       <EmailUs />

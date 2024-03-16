@@ -1,6 +1,4 @@
 import { Box, Typography } from "@mui/material";
-import Image from "next/image";
-import QuickDonate from "@/src/components/Home/HeroSection/HeroDonateButton";
 
 const MissionStatement = ({ locale }: { locale: "ar" | "en" }) => {
   return (
@@ -19,9 +17,9 @@ const MissionStatement = ({ locale }: { locale: "ar" | "en" }) => {
       >
         {locale === "ar" ? "رسالتنا" : "Our Mission"}
       </Typography>
-      <Typography fontSize="20px" textAlign="center" padding="20px" pt={0}>
+      <Typography variant="body2" textAlign="center" padding="20px" pt={0}>
         {locale === "ar"
-          ? "تقدم الرعاية الجيدة للأيتام من خلال الدعوة والتثقيف و تطوير الموارد للعائلات الكافلة"
+          ? "تقديم الرعاية الجيدة للأيتام من خلال الدعوة والتثقيف و تطوير الموارد للعائلات الكافلة"
           : "Advance quality care for orphans by advocating, educating, and developing resources for Kafala families"}
       </Typography>
     </Box>

@@ -1,13 +1,14 @@
-import { getLocationDataFromCookies } from "@/src/utils/geolocation";
-import { Box } from "@mui/material";
+"use client";
+
+import { useLocationData } from "@/src/utils/useLocationData";
 import Grid from "@mui/material/Grid";
 import Typography from "@mui/material/Typography";
 import { useLocale, useTranslations } from "next-intl";
-import { headers } from "next/headers";
 
 const CopyrightStatement = () => {
   const locale = useLocale();
-  const locationData = getLocationDataFromCookies();
+  const { locationData, loading, error } = useLocationData();
+  if (loading || error || !locationData) return null;
   const country = locationData.country.toLowerCase();
 
   let text: JSX.Element | string = "";

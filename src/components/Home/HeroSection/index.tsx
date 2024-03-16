@@ -1,6 +1,6 @@
 import { Box, Typography } from "@mui/material";
 import Image from "next/image";
-import QuickDonate from "@/src/components/Home/HeroSection/HeroDonateButton";
+import HeroDonateButton from "@/src/components/Home/HeroSection/HeroDonateButton";
 
 const HeroSection = ({ locale }: { locale: "ar" | "en" }) => {
   return (
@@ -27,10 +27,10 @@ const HeroSection = ({ locale }: { locale: "ar" | "en" }) => {
           paddingBottom="20px"
         >
           {locale === "ar"
-            ? "شاركنا فى بناء أفضل مستقبل ممكن لفاقدي الرعاية الأسرية والأسر الكافلة"
+            ? "شاركنا فى بناء مستقبل أفضل لفاقدي الرعاية الأسرية والأسر الكافلة"
             : "Join us in building a better future for orphans and Kafala families"}
         </Typography>
-        <QuickDonate locale={locale} />
+        <HeroDonateButton locale={locale} />
       </Box>
       <Box
         maxWidth="100%"
