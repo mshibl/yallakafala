@@ -49,7 +49,7 @@ export default function StoryCard({
                 {locale === "ar" ? story.arabic_title : story.english_title}
               </Typography>
               <Typography
-                fontSize="16px"
+                variant="body2"
                 color="text.secondary"
                 sx={{
                   WebkitLineClamp: 4,

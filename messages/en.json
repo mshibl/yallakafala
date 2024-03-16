@@ -54,6 +54,9 @@
   "AppFooter": {
     "quickLinks": {
       "title": "Quick Links",
+      "donate": {
+        "title": "Donate"
+      },
       "what_is_kafala": {
         "title": "What is Kafala?"
       },

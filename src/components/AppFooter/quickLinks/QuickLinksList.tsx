@@ -5,6 +5,7 @@ import Grid from "@mui/material/Grid";
 import { useLocale, useTranslations } from "next-intl";
 import {
   ABOUT_US_PAGE,
+  DONATE_PAGE,
   FAQS_PAGE,
   KAFALA_STEPS_PAGE,
   KAFALA_STORIES_PAGE,
@@ -13,6 +14,7 @@ import {
 } from "@/src/constants/pages";
 
 const QUICK_LINKS = [
+  DONATE_PAGE,
   ABOUT_US_PAGE,
   KAFALA_STEPS_PAGE,
   KAFALA_STORIES_PAGE,

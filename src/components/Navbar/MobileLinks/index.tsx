@@ -5,6 +5,7 @@ import { IconButton, Menu, MenuItem, Typography } from "@mui/material";
 import MenuIcon from "@mui/icons-material/Menu";
 import {
   ABOUT_US_PAGE,
+  DONATE_PAGE,
   FAQS_PAGE,
   KAFALA_STEPS_PAGE,
   KAFALA_STORIES_PAGE,
@@ -14,6 +15,7 @@ import {
 import Link from "next/link";
 
 const MOBILE_LINKS_PAGES = [
+  DONATE_PAGE,
   ABOUT_US_PAGE,
   KAFALA_STEPS_PAGE,
   KAFALA_STORIES_PAGE,

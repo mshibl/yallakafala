@@ -3,6 +3,7 @@ import Box from "@mui/material/Box";
 import { useLocale, useTranslations } from "next-intl";
 import { Button, Menu, MenuItem, Typography } from "@mui/material";
 import { ArrowDropDown } from "@mui/icons-material";
+import NavbarDonateButton from "@/src/components/Navbar/NavbarDonateButton";
 import Link from "next/link";
 import {
   ABOUT_US_PAGE,
@@ -24,8 +25,8 @@ const DESKTOP_HIGHLIGHTED_PAGES = [
   KAFALA_STEPS_PAGE,
   KAFALA_STORIES_PAGE,
   WHAT_IS_KAFALA_PAGE,
-  ABOUT_US_PAGE,
   FAQS_PAGE,
+  ABOUT_US_PAGE,
 ];
 
 const KNOWLEDGE_CENTER_PAGES = [
@@ -94,6 +95,16 @@ function DesktopLinks({
             </Button>
           </Link>
         ))}
+
+        {/* Donate Button */}
+        <Box
+          sx={{
+            display: { xs: "none", lg: "flex" },
+            marginLeft: "36px",
+          }}
+        >
+          <NavbarDonateButton />
+        </Box>
 
         <Menu
           sx={{ mt: "40px" }}

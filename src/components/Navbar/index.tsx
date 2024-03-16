@@ -63,16 +63,6 @@ function Navbar() {
           handleCloseKnowledgeCenterMenu={handleCloseKnowledgeCenterMenu}
         />
 
-        {/* Donate Button */}
-        <Box
-          sx={{
-            display: { xs: "none", lg: "flex" },
-            marginLeft: "36px",
-          }}
-        >
-          <NavbarDonateButton />
-        </Box>
-
         {/* Language Selector */}
         <SwitchLanguageButton />
 

@@ -18,7 +18,7 @@ const Address: React.FC<AddressProps> = ({ title, content }) => {
         <Typography sx={{ pb: 3.5 }} variant="h6" fontWeight={600}>
           {title}
         </Typography>
-        <Typography variant="body2">{content}</Typography>
+        {content}
       </Box>
     </Grid>
   );

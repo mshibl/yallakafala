@@ -5,7 +5,7 @@ import SubmitDonationButton from "./SubmitDonationButton";
 import { Box } from "@mui/material";
 import DonationDialog from "../../../DonationDialog";
 
-const QuickDonate = ({ locale }: { locale: "ar" | "en" }) => {
+const HeroDonateButton = ({ locale }: { locale: "ar" | "en" }) => {
   const [donationFormOpen, setDonationFormOpen] = useState(false);
 
   const openDonationForm = () => {
@@ -13,10 +13,14 @@ const QuickDonate = ({ locale }: { locale: "ar" | "en" }) => {
   };
 
   return (
-    <Box display="flex" width="100%" flexDirection="column">
+    <Box
+      width="100%"
+      flexDirection="column"
+      display={{ xs: "none", md: "flex" }}
+    >
       <SubmitDonationButton handleSubmit={openDonationForm} locale={locale} />
       <DonationDialog
-        locale="en"
+        locale={locale}
         donationFormOpen={donationFormOpen}
         setDonationFormOpen={setDonationFormOpen}
       />
@@ -24,4 +28,4 @@ const QuickDonate = ({ locale }: { locale: "ar" | "en" }) => {
   );
 };
 
-export default QuickDonate;
+export default HeroDonateButton;
