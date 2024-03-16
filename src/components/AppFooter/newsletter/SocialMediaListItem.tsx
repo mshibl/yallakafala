@@ -6,6 +6,7 @@ import Instagram from "@mui/icons-material/Instagram";
 import X from "@mui/icons-material/X";
 import YouTube from "@mui/icons-material/YouTube";
 import { Language } from "@mui/icons-material";
+import { Button, IconButton } from "@mui/material";
 
 interface SocialMediaListItemProps {
   name: string;
@@ -20,19 +21,19 @@ const SocialMediaListItem: React.FC<SocialMediaListItemProps> = ({
   switch (name) {
     case "facebook":
       url = "https://www.facebook.com/YallaKafala";
-      icon = <FacebookRoundedIcon fontSize="small" htmlColor="#ffffff" />;
+      icon = <FacebookRoundedIcon htmlColor="#ffffff" />;
       break;
     case "instagram":
       url = "https://www.instagram.com/yallakafala";
-      icon = <Instagram fontSize="small" htmlColor="#ffffff" />;
+      icon = <Instagram htmlColor="#ffffff" />;
       break;
     case "youtube":
       url = "https://www.youtube.com/Yalla%20Kafala";
-      icon = <YouTube fontSize="small" htmlColor="#ffffff" />;
+      icon = <YouTube htmlColor="#ffffff" />;
       break;
     case "twitter":
       url = "https://twitter.com/yallakafala";
-      icon = <X fontSize="small" htmlColor="#ffffff" />;
+      icon = <X htmlColor="#ffffff" />;
       break;
     default:
   }
@@ -44,7 +45,9 @@ const SocialMediaListItem: React.FC<SocialMediaListItemProps> = ({
         pl: language === "ar" ? 3.5 : 0,
       }}
     >
-      <Link href={url}>{icon}</Link>
+      <Link href={url}>
+        <IconButton>{icon}</IconButton>
+      </Link>
     </Grid>
   );
 };

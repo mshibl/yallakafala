@@ -14,7 +14,7 @@ const SocialMediaList = () => {
     <Grid
       item
       sx={{
-        pb: 13,
+        mb: "60px"
       }}
     >
       <Box>
