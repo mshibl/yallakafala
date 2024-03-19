@@ -39,6 +39,7 @@ export default async function Story({
             height="70vw"
             m="16px"
             maxHeight={500}
+            alignSelf="center"
           >
             <Image
               fill={true}
