@@ -11,6 +11,30 @@ const nextConfig = {
       },
     ],
   },
+  async redirects() {
+    return [
+      {
+        source: "/donate-en",
+        destination: "/ar/donate",
+        permanent: true,
+      },
+      {
+        source: "/donate-ar",
+        destination: "/ar/donate",
+        permanent: true,
+      },
+      {
+        source: "/faqs",
+        destination: "/ar/faqs",
+        permanent: true,
+      },
+      {
+        source: "/kafala-stories",
+        destination: "/ar/kafala_stories",
+        permanent: true,
+      },
+    ];
+  },
 };
 
 module.exports = withNextIntl(nextConfig);

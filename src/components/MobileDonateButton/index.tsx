@@ -20,13 +20,13 @@ const MobileDonationButton = ({ locale }: { locale: "ar" | "en" }) => {
     >
       <Button
         onClick={openDonationForm}
-        variant="text"
+        variant="contained"
         fullWidth
         sx={{
-          bgcolor: "red",
+          height: "64px",
           borderRadius: 0,
           color: "white",
-          fontSize: "20px",
+          fontSize: "24px",
           fontWeight: 700,
         }}
       >
