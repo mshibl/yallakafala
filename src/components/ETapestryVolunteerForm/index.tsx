@@ -2,14 +2,12 @@
 
 import React, { useState } from "react";
 import { Box, CircularProgress, Typography } from "@mui/material";
-import useResponsiveBreakpoint from "@/src/utils/mui-utils";
 
 /**
- * ETapestryDonationForm relies on the eTapestry iframe donation form.
- * "eTapestry" is a third-party service that provides donation processing among other services to Yalla Kafala.
+ * ETapestryVolunteerForm relies on the eTapestry iframe volunteer form.
  */
 
-const ETapestryDonationForm = ({
+const ETapestryVolunteerForm = ({
   locale,
   show,
 }: {
@@ -21,8 +19,6 @@ const ETapestryDonationForm = ({
   const handleIframeDoneLoading = () => {
     setIframeLoading(false);
   };
-
-  const isMD = useResponsiveBreakpoint("md");
 
   return (
     <Box height="100%" minHeight="500px" display="flex" flexDirection="column">
@@ -42,8 +38,8 @@ const ETapestryDonationForm = ({
             color="primary.main"
           >
             {locale === "ar"
-              ? "جاري تحميل نموذج التبرع..."
-              : "Loading donation form..."}
+              ? "جاري تحميل نموذج التطوع..."
+              : "Loading volunteer form..."}
           </Typography>
         </Box>
       )}
@@ -58,7 +54,7 @@ const ETapestryDonationForm = ({
             display: show ? "block" : "none",
             visibility: iframeLoading ? "hidden" : "visible",
           }}
-          src="https://app.etapestry.com/onlineforms/YallaKafala/website-donation.html"
+          src="https://app.etapestry.com/onlineforms/YallaKafala/volunteer.html"
           onLoad={handleIframeDoneLoading}
         ></iframe>
       </Box>
@@ -66,4 +62,4 @@ const ETapestryDonationForm = ({
   );
 };
 
-export default ETapestryDonationForm;
+export default ETapestryVolunteerForm;

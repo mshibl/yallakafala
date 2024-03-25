@@ -7,6 +7,7 @@ import Address from "./Address";
 import { useLocale } from "next-intl";
 import Link from "next/link";
 import { useLocationData } from "@/src/utils/useLocationData";
+import Volunteer from "./Volunteer";
 
 const ContactList = () => {
   const locale = useLocale();
@@ -66,7 +67,10 @@ const ContactList = () => {
           {locale === "ar" ? "تواصل معنا" : "Contact Us"}
         </Typography>
       </Grid>
-      <EmailUs />
+      <Box sx={{ pb: "20px" }}>
+      <EmailUs locale={locale} />
+      <Volunteer locale={locale} />
+      </Box>
       <Address title={EgyptAddressTitle} content={egyptAddress} />
       {country !== "eg" && (
         <Address content={usAddress} title={USAddressTitle} />
