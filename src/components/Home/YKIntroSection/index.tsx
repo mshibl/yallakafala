@@ -19,7 +19,7 @@ const YKIntroSection = ({ locale }: { locale: "ar" | "en" }) => {
             : "Yalla Kafala is a non-profit charity founded in 2020 with the aim of creating a better life for orphans in Egypt by raising awareness about Kafala, facilitating Kafala procedures, guiding Kafala families and preparing them by providing them with the necessary tools to raise children who are mentally and behaviorally healthy."}
         </Typography>
       </Box>
-      <Box padding={{ xs: "20px", md: "40px" }} flexBasis="100%">
+      <Box padding="20px" flexBasis="100%" height="300px">
         <iframe
           width="100%"
           height="100%"

@@ -86,7 +86,7 @@ function DesktopLinks({
               key={pageName}
               sx={{
                 my: 2,
-                color: "#0000000",
+                color: "#000000",
                 fontSize: "16px",
                 textTransform: "none",
               }}

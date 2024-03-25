@@ -21,6 +21,7 @@ function DonateButton() {
               fontSize: "14px",
               borderRadius: "24px",
               textTransform: "none",
+              boxShadow: "none",
             }}
           >
             {locale === "en" ? "Donate" : "تبرع الآن"}

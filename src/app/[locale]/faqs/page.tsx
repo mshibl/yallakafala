@@ -9,7 +9,7 @@ const FAQsPage = ({ params: { locale } }: { params: { locale: string } }) => {
   return (
     <ErrorBoundary locale={locale}>
       <Suspense fallback={<LoadingFallback />}>
-        <Box bgcolor="secondary.main">
+        <Box>
           <FAQsPageHeader locale={locale} />
           <FAQs locale={locale} firstFaqOpen={true} />
         </Box>
