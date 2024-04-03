@@ -38,9 +38,9 @@ export default async function FAQs({
     >
       {faqs.map((faq, index) => {
         const title =
-          locale === "en" ? faq.question.english : faq.question.arabic;
+          locale === "en" ? faq.english_question : faq.arabic_question;
         const description =
-          locale === "en" ? faq.answer.english : faq.answer.arabic;
+          locale === "en" ? faq.english_answer : faq.arabic_answer;
 
         return (
           <FaqItem
