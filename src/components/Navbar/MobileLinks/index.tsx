@@ -4,19 +4,27 @@ import { useLocale, useTranslations } from "next-intl";
 import { IconButton, Menu, MenuItem, Typography } from "@mui/material";
 import MenuIcon from "@mui/icons-material/Menu";
 import {
-  ABOUT_US_PAGE,
   DONATE_PAGE,
   FAQS_PAGE,
   KAFALA_STEPS_PAGE,
   KAFALA_STORIES_PAGE,
   PAGE_PATHNAMES,
   WHAT_IS_KAFALA_PAGE,
+  WHO_WE_ARE_PAGE,
+  VISION_MISSION_AND_VALUES_PAGE,
+  ACTIVITIES_AND_MILESTONES_PAGE,
+  KAFALA_PARTNERS_PAGE,
+  HOME_PAGE,
 } from "@/src/constants/pages";
 import Link from "next/link";
 
 const MOBILE_LINKS_PAGES = [
+  HOME_PAGE,
   DONATE_PAGE,
-  ABOUT_US_PAGE,
+  WHO_WE_ARE_PAGE,
+  VISION_MISSION_AND_VALUES_PAGE,
+  ACTIVITIES_AND_MILESTONES_PAGE,
+  KAFALA_PARTNERS_PAGE,
   KAFALA_STEPS_PAGE,
   KAFALA_STORIES_PAGE,
   WHAT_IS_KAFALA_PAGE,

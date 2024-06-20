@@ -17,7 +17,7 @@ export const ACTIVITIES_AND_MILESTONES_PAGE = "activities_and_milestones";
 export const KAFALA_PARTNERS_PAGE = "kafala_partners";
 
 export const PAGE_PATHNAMES: { [key: string]: string } = {
-  [HOME_PAGE]: "/home",
+  [HOME_PAGE]: "/",
   [ABOUT_US_PAGE]: "/about_us",
   [KAFALA_STORIES_PAGE]: "/kafala_stories",
   [WHAT_IS_KAFALA_PAGE]: "/what_is_kafala",
@@ -44,11 +44,14 @@ export const ALL_PAGES = [
   DONATE_PAGE,
   FAQS_PAGE,
   KAFALA_STEPS_PAGE,
-  KAFALA_PARTNERS_PAGE,
   NEWS_AND_UPDATES_PAGE,
   CAMPAIGNS_PAGE,
   SERVICES_PAGE,
   NEWSLETTER_SIGN_UP_PAGE,
   CONTACT_US_PAGE,
   VOLUNTEER_PAGE,
+  WHO_WE_ARE_PAGE,
+  VISION_MISSION_AND_VALUES_PAGE,
+  ACTIVITIES_AND_MILESTONES_PAGE,
+  KAFALA_PARTNERS_PAGE,
 ];
