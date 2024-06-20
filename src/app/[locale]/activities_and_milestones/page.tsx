@@ -63,7 +63,7 @@ const AchievementItem = ({
         <Image src={imgSrc} alt={imgAlt} width="255" height="150" />
       </Box>
       <Box
-        padding="20px"
+        padding="10px"
         lineHeight={1.3}
         color={color}
         bgcolor="#ffffff"
@@ -79,7 +79,7 @@ const AchievementItem = ({
             {locale === "en" ? englishPrefix : arabicPrefix}
           </Box>
         )}
-        <Box fontWeight="700" fontSize="54px" lineHeight={1}>
+        <Box fontWeight="700" fontSize="54px" lineHeight={1.3}>
           {achievementNumber}
         </Box>
         <Box fontWeight="bold" fontSize="20px" textAlign="center">
@@ -204,8 +204,10 @@ const ActivitiesAndMilestonesPage = ({
               imgSrc="/images/trained-kafala-families.svg"
               imgAlt="Trained Kafala Families"
               achievementNumber="1000+"
-              englishAchievementDescription="Trained Kafala Families"
-              arabicAchievementDescription="عائلة كفالة مدربة"
+              englishPrefix="Trained"
+              arabicPrefix="تم تدريب"
+              englishAchievementDescription="Kafala Families"
+              arabicAchievementDescription="عائلة كفالة"
             />
 
             <AchievementItem
@@ -214,6 +216,8 @@ const ActivitiesAndMilestonesPage = ({
               imgSrc="/images/governorates.svg"
               imgAlt="Governorates"
               achievementNumber="11"
+              englishPrefix="Present in"
+              arabicPrefix="متواجدون في"
               englishAchievementDescription="Governorates"
               arabicAchievementDescription="محافظة"
             />
@@ -237,9 +241,9 @@ const ActivitiesAndMilestonesPage = ({
               imgAlt="Community Events"
               achievementNumber="600+"
               englishPrefix="Hosted"
-              arabicPrefix="استضافة"
+              arabicPrefix="تم تنظيم"
               englishAchievementDescription="Community Engagement Events"
-              arabicAchievementDescription="فعاليات مشاركة مجتمعية"
+              arabicAchievementDescription="فاعلية مشاركة مجتمعية"
             />
           </Box>
         </Box>
