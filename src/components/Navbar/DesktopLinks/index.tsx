@@ -134,7 +134,7 @@ function DesktopLinks({
             >
               <Typography
                 color={activePage === pageName ? "#2194BC" : "#87226C"}
-                fontWeight={activePage === pageName ? "bold" : "normal"}
+                fontWeight={"bold"}
                 textAlign="center"
                 fontSize="16px"
               >
