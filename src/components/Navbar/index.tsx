@@ -5,36 +5,37 @@ import AppBar from "@mui/material/AppBar";
 import Box from "@mui/material/Box";
 import Toolbar from "@mui/material/Toolbar";
 import Logo from "../Logo";
-import NavbarDonateButton from "./NavbarDonateButton";
 import SwitchLanguageButton from "./SwitchLanguageButton";
 import DesktopLinks from "./DesktopLinks";
 import MobileLinks from "./MobileLinks";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 
 function Navbar() {
   const [anchorPagesMenu, setAnchorPagesMenu] =
-    React.useState<null | HTMLElement>(null);
-
-  const [anchorKnowledgeCenter, setAnchorKnowledgeCenter] =
     React.useState<null | HTMLElement>(null);
 
   const handleOpenPagesMenu = (event: React.MouseEvent<HTMLElement>) => {
     setAnchorPagesMenu(event.currentTarget);
   };
 
-  const handleOpenKnowledgeCenterMenu = (
-    event: React.MouseEvent<HTMLElement>
-  ) => {
-    setAnchorKnowledgeCenter(event.currentTarget);
-  };
+  const [anchorAboutUsMenu, setAnchorAboutUsMenu] =
+    React.useState<null | HTMLElement>(null);
 
   const handleClosePagesMenu = () => {
     setAnchorPagesMenu(null);
   };
 
-  const handleCloseKnowledgeCenterMenu = () => {
-    setAnchorKnowledgeCenter(null);
+  const handleOpenAboutUsMenu = (event: React.MouseEvent<HTMLElement>) => {
+    setAnchorAboutUsMenu(event.currentTarget);
   };
+
+  const handleCloseAboutUsMenu = () => {
+    setAnchorAboutUsMenu(null);
+  };
+
+  const pathname = usePathname();
+  const activePage = pathname.split("/")[2];
 
   return (
     <AppBar
@@ -50,7 +51,7 @@ function Navbar() {
     >
       <Toolbar sx={{ px: 0 }}>
         {/* Logo */}
-        <Box sx={{ ml: "24px", flexGrow: 1 }}>
+        <Box key="logo" sx={{ ml: "24px", flexGrow: 1 }}>
           <Link href="/">
             <Logo />
           </Link>
@@ -58,16 +59,19 @@ function Navbar() {
 
         {/* Desktop Links */}
         <DesktopLinks
-          anchorKnowledgeCenter={anchorKnowledgeCenter}
-          handleOpenKnowledgeCenterMenu={handleOpenKnowledgeCenterMenu}
-          handleCloseKnowledgeCenterMenu={handleCloseKnowledgeCenterMenu}
+          key="desktop-links"
+          activePage={activePage}
+          handleOpenAboutUsMenu={handleOpenAboutUsMenu}
+          handleCloseAboutUsMenu={handleCloseAboutUsMenu}
+          anchorAboutUsMenu={anchorAboutUsMenu}
         />
 
         {/* Language Selector */}
-        <SwitchLanguageButton />
+        <SwitchLanguageButton key="switch-language-button" />
 
         {/* Mobile */}
         <MobileLinks
+          key="mobile-links"
           anchorPagesMenu={anchorPagesMenu}
           handleOpenPagesMenu={handleOpenPagesMenu}
           handleClosePagesMenu={handleClosePagesMenu}

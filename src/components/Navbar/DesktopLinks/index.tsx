@@ -7,18 +7,15 @@ import NavbarDonateButton from "@/src/components/Navbar/NavbarDonateButton";
 import Link from "next/link";
 import {
   ABOUT_US_PAGE,
-  CAMPAIGNS_PAGE,
-  CONTACT_US_PAGE,
+  ACTIVITIES_AND_MILESTONES_PAGE,
   FAQS_PAGE,
   KAFALA_PARTNERS_PAGE,
   KAFALA_STEPS_PAGE,
   KAFALA_STORIES_PAGE,
-  NEWSLETTER_SIGN_UP_PAGE,
-  NEWS_AND_UPDATES_PAGE,
   PAGE_PATHNAMES,
-  SERVICES_PAGE,
-  VOLUNTEER_PAGE,
+  VISION_MISSION_AND_VALUES_PAGE,
   WHAT_IS_KAFALA_PAGE,
+  WHO_WE_ARE_PAGE,
 } from "@/src/constants/pages";
 
 const DESKTOP_HIGHLIGHTED_PAGES = [
@@ -29,25 +26,23 @@ const DESKTOP_HIGHLIGHTED_PAGES = [
   ABOUT_US_PAGE,
 ];
 
-const KNOWLEDGE_CENTER_PAGES = [
-  KAFALA_STEPS_PAGE,
+const ABOUT_US_MENU_PAGES = [
+  WHO_WE_ARE_PAGE,
+  VISION_MISSION_AND_VALUES_PAGE,
+  ACTIVITIES_AND_MILESTONES_PAGE,
   KAFALA_PARTNERS_PAGE,
-  NEWS_AND_UPDATES_PAGE,
-  CAMPAIGNS_PAGE,
-  SERVICES_PAGE,
-  NEWSLETTER_SIGN_UP_PAGE,
-  CONTACT_US_PAGE,
-  VOLUNTEER_PAGE,
 ];
 
 function DesktopLinks({
-  anchorKnowledgeCenter,
-  handleOpenKnowledgeCenterMenu,
-  handleCloseKnowledgeCenterMenu,
+  activePage,
+  handleOpenAboutUsMenu,
+  handleCloseAboutUsMenu,
+  anchorAboutUsMenu,
 }: {
-  anchorKnowledgeCenter: HTMLElement | null;
-  handleOpenKnowledgeCenterMenu: (e: React.MouseEvent<HTMLElement>) => void;
-  handleCloseKnowledgeCenterMenu: (e: React.MouseEvent<HTMLElement>) => void;
+  activePage: string;
+  handleOpenAboutUsMenu: (e: React.MouseEvent<HTMLElement>) => void;
+  handleCloseAboutUsMenu: (e: React.MouseEvent<HTMLElement>) => void;
+  anchorAboutUsMenu: HTMLElement | null;
 }) {
   const t = useTranslations("Navbar");
   const locale = useLocale();
@@ -60,33 +55,38 @@ function DesktopLinks({
         justifyContent: "flex-end",
       }}
     >
-      <>
-        {/* <Button
-          onClick={(e) => {
-            handleOpenKnowledgeCenterMenu(e);
-          }}
-          sx={{
-            my: 2,
-            color: "#0000000",
-            fontSize: "16px",
-            textTransform: "none",
-          }}
-        >
-          {locale === "en" ? "Knowledge Center" : "مركز المعرفة"}
-          <ArrowDropDown />
-        </Button> */}
-
-        {DESKTOP_HIGHLIGHTED_PAGES.map((pageName) => (
+      {DESKTOP_HIGHLIGHTED_PAGES.map((pageName) =>
+        pageName === ABOUT_US_PAGE ? (
+          <Button
+            key={pageName}
+            onClick={(e) => {
+              handleOpenAboutUsMenu(e);
+            }}
+            sx={{
+              my: 2,
+              color: ABOUT_US_MENU_PAGES.includes(activePage)
+                ? "#2194BC"
+                : "#87226C",
+              fontWeight: "bold",
+              fontSize: "16px",
+              textTransform: "none",
+              marginLeft: "30px",
+            }}
+          >
+            {locale === "en" ? "About Us" : "من نحن"}
+            <ArrowDropDown />
+          </Button>
+        ) : (
           <Link
             key={pageName}
             href={`/${locale}${PAGE_PATHNAMES[pageName]}`}
             style={{ textDecoration: "none", marginLeft: "30px" }}
           >
             <Button
-              key={pageName}
               sx={{
                 my: 2,
-                color: "#000000",
+                color: activePage === pageName ? "#2194BC" : "#87226C",
+                fontWeight: "bold",
                 fontSize: "16px",
                 textTransform: "none",
               }}
@@ -94,47 +94,56 @@ function DesktopLinks({
               {t(`pages.${pageName}.name`)}
             </Button>
           </Link>
-        ))}
+        )
+      )}
 
-        {/* Donate Button */}
-        <Box
-          sx={{
-            display: { xs: "none", lg: "flex" },
-            marginLeft: "36px",
-          }}
-        >
-          <NavbarDonateButton />
-        </Box>
+      <Box
+        sx={{
+          display: { xs: "none", lg: "flex" },
+          marginLeft: "36px",
+        }}
+      >
+        <NavbarDonateButton />
+      </Box>
 
-        <Menu
-          sx={{ mt: "40px" }}
-          id="knowledge-center-menu"
-          anchorEl={anchorKnowledgeCenter}
-          anchorOrigin={{
-            vertical: "top",
-            horizontal: "right",
-          }}
-          transformOrigin={{
-            vertical: "top",
-            horizontal: "right",
-          }}
-          keepMounted={true}
-          open={Boolean(anchorKnowledgeCenter)}
-          onClose={handleCloseKnowledgeCenterMenu}
-        >
-          {KNOWLEDGE_CENTER_PAGES.map((pageName) => (
-            <MenuItem
-              sx={{ minWidth: "150px" }}
-              key={pageName}
-              onClick={handleCloseKnowledgeCenterMenu}
+      <Menu
+        id="about-us-menu"
+        sx={{ mt: "40px" }}
+        anchorEl={anchorAboutUsMenu}
+        keepMounted={true}
+        open={Boolean(anchorAboutUsMenu)}
+        onClose={handleCloseAboutUsMenu}
+        anchorOrigin={{
+          vertical: "top",
+          horizontal: "right",
+        }}
+        transformOrigin={{
+          vertical: "top",
+          horizontal: "right",
+        }}
+      >
+        {ABOUT_US_MENU_PAGES.map((pageName) => (
+          <MenuItem
+            sx={{ minWidth: "150px" }}
+            key={pageName}
+            onClick={handleCloseAboutUsMenu}
+          >
+            <Link
+              href={`/${locale}${PAGE_PATHNAMES[pageName]}`}
+              style={{ textDecoration: "none" }}
             >
-              <Typography color="#000000" textAlign="center">
+              <Typography
+                color={activePage === pageName ? "#2194BC" : "#87226C"}
+                fontWeight={activePage === pageName ? "bold" : "normal"}
+                textAlign="center"
+                fontSize="16px"
+              >
                 {t(`pages.${pageName}.name`)}
               </Typography>
-            </MenuItem>
-          ))}
-        </Menu>
-      </>
+            </Link>
+          </MenuItem>
+        ))}
+      </Menu>
     </Box>
   );
 }

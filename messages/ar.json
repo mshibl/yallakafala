@@ -28,9 +28,6 @@
       "kafala_steps": {
         "name": "خطوات الكفالة"
       },
-      "kafala_partners": {
-        "name": "شركاء يلا كفالة"
-      },
       "kafala_news": {
         "name": "اخبار يلا كفالة"
       },
@@ -48,6 +45,18 @@
       },
       "volunteer": {
         "name": "تطوع معنا"
+      },
+      "who_we_are": {
+        "name": "من نحن"
+      },
+      "vision_mission_and_values": {
+        "name": "الرؤية والرسالة والقيم"
+      },
+      "activities_and_milestones": {
+        "name": "الانجازات والاحداث"
+      },
+      "kafala_partners": {
+        "name": "شركاء يلا كفالة"
       }
     }
   },

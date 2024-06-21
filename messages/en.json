@@ -23,13 +23,10 @@
         "name": "Donate"
       },
       "faqs": {
-        "name": "Frequently Asked Questions"
+        "name": "FAQs"
       },
       "kafala_steps": {
         "name": "Kafala Steps"
-      },
-      "kafala_partners": {
-        "name": "Kafala Partners"
       },
       "kafala_news": {
         "name": "Kafala News"
@@ -48,6 +45,18 @@
       },
       "volunteer": {
         "name": "Volunteer"
+      },
+      "who_we_are": {
+        "name": "Who We Are"
+      },
+      "vision_mission_and_values": {
+        "name": "Vision, Mission and Values"
+      },
+      "activities_and_milestones": {
+        "name": "Activities and Milestones"
+      },
+      "kafala_partners": {
+        "name": "Kafala Partners"
       }
     }
   },
