@@ -42,7 +42,7 @@ function Navbar() {
       sx={{
         position: "sticky",
         top: 0,
-        zIndex: 1,
+        zIndex: 2,
         direction: "ltr", // Navbar should always be LTR
         backgroundColor: "#FFFFFF",
         boxShadow: "none",
