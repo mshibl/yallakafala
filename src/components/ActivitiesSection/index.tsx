@@ -1,13 +1,12 @@
+"use client";
+
 import { Box } from "@mui/material";
 import ActivityItem from "./ActivityItem";
+import useResponsiveBreakpoint from "@/src/utils/mui-utils";
 
-const ActivitiesSection = ({
-  isMD,
-  locale,
-}: {
-  isMD: boolean;
-  locale: string;
-}) => {
+const ActivitiesSection = ({ locale }: { locale: string }) => {
+  const isMD = useResponsiveBreakpoint("md");
+
   return (
     <Box
       id="activities-section"

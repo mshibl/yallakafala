@@ -11,6 +11,7 @@ const MilestoneItem = ({
   englishMilestoneText,
   arabicMilestoneText,
   index,
+  isMD,
 }: {
   imgSrc: string;
   englishImgAlt: string;
@@ -21,6 +22,7 @@ const MilestoneItem = ({
   englishMilestoneText: string;
   arabicMilestoneText: string;
   index: number;
+  isMD: boolean;
 }) => {
   return (
     <Box
@@ -29,7 +31,6 @@ const MilestoneItem = ({
       top={`${index * 200}px`}
       left={align === "right" ? "50%" : "auto"}
       right={align === "right" ? "auto" : "50%"}
-      width="100%"
       height="240px"
       display="flex"
       justifyContent={
@@ -48,6 +49,7 @@ const MilestoneItem = ({
         justifyContent="center"
         width="230px"
         height="240px"
+        maxWidth="50vw"
       >
         <Image
           src={imgSrc}
@@ -84,10 +86,11 @@ const MilestoneItem = ({
         lineHeight={1}
         paddingX="30px"
         textAlign={align === "right" ? "left" : "right"}
+        maxWidth="50vw"
       >
         {milestoneYear}
         <Box
-          fontSize="24px"
+          fontSize={isMD ? "20px" : "18px"}
           color="#2194BC"
           fontWeight="normal"
           lineHeight={1.3}

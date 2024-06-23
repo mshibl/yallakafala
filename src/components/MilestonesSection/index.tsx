@@ -1,13 +1,12 @@
+"use client";
+
 import { Box } from "@mui/material";
 import MilestoneItem from "./MilestoneItem";
+import useResponsiveBreakpoint from "@/src/utils/mui-utils";
 
-const MilestonesSection = ({
-  isMD,
-  locale,
-}: {
-  isMD: boolean;
-  locale: string;
-}) => {
+const MilestonesSection = ({ locale }: { locale: string }) => {
+  const isMD = useResponsiveBreakpoint("md");
+
   return (
     <Box
       id="milestones-section"
@@ -60,6 +59,7 @@ const MilestonesSection = ({
             englishMilestoneText="Rasha adopted Mostafa"
             arabicMilestoneText="رشا تكفل مصطفى"
             index={0}
+            isMD={isMD}
           />
 
           <MilestoneItem
@@ -72,6 +72,7 @@ const MilestonesSection = ({
             englishMilestoneText="Yalla Kafala became an initiative"
             arabicMilestoneText="يلا كفالة أصبحت مبادرة"
             index={1}
+            isMD={isMD}
           />
 
           <MilestoneItem
@@ -84,6 +85,7 @@ const MilestonesSection = ({
             englishMilestoneText="Yalla Kafala became an NGO in the US"
             arabicMilestoneText="يلا كفالة أصبحت منظمة غير حكومية في الولايات المتحدة"
             index={2}
+            isMD={isMD}
           />
 
           <MilestoneItem
@@ -96,6 +98,7 @@ const MilestonesSection = ({
             englishMilestoneText="Yalla Kafala became an NGO in Egypt"
             arabicMilestoneText="يلا كفالة أصبحت منظمة غير حكومية في مصر"
             index={3}
+            isMD={isMD}
           />
 
           <MilestoneItem
@@ -108,6 +111,7 @@ const MilestonesSection = ({
             englishMilestoneText="First Kafala is Love event"
             arabicMilestoneText="أول حدث الكفالة هى الحب"
             index={4}
+            isMD={isMD}
           />
 
           <MilestoneItem
@@ -120,6 +124,7 @@ const MilestonesSection = ({
             englishMilestoneText="Started “Positive Discipline” and “How to tell the truth about kafala” sessions"
             arabicMilestoneText="بدأت جلسات “الانضباط الإيجابي” و “كيف تقول الحقيقة عن الكفالة”"
             index={5}
+            isMD={isMD}
           />
 
           <MilestoneItem
@@ -132,6 +137,7 @@ const MilestonesSection = ({
             englishMilestoneText="Launched the Training Center and the Family Support Center"
             arabicMilestoneText="أطلق مركز التدريب ومركز دعم الأسر الكفلاء"
             index={6}
+            isMD={isMD}
           />
 
           <MilestoneItem
@@ -144,6 +150,7 @@ const MilestonesSection = ({
             englishMilestoneText="Signed a Memorandum of Understanding (MoU) with the Ministry of Social Solidarity (MoSS) and launched the Kafala Bus"
             arabicMilestoneText="وقعت مذكرة تفاهم مع وزارة التضامن الاجتماعي وأطلقت حافلة الكفالة"
             index={7}
+            isMD={isMD}
           />
 
           <MilestoneItem
@@ -156,6 +163,7 @@ const MilestonesSection = ({
             englishMilestoneText="Opened the first Yalla Kafala Family House"
             arabicMilestoneText="افتتح أول منزل أسرة يلا كفالة"
             index={8}
+            isMD={isMD}
           />
         </Box>
       </Box>

@@ -1,13 +1,12 @@
+"use client";
+
 import { Box } from "@mui/material";
 import AchievementItem from "./AchievementItem";
+import useResponsiveBreakpoint from "@/src/utils/mui-utils";
 
-const AchievementsSection = ({
-  isMD,
-  locale,
-}: {
-  isMD: boolean;
-  locale: string;
-}) => {
+const AchievementsSection = ({ locale }: { locale: string }) => {
+  const isMD = useResponsiveBreakpoint("md");
+
   return (
     <Box
       id="achievements-section"
