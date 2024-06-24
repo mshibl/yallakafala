@@ -1,5 +1,4 @@
 import { Box, Typography } from "@mui/material";
-import Image from "next/image";
 import React from "react";
 
 const Vision = ({ locale }: { locale: string }) => {
@@ -50,11 +49,11 @@ const Vision = ({ locale }: { locale: string }) => {
           display: "flex",
           justifyContent: "center",
           marginBottom: 10,
-          height: { xs: "190px", md: "532px" },
+          width: "100%",
         }}
         alt="Vision"
         src="/images/mission_vision_image.webp"
-      ></Box>
+      />
     </Box>
   );
 };
