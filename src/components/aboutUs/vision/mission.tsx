@@ -1,7 +1,7 @@
 import { Box, Typography } from "@mui/material";
 import React from "react";
 
-const Mission = () => {
+const Mission = ({ locale }: { locale: string }) => {
   return (
     <Box
       sx={{
@@ -19,7 +19,7 @@ const Mission = () => {
         }}
         variant="h2"
       >
-        Our Mission
+        {locale === "en" ? "Mission" : "مهمتنا"}
       </Typography>
       <Typography
         sx={{
@@ -28,11 +28,23 @@ const Mission = () => {
         }}
         variant="body1"
       >
-        Advancing quality care for orphans and growing families by advocating,
-        educating, and developing resources. <br />
-        <br /> Our mission also extends to developing care arrangements for
-        non-Egyptian children, including migrants and refugees, focusing on
-        community-based solutions that uphold dignity and security.
+        {locale === "en" ? (
+          <>
+            Advancing quality care for orphans and growing families by
+            advocating, educating, and developing resources. <br />
+            <br /> Our mission also extends to developing care arrangements for
+            non-Egyptian children, including migrants and refugees, focusing on
+            community-based solutions that uphold dignity and security.
+          </>
+        ) : (
+          <>
+            تقديم الرعاية ذات الجودة للأيتام وتوسيع الأسر من خلال الترويج
+            والتثقيف وتطوير الموارد. <br /> <br /> تمتد مهمتنا أيضًا إلى تطوير
+            ترتيبات الرعاية للأطفال غير المصريين، بما في ذلك المهاجرين
+            واللاجئين، مع التركيز على الحلول القائمة على المجتمع التي تحافظ على
+            الكرامة والأمان.
+          </>
+        )}
       </Typography>
     </Box>
   );

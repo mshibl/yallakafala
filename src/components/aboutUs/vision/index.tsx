@@ -4,13 +4,13 @@ import Mission from "./mission";
 import Values from "./values";
 import Vision from "./vision";
 
-const MissionVisionAndValues = () => {
+const MissionVisionAndValues = ({ locale }: { locale: string }) => {
   return (
     <>
-      <Vision />
-      <Mission />
-      <Values />
-      <HelpChildrenAndFamilies />
+      <Vision locale={locale} />
+      <Mission locale={locale} />
+      <Values locale={locale} />
+      <HelpChildrenAndFamilies locale={locale} />
     </>
   );
 };

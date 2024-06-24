@@ -5,7 +5,7 @@ import { useLocale } from "next-intl";
 import Link from "next/link";
 import React from "react";
 
-const HelpChildrenAndFamilies = () => {
+const HelpChildrenAndFamilies = ({ locale }: { locale: string }) => {
   return (
     <Box
       sx={{
@@ -25,7 +25,9 @@ const HelpChildrenAndFamilies = () => {
         }}
         variant="h2"
       >
-        Wanna Help children & Kafala families?
+        {locale === "en"
+          ? "Wanna Help children & Kafala families?"
+          : "هل تريد مساعدة الأطفال وأسر الكفالة؟"}
       </Typography>
       <Typography
         sx={{
@@ -35,7 +37,9 @@ const HelpChildrenAndFamilies = () => {
         variant="body1"
         textAlign={"center"}
       >
-        Donate or join us in building better futures for these children
+        {locale === "en"
+          ? "Donate or join us in building better futures for these children"
+          : "تبرع أو انضم إلينا في بناء مستقبل أفضل لهؤلاء الأطفال"}
       </Typography>
       <Box
         sx={{
@@ -43,8 +47,14 @@ const HelpChildrenAndFamilies = () => {
           justifyContent: "center",
         }}
       >
-        <ActionButton link="donate" text="Donate" />
-        <ActionButton link="volunteer" text="Get Involved" />
+        <ActionButton
+          link="donate"
+          text={locale === "en" ? "Donate" : "تبرع"}
+        />
+        <ActionButton
+          link="volunteer"
+          text={locale === "en" ? "Volunteer" : "تطوع"}
+        />
       </Box>
     </Box>
   );
