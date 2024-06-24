@@ -4,15 +4,17 @@ import WhoWeAreText from "./whoWeAreText";
 import HelpChildrenAndFamilies from "../helpChildrenAndFamilies";
 import Initiatives from "./initiatives";
 import YallaKafalaBeginning from "./beginning";
+import Founder from "./founder";
 
-const WhoWeAre = () => {
+const WhoWeAre = ({ locale }: { locale: string }) => {
   return (
     <>
       <HeroImage />
       <WhoWeAreText />
+      <Founder />
       <YallaKafalaBeginning />
       <Initiatives />
-      <HelpChildrenAndFamilies />
+      <HelpChildrenAndFamilies locale={locale} />
     </>
   );
 };
