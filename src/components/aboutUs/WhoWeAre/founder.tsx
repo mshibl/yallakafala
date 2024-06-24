@@ -7,62 +7,67 @@ const Founder = () => {
       sx={{
         display: "flex",
         justifyContent: "end",
-        marginTop: { xs: "20px", md: "150px" },
+        marginTop: { xs: "20px", lg: "150px" },
       }}
     >
       <Box
         sx={{
           display: "flex",
+          flexDirection: { xs: "column", lg: "row" },
           position: "relative",
           justifyContent: "end",
           backgroundColor: "secondary.main",
-          paddingY: { xs: "40px", md: "50px" },
-          paddingX: { xs: "32px", md: "180px" },
-          paddingLeft: { xs: "20px", md: "450px" },
-          borderRadius: "1000px 0px 0px 1000px",
-          width: "95%",
+          paddingY: { xs: "40px", lg: "50px" },
+          paddingX: { xs: "32px", lg: "180px" },
+          paddingLeft: { xs: "32px", lg: "450px" },
+          borderRadius: { lg: "1000px 0px 0px 1000px" },
+          width: { xs: "100%", lg: "95%" },
         }}
       >
         <Box
           sx={{
-            left: "-40px",
-            top: "-90px",
-            position: "absolute",
+            left: { lg: "-40px" },
+            top: { lg: "-90px" },
+            position: { xs: "relative", lg: "absolute" },
           }}
         >
           <Box
             sx={{
               position: "relative",
-              width: "430px",
-              height: "400px",
+              width: { lg: "430px" },
+              height: { lg: "400px" },
             }}
           >
             <Box
-              sx={{ position: "absolute", zIndex: "2" }}
+              sx={{
+                position: { xs: "relative", lg: "absolute" },
+                zIndex: "1",
+                width: "100%",
+              }}
               component={"img"}
               src="/images/founder.png"
             ></Box>
             <Box
               sx={{
+                display: { xs: "none", lg: "block" },
                 position: "absolute",
                 backgroundColor: "secondary.main",
                 width: "100%",
                 height: "90%",
-                // zIndex: "-1",
                 top: "-25px",
-                left: "-25px",
+                left: "-20px",
                 borderRadius: "8px",
               }}
             ></Box>
             <Box
               sx={{
+                display: { xs: "none", lg: "block" },
                 position: "absolute",
                 backgroundColor: "primary.main",
                 width: "100%",
                 height: "90%",
-                // zIndex: "3",
-                bottom: "-25px",
-                right: "-25px",
+                bottom: "-20px",
+                right: "-20px",
                 borderRadius: "8px",
               }}
             ></Box>
@@ -73,14 +78,14 @@ const Founder = () => {
             display: "flex",
             flexDirection: "column",
             alignItems: "end",
-            // width: { xs: "100%", md: "60%" },
+            // width: { xs: "100%", lg: "60%" },
           }}
         >
           <Typography
             sx={{
-              fontSize: { xs: "24px", md: "50px" },
+              fontSize: { xs: "24px", lg: "50px" },
               fontWeight: "bold",
-              marginBottom: { xs: "10px", md: "35px" },
+              marginBottom: { xs: "10px", lg: "35px" },
               lineHeight: "32px",
               color: "white",
               width: "100%",
@@ -91,8 +96,8 @@ const Founder = () => {
           </Typography>
           <Typography
             sx={{
-              fontSize: { xs: "16px", md: "24px" },
-              lineHeight: { xs: "25px", md: "32px" },
+              fontSize: { xs: "16px", lg: "24px" },
+              lineHeight: { xs: "25px", lg: "32px" },
               color: "white",
             }}
             variant="body1"
