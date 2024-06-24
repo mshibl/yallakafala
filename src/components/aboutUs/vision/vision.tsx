@@ -2,7 +2,7 @@ import { Box, Typography } from "@mui/material";
 import Image from "next/image";
 import React from "react";
 
-const Vision = () => {
+const Vision = ({ locale }: { locale: string }) => {
   return (
     <Box
       sx={{
@@ -29,7 +29,7 @@ const Vision = () => {
           }}
           variant="h2"
         >
-          Our Vision
+          {locale === "en" ? "Vision" : "رؤيتنا"}
         </Typography>
         <Typography
           sx={{
@@ -38,7 +38,9 @@ const Vision = () => {
           }}
           variant="body1"
         >
-          Building the best possible future for orphans and kafala families.
+          {locale === "en"
+            ? "Building the best possible future for orphans and kafala families."
+            : "بناء أفضل مستقبل ممكن للأيتام وأسر الكفالة."}
         </Typography>
       </Box>
       <Box
@@ -49,10 +51,9 @@ const Vision = () => {
           justifyContent: "center",
           marginBottom: 10,
           height: { xs: "190px", md: "532px" },
-          width: { xs: "390px", md: "1064px" },
         }}
         alt="Vision"
-        src="/images/mission_vision_image.png"
+        src="/images/mission_vision_image.webp"
       ></Box>
     </Box>
   );
