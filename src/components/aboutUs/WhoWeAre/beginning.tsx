@@ -1,7 +1,7 @@
 import { Box, Typography } from "@mui/material";
 import React from "react";
 
-const YallaKafalaBeginning = () => {
+const YallaKafalaBeginning = ({ locale }: { locale: string }) => {
   return (
     <Box
       sx={{
@@ -22,8 +22,13 @@ const YallaKafalaBeginning = () => {
         }}
         variant="h2"
       >
-        The beginning of <br />
-        Yalla Kafala
+        {locale === "en" ? (
+          <>
+            The beginning of <br /> Yalla Kafala"
+          </>
+        ) : (
+          "بداية يالا كفالة"
+        )}
       </Typography>
     </Box>
   );
