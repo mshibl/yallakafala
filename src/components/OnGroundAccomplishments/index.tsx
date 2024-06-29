@@ -31,7 +31,12 @@ const OnGroundAccomplishments = ({ locale }: { locale: string }) => {
       >
         {locale === "en" ? "On-ground Accomplishments" : "إنجازاتنا الميدانية"}
       </Box>
-      <Box className="embla" ref={emblaRef} overflow="hidden">
+      <Box
+        className="embla"
+        ref={emblaRef}
+        overflow="hidden"
+        style={{ direction: "ltr" }}
+      >
         <Box
           className="embla__container"
           display="flex"
