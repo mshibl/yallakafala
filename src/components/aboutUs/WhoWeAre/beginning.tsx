@@ -24,7 +24,7 @@ const YallaKafalaBeginning = ({ locale }: { locale: string }) => {
       >
         {locale === "en" ? (
           <>
-            The beginning of <br /> Yalla Kafala"
+            The beginning of <br /> Yalla Kafala:
           </>
         ) : (
           "بداية يلا كفالة"
