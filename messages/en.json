@@ -55,8 +55,8 @@
       "activities_and_milestones": {
         "name": "Activities and Milestones"
       },
-      "kafala_partners": {
-        "name": "Kafala Partners"
+      "partnerships": {
+        "name": "Partnerships"
       }
     }
   },
@@ -78,8 +78,8 @@
       "faqs": {
         "title": "Frequent asked questions"
       },
-      "kafala_partners": {
-        "title": "Yalla Kafala Partners"
+      "partnerships": {
+        "title": "Partnerships"
       },
       "kafala_campaigns": {
         "title": "Our campaigns"
