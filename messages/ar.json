@@ -55,7 +55,7 @@
       "activities_and_milestones": {
         "name": "الانجازات والاحداث"
       },
-      "kafala_partners": {
+      "partnerships": {
         "name": "شركاء يلا كفالة"
       }
     }
@@ -79,7 +79,7 @@
       "faqs": {
         "title": "أسئلة متكررة"
       },
-      "kafala_partners": {
+      "partnerships": {
         "title": "شركاء يلا كفالة"
       },
       "kafala_campaigns": {
