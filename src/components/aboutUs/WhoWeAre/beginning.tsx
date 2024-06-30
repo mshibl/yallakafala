@@ -27,7 +27,7 @@ const YallaKafalaBeginning = ({ locale }: { locale: string }) => {
             The beginning of <br /> Yalla Kafala"
           </>
         ) : (
-          "بداية يالا كفالة"
+          "بداية يلا كفالة"
         )}
       </Typography>
     </Box>
