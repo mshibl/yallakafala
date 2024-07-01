@@ -43,54 +43,6 @@ const boardMembers = [
 `,
     bioAr: `تفحص غادة أحمد، مؤسسة Insurgent Business Analytics وزميلة كبيرة في جامعة ديوك، تأثير الممارسات والسياسات التجارية على استدامة المجتمعات. تركز بحوثها في جامعة ديوك على إطارات رائدة في التكنولوجيا النظيفة والأمن الغذائي والطاقة. سبق أن كانت عملها كاقتصادية اجتماعية رئيسية في منظمة الأغذية والزراعة للأمم المتحدة والبنك الدولي مركزًا على استراتيجيات التنمية الاقتصادية المستدامة. ولا يُغفل أنها قادت تطوير دراسات جوجل الرائدة في مجال الأثر على مراكز البيانات. تعتبر السيدة أحمد مؤلفة معترف بها بأكثر من 30 منشورًا وتحمل درجات في سياسات التنمية الدولية وعلوم الأعمال والحاسوب.`,
   },
-  {
-    nameEn: "Rasha Mekky",
-    nameAr: "رشا مكي",
-    titleEn: "Executive Director",
-    titleAr: "المدير التنفيذي",
-    image: "/images/rasha.png",
-    bioEn:
-      "Rasha Mekky has over 25 years of experience in Child Development, Child Assessment, and Positive Discipline. Her journey began with the Kafala of her son Mostafa eight years ago, which inspired her to launch Yalla Kafala. Rasha also established Little Pharaohs daycare in the San Francisco Bay Area in 2015.",
-
-    bioAr:
-      "رشا مكي لديها أكثر من 25 عامًا من الخبرة في تطوير الطفل، تقييم الطفل، والانضباط الإيجابي. بدأت رحلتها مع الكفالة لابنها مصطفى قبل ثماني سنوات، مما ألهمها لإطلاق يلا كفالة. أسست رشا أيضًا حضانة Little Pharaohs في منطقة خليج سان فرانسيسكو في عام 2015.",
-  },
-  {
-    nameEn: "Rasha Mekky",
-    nameAr: "رشا مكي",
-    titleEn: "Executive Director",
-    titleAr: "المدير التنفيذي",
-    image: "/images/rasha.png",
-    bioEn:
-      "Rasha Mekky has over 25 years of experience in Child Development, Child Assessment, and Positive Discipline. Her journey began with the Kafala of her son Mostafa eight years ago, which inspired her to launch Yalla Kafala. Rasha also established Little Pharaohs daycare in the San Francisco Bay Area in 2015.",
-
-    bioAr:
-      "رشا مكي لديها أكثر من 25 عامًا من الخبرة في تطوير الطفل، تقييم الطفل، والانضباط الإيجابي. بدأت رحلتها مع الكفالة لابنها مصطفى قبل ثماني سنوات، مما ألهمها لإطلاق يلا كفالة. أسست رشا أيضًا حضانة Little Pharaohs في منطقة خليج سان فرانسيسكو في عام 2015.",
-  },
-  {
-    nameEn: "Rasha Mekky",
-    nameAr: "رشا مكي",
-    titleEn: "Executive Director",
-    titleAr: "المدير التنفيذي",
-    image: "/images/rasha.png",
-    bioEn:
-      "Rasha Mekky has over 25 years of experience in Child Development, Child Assessment, and Positive Discipline. Her journey began with the Kafala of her son Mostafa eight years ago, which inspired her to launch Yalla Kafala. Rasha also established Little Pharaohs daycare in the San Francisco Bay Area in 2015.",
-
-    bioAr:
-      "رشا مكي لديها أكثر من 25 عامًا من الخبرة في تطوير الطفل، تقييم الطفل، والانضباط الإيجابي. بدأت رحلتها مع الكفالة لابنها مصطفى قبل ثماني سنوات، مما ألهمها لإطلاق يلا كفالة. أسست رشا أيضًا حضانة Little Pharaohs في منطقة خليج سان فرانسيسكو في عام 2015.",
-  },
-  {
-    nameEn: "Rasha Mekky",
-    nameAr: "رشا مكي",
-    titleEn: "Executive Director",
-    titleAr: "المدير التنفيذي",
-    image: "/images/rasha.png",
-    bioEn:
-      "Rasha Mekky has over 25 years of experience in Child Development, Child Assessment, and Positive Discipline. Her journey began with the Kafala of her son Mostafa eight years ago, which inspired her to launch Yalla Kafala. Rasha also established Little Pharaohs daycare in the San Francisco Bay Area in 2015.",
-
-    bioAr:
-      "رشا مكي لديها أكثر من 25 عامًا من الخبرة في تطوير الطفل، تقييم الطفل، والانضباط الإيجابي. بدأت رحلتها مع الكفالة لابنها مصطفى قبل ثماني سنوات، مما ألهمها لإطلاق يلا كفالة. أسست رشا أيضًا حضانة Little Pharaohs في منطقة خليج سان فرانسيسكو في عام 2015.",
-  },
 ];
 const Board = ({ locale }: { locale: string }) => {
   const [currentMember, setCurrentMember] = useState(0);
