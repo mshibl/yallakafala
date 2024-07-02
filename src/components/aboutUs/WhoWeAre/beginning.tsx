@@ -1,3 +1,4 @@
+import { convertGoogleDriveImageUrlToImageSrc } from "@/src/utils/string-utils";
 import { Box, Typography } from "@mui/material";
 import React from "react";
 
@@ -30,6 +31,21 @@ const YallaKafalaBeginning = ({ locale }: { locale: string }) => {
           "بداية يلا كفالة"
         )}
       </Typography>
+      <Box
+        sx={{
+          display: "flex",
+          justifyContent: "center",
+          paddingBottom: { xs: "20px", md: "40px" },
+          height: { sx: "175px", md: "605px" },
+        }}
+      >
+        <iframe
+          src="https://drive.google.com/file/d/1pNG2124NcWwSvV3LuLmlhj8XtwJ2X7w1/preview"
+          width="1065"
+          height="100%"
+          allow="autoplay"
+        ></iframe>
+      </Box>
     </Box>
   );
 };

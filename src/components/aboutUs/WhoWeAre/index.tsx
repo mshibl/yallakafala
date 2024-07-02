@@ -13,7 +13,7 @@ const WhoWeAre = ({ locale }: { locale: string }) => {
       <HeroImage />
       <Story locale={locale} />
       <Founder locale={locale} />
-      <Board locale={locale} />
+      {/* <Board locale={locale} /> */}
       <YallaKafalaBeginning locale={locale} />
       <Initiatives locale={locale} />
       <HelpChildrenAndFamilies locale={locale} />

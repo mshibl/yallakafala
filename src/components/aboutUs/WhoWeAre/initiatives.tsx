@@ -72,7 +72,7 @@ const Initiatives = ({ locale }: { locale: string }) => {
       >
         {locale === "en" ? (
           <>
-            Yalla Kafala&aposs <br /> Initiatives
+            Yalla Kafala&aposs; <br /> Initiatives
           </>
         ) : (
           "مبادرات يلا كفالة"
