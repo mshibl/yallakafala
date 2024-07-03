@@ -34,8 +34,8 @@ const Story = ({ locale }: { locale: string }) => {
             reshaping child welfare in Egypt through alternative care options
             and Kafala (guardianship/adoption).
             <br />
-            <br /> Inspired by our founder Rasha Mekky's personal journey and
-            her Kafala of her son Mostafa, we launched Egypt's first
+            <br /> Inspired by our founder Rasha Mekky&apos;s personal journey
+            and her Kafala of her son Mostafa, we launched Egypt&apos;s first
             Kafala-dedicated website and established Yalla Kafala.
             <br />
             <br /> With headquarters in Egypt and San Francisco, we strive to
