@@ -14,7 +14,7 @@ export const VOLUNTEER_PAGE = "volunteer";
 export const WHO_WE_ARE_PAGE = "who_we_are";
 export const VISION_MISSION_AND_VALUES_PAGE = "vision_mission_and_values";
 export const ACTIVITIES_AND_MILESTONES_PAGE = "activities_and_milestones";
-export const KAFALA_PARTNERS_PAGE = "kafala_partners";
+export const PARTNERSHIPS_PAGE = "partnerships";
 
 export const PAGE_PATHNAMES: { [key: string]: string } = {
   [HOME_PAGE]: "/",
@@ -33,7 +33,7 @@ export const PAGE_PATHNAMES: { [key: string]: string } = {
   [WHO_WE_ARE_PAGE]: "/who_we_are",
   [VISION_MISSION_AND_VALUES_PAGE]: "/vision_mission_and_values",
   [ACTIVITIES_AND_MILESTONES_PAGE]: "/activities_and_milestones",
-  [KAFALA_PARTNERS_PAGE]: "/kafala_partners",
+  [PARTNERSHIPS_PAGE]: "/partnerships",
 };
 
 export const ALL_PAGES = [
@@ -53,5 +53,5 @@ export const ALL_PAGES = [
   WHO_WE_ARE_PAGE,
   VISION_MISSION_AND_VALUES_PAGE,
   ACTIVITIES_AND_MILESTONES_PAGE,
-  KAFALA_PARTNERS_PAGE,
+  PARTNERSHIPS_PAGE,
 ];
