@@ -105,8 +105,8 @@ const OnGroundAccomplishments = ({ locale }: { locale: string }) => {
             englishImgAlt="Positive Discipline Workshops Photo"
             arabicAccomplishmentTitle="ورش عمل التربية الإيجابية"
             englishAccomplishmentTitle="Positive Discipline workshops"
-            englishAccomplishmentDescription="Designing & delivering these workshops for social workers"
-            arabicAccomplishmentDescription="ورش عمل التربية الإيجابية - تصميم وتقديم هذه الورش لموظفي الشئون الاجتماعية."
+            englishAccomplishmentDescription="Designing & delivering positive discipline workshops for social affairs employees. These workshops aim to enhance the skills and knowledge of social workers in supporting kafala families and promoting positive parenting practices."
+            arabicAccomplishmentDescription="تصميم وتقديم ورش عمل للتربية الإيجابية لموظفي الشؤون الاجتماعية. تهدف هذه الورش إلى تعزيز مهارات ومعرفة العاملين الاجتماعيين في دعم الأسر الكافلة وتعزيز ممارسات التربية الإيجابية."
           />
 
           <AccomplishmentCard

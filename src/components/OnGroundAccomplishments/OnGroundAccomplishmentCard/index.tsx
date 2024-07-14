@@ -2,7 +2,6 @@ import React from "react";
 import Image from "next/image";
 import { Box, Button, Dialog } from "@mui/material";
 import { truncateString } from "@/src/utils/string-utils";
-import useResponsiveBreakpoint from "@/src/utils/mui-utils";
 
 const AccomplishmentCard = ({
   imgSrc,
@@ -24,8 +23,6 @@ const AccomplishmentCard = ({
   englishAccomplishmentDescription: string;
 }) => {
   const [dialogOpen, setDialogOpen] = React.useState(false);
-
-  const isMD = useResponsiveBreakpoint("md");
 
   const title =
     locale === "en" ? englishAccomplishmentTitle : arabicAccomplishmentTitle;
