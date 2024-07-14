@@ -51,7 +51,7 @@ const OnGroundAccomplishments = ({ locale }: { locale: string }) => {
             arabicAccomplishmentTitle="الكفالة هي الحب"
             englishAccomplishmentTitle="Kafala is Love"
             arabicAccomplishmentDescription="حدثنا السنوي"
-            englishAccomplishmentDescription="Our Yearly Event"
+            englishAccomplishmentDescription="Yalla Kafala organizes the 'Kafala is Love Event' to celebrate the spirit of love and care within kafala families. This event aims to bring together kafala families, raise awareness about the importance of kafala, and foster a sense of community support and belonging."
           />
 
           <AccomplishmentCard
