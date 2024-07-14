@@ -125,11 +125,16 @@ const CardContent = ({
           justifyContent="space-between"
         >
           <Box p="8px">
-            {fullContent ? description : truncateString(description, 150)}
+            {fullContent ? description : truncateString(description, 120)}
           </Box>
 
-          {!fullContent && description.length > 150 && (
-            <Box>
+          {!fullContent && description.length > 120 && (
+            <Box
+              display="flex"
+              justifyContent="flex-end"
+              padding="8px"
+              paddingBottom="0"
+            >
               <Button
                 variant="text"
                 onClick={onClickReadMore}
