@@ -1,6 +1,15 @@
 import Link from "next/link";
 import sanitizeHtml from "sanitize-html";
 
+// Truncate a string to a certain length and add "..." at the end
+export function truncateString(str: string, num: number) {
+  if (str.length > num) {
+    return str.slice(0, num) + "...";
+  } else {
+    return str;
+  }
+}
+
 export function cleanResponse(dirty: string) {
   return sanitizeHtml(dirty, {
     allowedTags: [],
