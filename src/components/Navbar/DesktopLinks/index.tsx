@@ -123,14 +123,14 @@ function DesktopLinks({
         }}
       >
         {ABOUT_US_MENU_PAGES.map((pageName) => (
-          <MenuItem
-            sx={{ minWidth: "150px" }}
+          <Link
+            href={`/${locale}${PAGE_PATHNAMES[pageName]}`}
+            style={{ textDecoration: "none" }}
             key={pageName}
-            onClick={handleCloseAboutUsMenu}
           >
-            <Link
-              href={`/${locale}${PAGE_PATHNAMES[pageName]}`}
-              style={{ textDecoration: "none" }}
+            <MenuItem
+              sx={{ minWidth: "150px" }}
+              onClick={handleCloseAboutUsMenu}
             >
               <Typography
                 color={activePage === pageName ? "#2194BC" : "#87226C"}
@@ -140,8 +140,8 @@ function DesktopLinks({
               >
                 {t(`pages.${pageName}.name`)}
               </Typography>
-            </Link>
-          </MenuItem>
+            </MenuItem>
+          </Link>
         ))}
       </Menu>
     </Box>
