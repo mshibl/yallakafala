@@ -35,9 +35,9 @@ const AchievementsSection = ({ locale }: { locale: string }) => {
           arabicImgAlt="أكثر من 1000 عائلة كفالة تم تدريبها"
           achievementNumber="1000+"
           englishPrefix="Trained"
-          arabicPrefix="تم تدريب"
+          arabicPrefix="دربنا"
           englishAchievementDescription="Kafala Families"
-          arabicAchievementDescription="عائلة كفالة"
+          arabicAchievementDescription="أسرة كفالة"
         />
 
         <AchievementItem
@@ -61,22 +61,22 @@ const AchievementsSection = ({ locale }: { locale: string }) => {
           arabicImgAlt="أكثر من 2000 عائلة كفالة تم توجيهها"
           achievementNumber="2000+"
           englishPrefix="Guided"
-          arabicPrefix="تم توجيه"
+          arabicPrefix="وجهنا"
           englishAchievementDescription="Families through the kafala process"
-          arabicAchievementDescription="أسرة خلال عملية الكفالة"
+          arabicAchievementDescription="أسرة خلال رحلة الكفالة"
         />
 
         <AchievementItem
           locale={locale}
           color="#87226C"
           imgSrc="/images/community-events.svg"
-          englishImgAlt="Yalla Kafala organized more than 600 community engagement events"
-          arabicImgAlt="يلا كفالة نظمت أكثر من 600 فاعلية مشاركة مجتمعية"
-          achievementNumber="600+"
+          englishImgAlt="Yalla Kafala organized more than 10 community engagement events"
+          arabicImgAlt="يلا كفالة نظمت أكثر من 10 فاعلية مشاركة مجتمعية"
+          achievementNumber="10+"
           englishPrefix="Hosted"
-          arabicPrefix="تم تنظيم"
+          arabicPrefix="نظمنا"
           englishAchievementDescription="Community Engagement Events"
-          arabicAchievementDescription="فاعلية مشاركة مجتمعية"
+          arabicAchievementDescription="فعاليات مجتمعية بمشاركة + ٦٠٠ أسرة كافلة"
         />
       </Box>
     </Box>
