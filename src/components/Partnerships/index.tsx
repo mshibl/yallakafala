@@ -11,10 +11,10 @@ const Partnerships = ({ locale }: { locale: string }) => {
 
   return (
     <Box display="flex" flexDirection="column" alignItems="center">
-      <Box marginTop="40px" marginBottom="20px" width="700px" maxWidth="100%">
+      <Box marginTop="40px" marginBottom="20px" width="700px" maxWidth="100%" px="20px">
         <Box
           justifySelf="flex-start"
-          width="50%"
+          width="70%"
           style={{
             color: "#87226C",
             fontSize: isMD ? "50px" : "32px",
@@ -195,7 +195,7 @@ const Partnerships = ({ locale }: { locale: string }) => {
           />
         </PartnerItem>
       </Box>
-      <Box width="700px" maxWidth="100%" marginTop="20px" marginBottom="20px">
+      <Box width="700px" maxWidth="100%" marginTop="20px" marginBottom="20px" px="20px">
         {locale === "en"
           ? "By supporting Yalla Kafala, you give hope, support, and contribute to a better future for our children. Together, we can build a future where every child knows the love of a family and the promise of a bright tomorrow."
           : "من خلال دعم يلا كفالة، تمنح الأمل والدعم وتساهم في مستقبل أفضل لأطفالنا. معًا، يمكننا بناء مستقبل يعرف فيه كل طفل حب العائلة ووعد غد مشرق."}

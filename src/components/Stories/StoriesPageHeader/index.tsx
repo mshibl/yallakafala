@@ -10,7 +10,7 @@ const StoriesPageHeader = ({ locale }: { locale: string }) => {
         py: "40px",
       }}
     >
-      <Typography variant="h4" color="#ffffff" fontWeight={500} >
+      <Typography variant="h4" color="#87226C" fontWeight={500} >
         {locale === "ar" ? "قصص الكفالة" : "Kafala Stories"}
       </Typography>
     </Box>

@@ -12,7 +12,7 @@ const MilestonesSection = ({ locale }: { locale: string }) => {
       id="milestones-section"
       position="relative"
       width="100%"
-      height="2100px"
+      height="2300px"
       padding={"30px"}
       marginBottom="30px"
       display="flex"
@@ -65,12 +65,12 @@ const MilestonesSection = ({ locale }: { locale: string }) => {
           <MilestoneItem
             imgSrc="/images/Rasha-Mostage-Article-1.jpg"
             englishImgAlt="Yalla Kafala became an initiative in 2017"
-            arabicImgAlt="يلا كفالة أصبحت مبادرة في 2017"
+            arabicImgAlt="يلا كفالة أصبحت مبادرة رسمية في 2017"
             align="left"
             locale={locale}
             milestoneYear="2017"
             englishMilestoneText="Yalla Kafala became an initiative"
-            arabicMilestoneText="يلا كفالة أصبحت مبادرة"
+            arabicMilestoneText="يلا كفالة مبادرة رسمية"
             index={1}
             isMD={isMD}
           />
@@ -83,7 +83,7 @@ const MilestonesSection = ({ locale }: { locale: string }) => {
             locale={locale}
             milestoneYear="2020"
             englishMilestoneText="Yalla Kafala became an NGO in the US"
-            arabicMilestoneText="يلا كفالة أصبحت منظمة غير حكومية في الولايات المتحدة"
+            arabicMilestoneText="الاعلان عن يلا كفالة منظمة غير ربحية في الولايات المتحدة"
             index={2}
             isMD={isMD}
           />
@@ -96,7 +96,7 @@ const MilestonesSection = ({ locale }: { locale: string }) => {
             locale={locale}
             milestoneYear="2021"
             englishMilestoneText="Yalla Kafala became an NGO in Egypt"
-            arabicMilestoneText="يلا كفالة أصبحت منظمة غير حكومية في مصر"
+            arabicMilestoneText="الاعلان عن يلا كفالة منظمة غير ربحية في مصر"
             index={3}
             isMD={isMD}
           />
@@ -109,7 +109,7 @@ const MilestonesSection = ({ locale }: { locale: string }) => {
             locale={locale}
             milestoneYear="2021"
             englishMilestoneText="First Kafala is Love event"
-            arabicMilestoneText="أول حدث الكفالة هى الحب"
+            arabicMilestoneText="إطلاق أول حفل سنوي بأسم 'الكفالة حب'"
             index={4}
             isMD={isMD}
           />
@@ -122,7 +122,7 @@ const MilestonesSection = ({ locale }: { locale: string }) => {
             locale={locale}
             milestoneYear="2021"
             englishMilestoneText="Started “Positive Discipline” and “How to tell the truth about kafala” sessions"
-            arabicMilestoneText="بدأت جلسات “الانضباط الإيجابي” و “كيف تقول الحقيقة عن الكفالة”"
+            arabicMilestoneText="تقديم ورش عمل التربية الإيجابية ومحاضرات 'إخبار حقيقة الكفالة'"
             index={5}
             isMD={isMD}
           />
@@ -135,7 +135,7 @@ const MilestonesSection = ({ locale }: { locale: string }) => {
             locale={locale}
             milestoneYear="2021"
             englishMilestoneText="Launched the Training Center and the Family Support Center"
-            arabicMilestoneText="أطلق مركز التدريب ومركز دعم الأسر الكفلاء"
+            arabicMilestoneText="افتتاح مركز التدريب ومركز الدعم"
             index={6}
             isMD={isMD}
           />
@@ -148,21 +148,34 @@ const MilestonesSection = ({ locale }: { locale: string }) => {
             locale={locale}
             milestoneYear="2023"
             englishMilestoneText="Signed a Memorandum of Understanding (MoU) with the Ministry of Social Solidarity (MoSS) and launched the Kafala Bus"
-            arabicMilestoneText="وقعت مذكرة تفاهم مع وزارة التضامن الاجتماعي وأطلقت حافلة الكفالة"
+            arabicMilestoneText="توقيع بروتوكول تعاون بين يلا كفالة ووزارة التضامن الاجتماعي"
             index={7}
             isMD={isMD}
           />
 
           <MilestoneItem
-            imgSrc="/images/YK-family-house.svg"
-            englishImgAlt="Opened the first Yalla Kafala Family House in 2024"
-            arabicImgAlt="افتتح أول منزل أسرة يلا كفالة في 2024"
+            imgSrc="/images/kafala-bus.jpg"
+            englishImgAlt="Launched the Kafala Bus campaign in 2023"
+            arabicImgAlt="إطلاق حملة 'أوتوبيس الكفالة' في ٢٠٢٣"
             align="right"
             locale={locale}
-            milestoneYear="2024"
-            englishMilestoneText="Opened the first Yalla Kafala Family House"
-            arabicMilestoneText="افتتح أول منزل أسرة يلا كفالة"
+            milestoneYear="2023"
+            englishMilestoneText="Launched the Kafala Bus campaign"
+            arabicMilestoneText="إطلاق حملة 'أوتوبيس الكفالة'"
             index={8}
+            isMD={isMD}
+          />
+
+          <MilestoneItem
+            imgSrc="/images/YK-family-house.svg"
+            englishImgAlt="Opening the first Yalla Kafala Family House in 2024"
+            arabicImgAlt="افتتح أول منزل أسرة يلا كفالة في 2024"
+            align="left"
+            locale={locale}
+            milestoneYear="2024"
+            englishMilestoneText="Opening the first Yalla Kafala Family House"
+            arabicMilestoneText="تدشين أول بيت صغير"
+            index={9}
             isMD={isMD}
           />
         </Box>

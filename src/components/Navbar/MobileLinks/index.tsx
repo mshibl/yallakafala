@@ -73,21 +73,17 @@ function MobileLinks({
         }}
       >
         {MOBILE_LINKS_PAGES.map((pageName) => (
-          <MenuItem
-            sx={{ minWidth: "200px" }}
+          <Link
             key={pageName}
-            onClick={handleClosePagesMenu}
+            href={`/${locale}${PAGE_PATHNAMES[pageName]}`}
+            style={{ textDecoration: "none" }}
           >
-            <Link
-              key={pageName}
-              href={`/${locale}${PAGE_PATHNAMES[pageName]}`}
-              style={{ textDecoration: "none" }}
-            >
+            <MenuItem sx={{ minWidth: "200px" }} onClick={handleClosePagesMenu}>
               <Typography color="#000000" textAlign="center">
                 {t(`pages.${pageName}.name`)}
               </Typography>
-            </Link>
-          </MenuItem>
+            </MenuItem>
+          </Link>
         ))}
       </Menu>
     </Box>

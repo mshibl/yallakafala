@@ -73,7 +73,7 @@ const OnGroundAccomplishments = ({ locale }: { locale: string }) => {
             arabicAccomplishmentTitle="بيع خيري"
             englishAccomplishmentTitle="Garage Sale"
             englishAccomplishmentDescription="Quarterly Initiative"
-            arabicAccomplishmentDescription="مبادرة ربع سنوية"
+            arabicAccomplishmentDescription="معرض مُدعم للأسر الكافلة - مبادرة ربع سنوية."
           />
 
           <AccomplishmentCard
@@ -84,7 +84,7 @@ const OnGroundAccomplishments = ({ locale }: { locale: string }) => {
             arabicAccomplishmentTitle="تدريب الكفالة"
             englishAccomplishmentTitle="Kafala Training"
             englishAccomplishmentDescription="Primary providers of kafala training in 11 governorates"
-            arabicAccomplishmentDescription="المصدر الرئيسي لتدريب الكفالة في 11 محافظة"
+            arabicAccomplishmentDescription="التدريب الإلزامي للكفالة - مقدم رئيسي للتدريب الإلزامي للكفالة  في ١١ محافظة."
           />
 
           <AccomplishmentCard
@@ -95,7 +95,7 @@ const OnGroundAccomplishments = ({ locale }: { locale: string }) => {
             arabicAccomplishmentTitle="ورش عمل التربية الإيجابية"
             englishAccomplishmentTitle="Positive Discipline workshops"
             englishAccomplishmentDescription="For kafala and non-kafala families"
-            arabicAccomplishmentDescription="لعائلات الكفالة وغير الكفالة"
+            arabicAccomplishmentDescription="ورش عمل التربية الإيجابية للأسر الكافلة وغير الكافلة."
           />
 
           <AccomplishmentCard
@@ -106,7 +106,7 @@ const OnGroundAccomplishments = ({ locale }: { locale: string }) => {
             arabicAccomplishmentTitle="ورش عمل التربية الإيجابية"
             englishAccomplishmentTitle="Positive Discipline workshops"
             englishAccomplishmentDescription="Designing & delivering these workshops for social workers"
-            arabicAccomplishmentDescription="تصميم وتقديم هذه الورش للعاملين الاجتماعيين"
+            arabicAccomplishmentDescription="ورش عمل التربية الإيجابية - تصميم وتقديم هذه الورش لموظفي الشئون الاجتماعية."
           />
 
           <AccomplishmentCard
@@ -117,7 +117,7 @@ const OnGroundAccomplishments = ({ locale }: { locale: string }) => {
             arabicAccomplishmentTitle="تقديم العلاج بالفن"
             englishAccomplishmentTitle="Introducing Art Therapy"
             englishAccomplishmentDescription="To kafala and non-kafala families"
-            arabicAccomplishmentDescription="لعائلات الكفالة وغير الكفالة"
+            arabicAccomplishmentDescription="تقديم جلسات علاج بالفن للأسر الكافلة وغير الكفالة."
           />
         </Box>
         <Box display="flex" justifyContent="center" width="100%">
