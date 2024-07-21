@@ -37,7 +37,7 @@ const DonatePage = ({
         </Box>
         {country === "eg" && !showEtapestry ? (
           <Box>
-            <Box mb="20px" ml={isMD ? 0 : "18px"}>
+            <Box mb="20px" mx={isMD ? 0 : "22px"}>
               <Button
                 variant="outlined"
                 startIcon={
