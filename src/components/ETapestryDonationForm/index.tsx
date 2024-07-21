@@ -48,7 +48,7 @@ const ETapestryDonationForm = ({
         </Box>
       )}
 
-      <Box height="800px" flexGrow={1}>
+      <Box height={iframeLoading ? "300px" : "1700px"} flexGrow={1}>
         <iframe
           id="etapIframe"
           style={{
