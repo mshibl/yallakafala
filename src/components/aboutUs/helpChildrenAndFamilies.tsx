@@ -26,7 +26,7 @@ const HelpChildrenAndFamilies = ({ locale }: { locale: string }) => {
         variant="h2"
       >
         {locale === "en"
-          ? "Want to Help children & Kafala families?"
+          ? "Want to Help Children & Kafala families?"
           : "هل تريد مساعدة الأطفال وأسر الكفالة؟"}
       </Typography>
       <Typography
