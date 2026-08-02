@@ -11,23 +11,20 @@ import { fatwaPdfUrl } from "@/constants/links";
 const Fatwa = ({ locale }: { locale: Locale }) => {
   return (
     <div className="min-h-screen flex flex-col">
-      {/* Hero Section */}
-      <ExploreKafalaHero locale={locale} />
+      <ExploreKafalaHero
+        locale={locale}
+        title={translations.fatwaTitle}
+        description={translations.fatwaIntro}
+        imageSrc="/images/dar-ifta-fatwa.webp"
+        imageAlt={{
+          en: "Dar Ifta Al-Azhar door in Egypt",
+          ar: "باب دار الإفتاء في مصر",
+        }}
+      />
 
       {/* Fatwa Summary Section */}
       <section id="fatwa" className="py-12 bg-gray-50">
         <div className="container mx-auto px-6">
-          {/* Title */}
-          <div className="max-w-4xl mx-auto mb-12 text-center animate-fade-in">
-            <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-primary mb-6">
-              {translations.fatwaTitle[locale]}
-            </h1>
-            <div className="w-24 h-1 bg-primary mx-auto mb-8 rounded-full"></div>
-            <p className="text-gray-600 max-w-3xl mx-auto">
-              {translations.fatwaIntro[locale]}
-            </p>
-          </div>
-
           {/* Summary */}
           <div className="max-w-5xl mx-auto mb-16 animate-fade-up">
             <Card>

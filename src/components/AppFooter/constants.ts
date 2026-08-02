@@ -56,12 +56,12 @@ export const navigationLinks = [
     group: { en: "Explore Kafala", ar: "استكشف الكفالة" },
     links: [
       {
-        href: "/fatwa",
-        text: { en: "Dar Ifta Fatwa", ar: "فتوى دار الإفتاء" },
-      },
-      {
         href: "/what-is-kafala",
         text: { en: "What is Kafala", ar: "ما هي الكفالة" },
+      },
+      {
+        href: "/fatwa",
+        text: { en: "Dar Ifta Fatwa", ar: "فتوى دار الإفتاء" },
       },
       {
         href: "/kafala-steps",
@@ -71,11 +71,11 @@ export const navigationLinks = [
         href: "/kafala-blogs",
         text: { en: "Kafala Blogs", ar: "مدونات الكفالة" },
       },
+      { href: "/faqs", text: { en: "FAQs", ar: "الأسئلة الشائعة" } },
       {
         href: "/resources",
         text: { en: "Resources", ar: "الموارد" },
       },
-      { href: "/faqs", text: { en: "FAQs", ar: "الأسئلة الشائعة" } },
     ],
   },
   { href: "/beit-sagheer", text: { en: "Beit Sagheer", ar: "البيت الصغير" } },
@@ -84,13 +84,12 @@ export const navigationLinks = [
     links: [
       { href: "/who-we-are", text: { en: "Who We Are", ar: "من نحن" } },
       {
-        href: "/activities-and-milestones",
-        text: { en: "Activities & Milestones", ar: "الانجازات والأنشطة" },
-      },
-      { href: "/partnerships", text: { en: "Partnerships", ar: "الشركاء" } },
-      {
         href: "/vision-mission",
         text: { en: "Vision & Mission", ar: "الرؤية والرسالة" },
+      },
+      {
+        href: "/activities-and-milestones",
+        text: { en: "Activities & Milestones", ar: "الانجازات والأنشطة" },
       },
     ],
   },

@@ -1,5 +1,6 @@
 import type { Blog } from "@/lib/types";
 import type { Locale } from "@/components/Providers/LocaleProvider";
+import ResilientImage from "@/components/ui/ResilientImage";
 import BackToBlogsButton from "./BackToBlogsButton";
 
 export default function BlogContent({
@@ -20,7 +21,7 @@ export default function BlogContent({
             <BackToBlogsButton locale={locale} />
           </div>
           <div className="aspect-video bg-gray-100 overflow-hidden rounded-lg mb-8">
-            <img
+            <ResilientImage
               src={blog.imageUrl}
               alt={locale === "en" ? blog.titleEn : blog.titleAr}
               className="w-full h-full object-cover"

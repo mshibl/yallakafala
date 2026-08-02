@@ -2,7 +2,7 @@ import React from "react";
 import { Card, CardContent } from "@/components/ui/card";
 import type { Blog } from "@/lib/types";
 import Link from "next/link";
-import Image from "next/image";
+import ResilientImage from "@/components/ui/ResilientImage";
 import { useLocale } from "@/components/Providers/LocaleProvider";
 import { ArrowRight, ArrowLeft } from "lucide-react";
 interface BlogCardProps {
@@ -26,8 +26,7 @@ const BlogCard: React.FC<BlogCardProps> = ({ blog, cardRef, index }) => {
         <CardContent className="p-0">
           <div className="grid grid-cols-1 md:grid-cols-12 gap-0">
             <div className="md:col-span-6 relative h-80 md:h-[450px] overflow-hidden group">
-              <Image
-                fill
+              <ResilientImage
                 src={blog.imageUrl}
                 alt={title}
                 className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"

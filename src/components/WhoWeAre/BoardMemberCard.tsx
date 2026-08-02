@@ -27,11 +27,13 @@ export const BoardMemberCard = ({
         <Card className="overflow-hidden border-none shadow-sm hover:shadow-md transition-shadow cursor-pointer">
           <div className="relative pt-[100%] bg-gray-100">
             <Avatar className="absolute inset-0 w-full h-full rounded-none">
-              <AvatarImage
-                src={member.imageUrl}
-                alt={name}
-                className="object-cover"
-              />
+              {member.imageUrl ? (
+                <AvatarImage
+                  src={member.imageUrl}
+                  alt={name}
+                  className="object-cover"
+                />
+              ) : null}
               <AvatarFallback className="rounded-none text-4xl font-semibold">
                 {name
                   .split(" ")
@@ -51,10 +53,12 @@ export const BoardMemberCard = ({
             {name}
           </DialogTitle>
         </DialogHeader>
-        <div className="mt-4 space-y-6">
-          <div className="flex items-start gap-4">
-            <Avatar className="w-24 h-24">
-              <AvatarImage src={member.imageUrl} alt={name} />
+        <div className="mt-4 min-w-0">
+          <div className="flex min-w-0 flex-col items-start gap-6 sm:flex-row">
+            <Avatar className="h-24 w-24 shrink-0">
+              {member.imageUrl ? (
+                <AvatarImage src={member.imageUrl} alt={name} />
+              ) : null}
               <AvatarFallback className="text-2xl">
                 {name
                   .split(" ")
@@ -64,7 +68,7 @@ export const BoardMemberCard = ({
             </Avatar>
             <div
               dangerouslySetInnerHTML={{ __html: bio }}
-              className="text-gray-700 flex-1"
+              className="max-h-[55vh] min-w-0 flex-1 overflow-y-auto break-words pr-2 leading-relaxed text-gray-700 [&_p]:mb-4 [&_p:last-child]:mb-0"
             />
           </div>
         </div>
