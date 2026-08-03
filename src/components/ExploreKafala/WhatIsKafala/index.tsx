@@ -1,4 +1,3 @@
-import { MakeDifference } from "@/components/Homepage/MakeDifference";
 import ExploreKafalaHero from "../ExploreKafalaHero";
 import { translations } from "./translations";
 import { BackToTopButton } from "../BackToTopButton";
@@ -7,16 +6,18 @@ import type { Locale } from "@/components/Providers/LocaleProvider";
 const WhatIsKafala = ({ locale }: { locale: Locale }) => {
   return (
     <div className="min-h-screen flex flex-col">
-      <ExploreKafalaHero locale={locale} />
+      <ExploreKafalaHero
+        locale={locale}
+        title={translations.title}
+        description={translations.heroDescription}
+        imageSrc="/images/what-is-kafala.webp"
+        imageAlt={{
+          en: "A family embracing a child at home",
+          ar: "أسرة تحتضن طفلاً في المنزل",
+        }}
+      />
       <section id="learn-more" className="py-12 bg-gray-50">
         <div className="container mx-auto px-6">
-          <div className="max-w-4xl mx-auto mb-8 animate-fade-in">
-            <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-primary mb-6 text-center">
-              {translations.title[locale]}
-            </h1>
-            <div className="w-24 h-1 bg-primary mx-auto mb-8 rounded-full"></div>
-          </div>
-
           <div className="prose prose-lg max-w-4xl mx-auto animate-fade-up">
             <p>{translations.firstParagraph[locale]}</p>
 
@@ -47,7 +48,9 @@ const WhatIsKafala = ({ locale }: { locale: Locale }) => {
             <ol className="list-decimal pl-6 space-y-4">
               {translations.firstHadith.essentialPhrases.phrases[locale].map(
                 (phrase, index) => (
-                  <li key={index}>{phrase}</li>
+                  <li key={index}>
+                    <strong>{phrase.title}</strong> {phrase.description}
+                  </li>
                 ),
               )}
             </ol>
@@ -58,7 +61,10 @@ const WhatIsKafala = ({ locale }: { locale: Locale }) => {
 
             <ul className="list-disc pl-6 space-y-4">
               <li>
-                {translations.islamicRules.rules[locale][0]}
+                <strong>
+                  {translations.islamicRules.rules[locale][0]!.title}
+                </strong>{" "}
+                {translations.islamicRules.rules[locale][0]!.description}
                 <blockquote className="bg-gray-100 p-4 my-2 border-l-4 border-primary">
                   <p className="text-right font-arabic">
                     ادْعُوهُمْ لِآبَائِهِمْ هُوَ أَقْسَطُ عِندَ اللَّـهِ ۚ فَإِن
@@ -81,7 +87,12 @@ const WhatIsKafala = ({ locale }: { locale: Locale }) => {
               {translations.islamicRules.rules[locale]
                 .slice(1)
                 .map((rule, index) => (
-                  <li key={index + 1}>{rule}</li>
+                  <li
+                    key={index + 1}
+                    className={index === 1 ? "text-red-600" : undefined}
+                  >
+                    <strong>{rule.title}</strong> {rule.description}
+                  </li>
                 ))}
             </ul>
 

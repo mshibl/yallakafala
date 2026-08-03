@@ -4,6 +4,7 @@ import React from "react";
 import { ArrowLeft, ArrowRight } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
+import ResilientImage from "@/components/ui/ResilientImage";
 import type { Blog } from "@/lib/types.js";
 import { useLocale } from "@/components/Providers/LocaleProvider";
 import Link from "next/link";
@@ -28,7 +29,7 @@ const BlogCard = ({ blog, index, reference }: BlogCardProps) => {
     >
       <Card className="h-full hover:shadow-md transition-shadow overflow-hidden">
         <div className="aspect-video bg-gray-100 overflow-hidden">
-          <img
+          <ResilientImage
             src={blog.imageUrl}
             alt={locale === "en" ? blog.titleEn : blog.titleAr}
             className="w-full h-full object-cover"

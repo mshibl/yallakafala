@@ -18,10 +18,6 @@ export const translations = {
       en: "Our Achievements",
       ar: "إنجازاتنا",
     },
-    milestones: {
-      en: "Yalla Kafala Milestones",
-      ar: "محطات يلا كفالة",
-    },
     onGround: {
       en: "On-ground Accomplishments",
       ar: "إنجازات على أرض الواقع",
@@ -44,22 +40,22 @@ export const translations = {
         ar: "التواصل مع العائلات والأطفال",
       },
       content: {
-        en: "We conduct regular outreach programs across various communities to identify children in need and connect them with potential guardians. Our team works closely with local communities to raise awareness about kafala and the importance of providing loving homes for children without parental care.",
+        en: "We conduct regular outreach programs across various communities to identify children in need and connect them with prospective Kafala parents. Our team works closely with local communities to raise awareness about Kafala and the importance of providing loving homes for children without parental care.",
         ar: "نقوم بتنفيذ برامج تواصل منتظمة في مجتمعات مختلفة للتعرف على الأطفال المحتاجين وربطهم بأسر كافلة محتملة. يعمل فريقنا عن كثب مع المجتمعات المحلية لزيادة الوعي حول الكفالة وأهمية توفير منازل محبة للأطفال الذين يفتقرون للرعاية الوالدية.",
       },
     },
     {
       title: {
-        en: "Guardian Training Workshops",
-        ar: "ورش تدريب الأوصياء",
+        en: "Prospective Kafala Parents Training Workshops",
+        ar: "ورش تدريب أولياء الأمور المحتملين للكفالة",
       },
       description: {
-        en: "Supporting new kafala parents",
-        ar: "دعم أولياء الأمور الجدد في الكفالة",
+        en: "Supporting prospective Kafala parents",
+        ar: "دعم أولياء الأمور المحتملين للكفالة",
       },
       content: {
-        en: "Our specialized workshops help prepare guardians for their new responsibilities, providing guidance on emotional support, legal matters, and practical parenting skills specific to kafala children. These workshops are facilitated by experienced professionals in child psychology, law, and social services.",
-        ar: "تساعد ورشنا المتخصصة في إعداد الأوصياء لمسؤولياتهم الجديدة، حيث تقدم إرشادات حول الدعم العاطفي والمسائل القانونية والمهارات العملية في التربية الخاصة بأطفال الكفالة. يشرف على هذه الورش محترفون ذوو خبرة في علم نفس الطفل والقانون والخدمات الاجتماعية.",
+        en: "Our specialized workshops help prepare prospective Kafala parents for their new responsibilities, providing guidance on emotional support, legal matters, and practical parenting skills specific to Kafala children. These workshops are facilitated by experienced professionals in child psychology, law, and social services.",
+        ar: "تساعد ورشنا المتخصصة في إعداد أولياء الأمور المحتملين للكفالة لمسؤولياتهم الجديدة، حيث تقدم إرشادات حول الدعم العاطفي والمسائل القانونية والمهارات العملية في التربية الخاصة بأطفال الكفالة. يشرف على هذه الورش محترفون ذوو خبرة في علم نفس الطفل والقانون والخدمات الاجتماعية.",
       },
     },
     {
@@ -118,7 +114,7 @@ export const translations = {
       },
     },
     {
-      count: "3,100+",
+      count: "3,100",
       title: {
         en: "Individuals Reached",
         ar: "فرد تم الوصول إليهم",
@@ -129,7 +125,7 @@ export const translations = {
       },
     },
     {
-      count: "3,000+",
+      count: "3,000",
       title: {
         en: "Kafala Families Engaged",
         ar: "عائلة كفالة شاركت",
@@ -140,7 +136,7 @@ export const translations = {
       },
     },
     {
-      count: "2,250+",
+      count: "2,250",
       title: {
         en: "Single Mothers & Families Trained",
         ar: "أم عزباء وعائلة تم تدريبها",
@@ -162,7 +158,7 @@ export const translations = {
       },
     },
     {
-      count: "100s",
+      count: "250",
       title: {
         en: "Breast Pumps Provided",
         ar: "مضخة حليب تم توفيرها",
@@ -170,6 +166,17 @@ export const translations = {
       description: {
         en: "Provided free of charge to kafala mothers",
         ar: "تم توفيرها مجاناً لأمهات الكفالة",
+      },
+    },
+    {
+      count: "10",
+      title: {
+        en: "Garage Sale Events",
+        ar: "فعاليات بيع المرآب",
+      },
+      description: {
+        en: "Garage sale events organized to support and empower Kafala families",
+        ar: "فعاليات بيع المرآب التي نُظمت لدعم وتمكين عائلات الكفالة",
       },
     },
     {
@@ -190,81 +197,9 @@ export const translations = {
         ar: "أطفال في البيت الصغير",
       },
       description: {
-        en: "Currently cared for through our \"Small Home\" initiative",
-        ar: "يتم رعايتهم حالياً من خلال مبادرة \"البيت الصغير\"",
+        en: 'Currently cared for through our "Small Home" initiative',
+        ar: 'يتم رعايتهم حالياً من خلال مبادرة "البيت الصغير"',
       },
-    },
-  ],
-  milestones: [
-    {
-      year: 2015,
-      title: {
-        en: "Foundation Established",
-        ar: "تأسيس المؤسسة",
-      },
-      description: {
-        en: "Yalla Kafala was founded by a group of dedicated professionals and community leaders committed to improving the lives of children without parental care.",
-        ar: "تأسست يلا كفالة على يد مجموعة من المتخصصين والقيادات المجتمعية الملتزمين بتحسين حياة الأطفال الذين يفتقرون للرعاية الوالدية.",
-      },
-      image:
-        "https://images.unsplash.com/photo-1472396961693-142e6e269027?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-      position: "left" as const,
-    },
-    {
-      year: 2017,
-      title: {
-        en: "First Awareness Campaign",
-        ar: "أول حملة توعية",
-      },
-      description: {
-        en: "Launched our first national awareness campaign, reaching thousands of citizens and changing perceptions about kafala.",
-        ar: "أطلقنا أول حملة توعية وطنية ووصلنا إلى آلاف المواطنين وساهمنا في تغيير التصورات حول الكفالة.",
-      },
-      image:
-        "https://images.unsplash.com/photo-1433086966358-54859d0ed716?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-      position: "right" as const,
-    },
-    {
-      year: 2019,
-      title: {
-        en: "Beit Sagheer Initiative",
-        ar: "مبادرة بيت صغير",
-      },
-      description: {
-        en: "Established our Beit Sagheer transitional homes, providing temporary care for children awaiting kafala placement.",
-        ar: "أنشأنا مبادرة بيت صغير كمنازل انتقالية لتقديم رعاية مؤقتة للأطفال في انتظار احتضانهم عبر الكفالة.",
-      },
-      image:
-        "https://images.unsplash.com/photo-1465146344425-f00d5f5c8f07?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-      position: "left" as const,
-    },
-    {
-      year: 2021,
-      title: {
-        en: "Government Partnership",
-        ar: "شراكة مع الحكومة",
-      },
-      description: {
-        en: "Signed a landmark agreement with the Ministry of Social Development to streamline and improve the kafala process.",
-        ar: "وقعنا اتفاقية تاريخية مع وزارة التنمية الاجتماعية لتسهيل وتحسين عملية الكفالة.",
-      },
-      image:
-        "https://images.unsplash.com/photo-1482938289607-e9573fc25ebb?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-      position: "right" as const,
-    },
-    {
-      year: 2023,
-      title: {
-        en: "Regional Expansion",
-        ar: "توسع إقليمي",
-      },
-      description: {
-        en: "Expanded our services to three new regions, making support accessible to more families and children throughout the country.",
-        ar: "وسعنا خدماتنا إلى ثلاث مناطق جديدة، مما جعل الدعم متاحًا لمزيد من العائلات والأطفال في جميع أنحاء البلاد.",
-      },
-      image:
-        "https://images.unsplash.com/photo-1509316975850-ff9c5deb0cd9?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-      position: "left" as const,
     },
   ],
   onGround: [

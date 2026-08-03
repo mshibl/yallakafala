@@ -33,6 +33,42 @@ const translationSystemPrompt = `You are a translator. You will be given a faceb
           Your job is to only translate the text to the language that is not provided without changing the text.
           `;
 
+const hasVideoType = (value: unknown) =>
+  typeof value === "string" && value.toLowerCase().includes("video");
+
+const isVideoAttachment = (attachment: any): boolean => {
+  if (!attachment || typeof attachment !== "object") return false;
+
+  const attachmentTypes = [
+    attachment.media_type,
+    attachment.type,
+    attachment.media?.media_type,
+    attachment.media?.type,
+  ];
+
+  if (attachmentTypes.some(hasVideoType)) return true;
+
+  return (
+    Array.isArray(attachment.subattachments?.data) &&
+    attachment.subattachments.data.some(isVideoAttachment)
+  );
+};
+
+const isVideoPost = (post: any): boolean => {
+  const postTypes = [
+    post?.type,
+    post?.media_type,
+    post?.attachment?.media_type,
+    post?.attachment?.type,
+  ];
+
+  return (
+    postTypes.some(hasVideoType) ||
+    (Array.isArray(post?.attachments?.data) &&
+      post.attachments.data.some(isVideoAttachment))
+  );
+};
+
 // Helper to map a raw Facebook post to internal structure
 function mapFacebookPost(post: any): FacebookPostType {
   return {
@@ -54,7 +90,7 @@ async function fetchPostsFromFacebook(
 ): Promise<FacebookPostType[]> {
   const latestFacebookPosts: FacebookPostType[] = [];
   let nextPageUrl: string | null =
-    `https://graph.facebook.com/v20.0/469771757195549/posts?limit=10&fields=message,created_time,permalink_url,full_picture,attachments,id,comments.summary(true),reactions.summary(true),shares&access_token=${process.env.FACEBOOK_PAGE_ACCESS_TOKEN}`;
+    `https://graph.facebook.com/v20.0/469771757195549/posts?limit=10&fields=message,created_time,permalink_url,full_picture,attachments{media_type,type,subattachments{media_type,type}},id,comments.summary(true),reactions.summary(true),shares&access_token=${process.env.FACEBOOK_PAGE_ACCESS_TOKEN}`;
 
   while (latestFacebookPosts.length < minPosts && nextPageUrl !== null) {
     const response = await fetch(nextPageUrl, {
@@ -73,7 +109,9 @@ async function fetchPostsFromFacebook(
       console.error("Facebook posts data is not an array:", data);
       break;
     }
-    const posts = data.data.map(mapFacebookPost);
+    const posts = data.data
+      .filter((post) => !isVideoPost(post))
+      .map(mapFacebookPost);
     latestFacebookPosts.push(...posts);
     nextPageUrl = data.paging?.next || null;
   }

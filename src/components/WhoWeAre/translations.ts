@@ -74,23 +74,13 @@ export const translations = {
         ar: "رشا مكي لديها أكثر من 25 عامًا من الخبرة في تطوير الطفل، تقييم الطفل، والانضباط الإيجابي. بدأت رحلتها مع الكفالة لابنها مصطفى قبل ثماني سنوات، مما ألهمها لإطلاق يلا كفالة. أسست رشا أيضًا حضانة Little Pharaohs في منطقة خليج سان فرانسيسكو في عام 2015.",
       },
     ],
-    image: "/images/founder.png",
+    image: "/images/founder.webp",
   },
 
   team: {
     title: {
       en: "Our Team",
       ar: "فريقنا",
-    },
-    tabs: {
-      egyptTeam: {
-        en: "Egypt Team",
-        ar: "فريق مصر",
-      },
-      usaTeam: {
-        en: "USA Team",
-        ar: "فريق الولايات المتحدة",
-      },
     },
     sections: {
       boardMembers: {
@@ -109,64 +99,5 @@ export const translations = {
       en: "The Beginning of Yalla Kafala",
       ar: "بداية يلا كفالة",
     },
-  },
-
-  initiatives: {
-    title: {
-      en: "Yalla Kafala's Initiatives",
-      ar: "مبادرات يلا كفالة",
-    },
-    items: [
-      {
-        title: {
-          en: "Yalla Family House",
-          ar: "دار عائلة يلا",
-        },
-        description: {
-          en: "A haven for vulnerable Egyptian children, providing a nurturing home environment with high-standard education and vocational skills.",
-          ar: "ملاذ للأطفال المصريين المعرّضين للخطر، يوفر بيئة منزلية حانية مع تعليم عالي المستوى ومهارات مهنية.",
-        },
-      },
-      {
-        title: {
-          en: "Safe Independent Future",
-          ar: "مستقبل مستقل آمن",
-        },
-        description: {
-          en: "A haven for vulnerable Egyptian children, providing a nurturing home environment with high-standard education and vocational skills.",
-          ar: "ملاذ للأطفال المصريين المعرّضين للخطر، يوفر بيئة منزلية حانية مع تعليم عالي المستوى ومهارات مهنية.",
-        },
-      },
-      {
-        title: {
-          en: "Safe Family Guidelines",
-          ar: "إرشادات الأسرة الآمنة",
-        },
-        description: {
-          en: "Comprehensive guidelines for children without parental care and kafala families, ensuring safety and well-being.",
-          ar: "إرشادات شاملة للأطفال فاقدي الرعاية الوالدية وأسر الكفالة تضمن السلامة والرفاه.",
-        },
-      },
-      {
-        title: {
-          en: "Safe Family Placement",
-          ar: "إلحاق الأسرة الآمنة",
-        },
-        description: {
-          en: "Matching children without parental care, migrants, and refugees with loving Kafala families for long-term stability.",
-          ar: "مواءمة الأطفال فاقدي الرعاية الوالدية والمهاجرين واللاجئين مع أسر كفالة محبة لتحقيق الاستقرار طويل الأمد.",
-        },
-      },
-      {
-        title: {
-          en: "Safe Little Home",
-          ar: "البيت الصغير الآمن",
-        },
-        description: {
-          en: "Providing a safe, nurturing home environment for refugee and migrant children, facilitating placement with families.",
-          ar: "توفير بيئة منزلية آمنة وحانية للأطفال اللاجئين والمهاجرين، تسهّل إلحاقهم بالأسر.",
-        },
-      },
-    ],
   },
 };

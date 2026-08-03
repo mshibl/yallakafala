@@ -1,14 +1,10 @@
 import BlogsSection from "./BlogsSection";
 import type { Locale } from "@/components/Providers/LocaleProvider";
-import { MakeDifference } from "@/components/Homepage/MakeDifference";
-import ExploreKafalaHero from "../ExploreKafalaHero";
 
 const KafalaBlogs = ({ locale }: { locale: Locale }) => {
   return (
     <div className="min-h-screen flex flex-col">
-      <ExploreKafalaHero locale={locale} />
-
-      <main className="flex-grow">
+      <main className="flex-grow pt-24 md:pt-32">
         <BlogsSection locale={locale} />
       </main>
     </div>

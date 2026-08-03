@@ -6,14 +6,31 @@ import { api } from "../../../../convex/_generated/api";
 import { Skeleton } from "@/components/ui/skeleton";
 import { translations } from "./translations";
 import type { Locale } from "@/components/Providers/LocaleProvider";
+import type { CarouselImage } from "@/lib/types";
 import DonateNowModal from "@/components/Donate/DonateNowModal";
 
 const CarouselContent = async () => {
-  const carouselImages = await fetchQuery(api.carouselImages.queries.getCarouselImages);
+  const carouselImages = await fetchQuery(
+    api.carouselImages.queries.getCarouselImages,
+  );
   if (!carouselImages || carouselImages.length === 0) {
-    return <div>No carousel images found</div>;
+    const fallbackImage: CarouselImage = {
+      id: "home-page-fallback",
+      uploadthingKey: "local-home-page",
+      src: "/images/home-page.webp",
+      altDescription: "A child playing in a welcoming home environment",
+      order: 0,
+    };
+    return <HeroCarousel carouselImages={[fallbackImage]} />;
   }
-  return <HeroCarousel carouselImages={carouselImages} />;
+  const homepageImage: CarouselImage = {
+    id: "home-page-featured",
+    uploadthingKey: "local-home-page",
+    src: "/images/home-page.webp",
+    altDescription: "A child playing in a welcoming home environment",
+    order: -1,
+  };
+  return <HeroCarousel carouselImages={[homepageImage, ...carouselImages]} />;
 };
 
 const Hero = ({ locale }: { locale: Locale }) => {
@@ -40,7 +57,7 @@ const Hero = ({ locale }: { locale: Locale }) => {
 
       <div className="container mx-auto px-6 py-20 relative z-10">
         <div className="flex flex-col md:flex-row gap-16 items-center">
-          <div className="space-y-6 max-w-xl">
+          <div className="w-full max-w-xl space-y-6 md:w-1/2 md:shrink-0">
             <div
               className="chip purple-gradient text-white animate-fade-in opacity-0 translate-y-10"
               style={{ transitionDelay: "200ms" }}
@@ -79,7 +96,7 @@ const Hero = ({ locale }: { locale: Locale }) => {
           </div>
 
           <div
-            className="relative animate-fade-in opacity-0 translate-y-10"
+            className="relative w-full animate-fade-in opacity-0 translate-y-10 md:w-1/2 md:shrink-0"
             style={{ transitionDelay: "600ms" }}
           >
             <Suspense

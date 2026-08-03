@@ -3,18 +3,22 @@ export const translations = {
     en: "What is Kafala",
     ar: "ما هي الكفالة",
   },
+  heroDescription: {
+    en: "Understand Kafala as a permanent, faith-aligned way to build a family while protecting every child's identity and rights.",
+    ar: "تعرّف على الكفالة كطريقة دائمة ومتوافقة مع الشريعة لبناء الأسرة مع حماية هوية كل طفل وحقوقه.",
+  },
   firstParagraph: {
-    en: `Adoption is the formal, permanent transfer of parental rights to a family other than a child's own and the formal assumption by that family of all parenting duties for the child. In some Islamic countries; including Egypt, the term "Kafala" of Islamic law is used to describe a situation similar to adoption, but not necessarily with the transference of inheritance rights, or the change of the child's full name.`,
-    ar: "التبني هو النقل الرسمي والدائم لحقوق الوالدين إلى أسرة بخلاف أسرة الطفل، وقيام تلك العائلة رسميًا بجميع واجبات الأبوة للطفل. في بعض الدول الإسلامية. بما في ذلك مصر، يستخدم مصطلح الكفالة في الشريعة الإسلامية لوصف علاقة مشابهة للتبني، بدون حقوق الميراث، أو تغيير الاسم الكامل للطفل.",
+    en: "Kafala is a legal and permanent arrangement in which a child is placed with a family other than their biological one, with that family assuming full responsibility for the child's care and upbringing. In Islamic law, Kafala is recognized as a religiously valid form of guardianship, allowing a family to nurture and provide for a child while preserving the child's lineage, inheritance rights, and full name—factors that distinguish it from adoption in Islam.",
+    ar: "الكفالة هي ترتيب قانوني ودائم يوضع فيه الطفل لدى أسرة غير أسرته البيولوجية، مع تحمل هذه الأسرة المسؤولية الكاملة عن رعايته وتربيته. وتُعترف الكفالة في الشريعة الإسلامية كشكل مشروع من أشكال الولاية، بما يتيح للأسرة رعاية الطفل والإنفاق عليه مع الحفاظ على نسبه وحقوقه في الميراث واسمه الكامل، وهي عوامل تميزها عن التبني في الإسلام.",
   },
   secondParagraph: {
-    en: "Despite Kafala being strongly encouraged in Islam there have been a misleading CULTURAL perception about its true meaning, practice, and significance. As a result, our innocent children have been under institutionalized care of orphanages rather than being granted a warm family life and home. We created this page to restore back the authentic meaning of Kafala in Islam that was taught by our beloved prophet.",
-    ar: "على الرغم من حث الإسلام وتشجيعه على الكفالة، إلا أن هناك تصورًا ثقافيًا مضللًا حول المعنى الحقيقي للكفالة وأهميتها وكيفية ممارستها. ونتيجة لذلك، يبقى أطفالنا الأبرياء تحت رعاية مؤسسية لدور الأيتام بدلاً من منحهم حياة أسرية دافئة ومنزلًا. أنشأنا هذه الصفحة لاستعادة المعنى الحقيقي للكفالة في الإسلام الذي علمه إيانا نبينا الحبيب.",
+    en: "Although Kafala is strongly encouraged in Islam, there has been a widespread cultural misunderstanding about its true meaning, practice, and significance. As a result, many children have remained in institutional care homes instead of growing up in a loving family environment. This page was created to restore the authentic understanding of Kafala in Islam, as taught by our beloved Prophet.",
+    ar: "على الرغم من أن الإسلام يشجع الكفالة بقوة، فقد انتشر سوء فهم ثقافي لمعناها الحقيقي وممارستها وأهميتها. ونتيجة لذلك، ظل العديد من الأطفال في دور الرعاية المؤسسية بدلاً من أن ينشأوا في بيئة أسرية محبة. أُنشئت هذه الصفحة لاستعادة الفهم الأصيل للكفالة في الإسلام كما علّمنا نبينا الحبيب.",
   },
   firstHadith: {
     explaination: {
-      en: "This great hadith indicates the magnitude and virtue of the person sponsoring orphans, so that Imam al-Bukhari rahimahullaah puts it in the chapter: The Virtue of the People Who Care for the Orphans.",
-      ar: `يشير هذا الحديث الكريم إلى عظم أجر كافل اليتيم. وقد وضعه الامام البخاري رحمة الله عليه في باب "فضل من يعول يتيمًا"`,
+      en: "This great hadith highlights the magnitude and virtue of the person practicing Kafala for children without parental care, which is why Imam al-Bukhari rahimahullaah includes it in the chapter: The Virtue of the People Who Care for the Orphans.",
+      ar: "يبرز هذا الحديث العظيم عظم فضل من يمارس الكفالة للأطفال فاقدي الرعاية الوالدية، ولذلك أورده الإمام البخاري رحمه الله في باب فضل من يعول يتيمًا.",
     },
     essentialPhrases: {
       title: {
@@ -23,37 +27,100 @@ export const translations = {
       },
       phrases: {
         en: [
-          "The meaning of this hadith: the person who sponsors the orphans worldly concerns will occupy a high position in the heaven close to the position of the Prophet sallallaahu alaihi w sallam [1] .",
-          "The meaning of “caring for the orphans” is to take care of and support all their worldly interests, such as feeding (food and drink), clothing, nurturing and guiding them with proper Islamic education. [2]",
-          "The meaning of an orphan is a person who has lost his father or both his parents before the age of maturity. [3]",
-          "The virtue in this hadith applies to the person who sponsors the orphans from his own property or the orphan's property if the person is truly the one to whom he is sponsored. [4]",
-          "Similarly, this excellence applies to people who sponsor an orphan having kin relationship with him or with an orphan who has no kinship ties with them. [5]",
+          {
+            title: "Meaning of the hadith:",
+            description:
+              "The person who practices Kafala for children without parental care in their worldly affairs will attain a high position in Paradise, close to the rank of the Prophet sallallaahu alaihi wa sallam.",
+          },
+          {
+            title: "Meaning of “caring for children without parental care”:",
+            description:
+              "It involves attending to all their worldly needs, such as providing food and drink, clothing, nurturing, and guiding them with proper Islamic education.",
+          },
+          {
+            title: "Definition of a child without parental care:",
+            description:
+              "A child who has lost their father, or both parents, before reaching maturity.",
+          },
+          {
+            title: "Scope of the virtue:",
+            description:
+              "This excellence applies to the person practicing Kafala using their own property or the property of the child, if they are the rightful guardian.",
+          },
+          {
+            title: "Applicability:",
+            description:
+              "This virtue extends to those who practice Kafala for children with or without kinship ties.",
+          },
         ],
         ar: [
-          " إن لمن يرعى حوائج اليتيم الدنيوية منزلة في الجنة بالقرب من رسول الله صلى الله عليه وسلم.",
-          " معنى كفالة اليتيم تشمل: القيام على العناية باليتيم ورعايته وتوفير الحوائج والاحتياجات الدنيوية من مأكل ومشرب وملبس وتربيته تربية إسلامية صالحة.",
-          " اليتيم هو من فقد الوالد أو الوالدين قبل أن يبلغ.",
-          " فضل هذا الحديث يشمل أولئك الذين يقومون على رعاية اليتيم وتقديمها سواء بأموالهم الخاصة أو بأموال اليتيم طالما أنفقوها لرعايته.",
-          " هذا الفضل أيضا يشمل كافلي اليتيم ذي القربى أو لغير ذي القربى.",
+          {
+            title: "معنى الحديث:",
+            description:
+              "إن لمن يرعى حاجات الأطفال فاقدي الرعاية الوالدية منزلة في الجنة بالقرب من رسول الله صلى الله عليه وسلم.",
+          },
+          {
+            title: "معنى رعاية الأطفال فاقدي الرعاية الوالدية:",
+            description:
+              "تشمل العناية بهم وتوفير حاجاتهم الدنيوية من مأكل ومشرب وملبس وتربيتهم تربية إسلامية صالحة.",
+          },
+          {
+            title: "تعريف الطفل فاقد الرعاية الوالدية:",
+            description: "هو الطفل الذي فقد والده أو والديه قبل بلوغه.",
+          },
+          {
+            title: "نطاق الفضل:",
+            description:
+              "يشمل هذا الفضل من يمارس الكفالة من ماله أو من مال الطفل إذا كان هو الولي القائم على رعايته.",
+          },
+          {
+            title: "الانطباق:",
+            description:
+              "يمتد هذا الفضل إلى من يكفل طفلاً ذا قرابة أو طفلاً لا تربطه به صلة قرابة.",
+          },
         ],
       },
     },
   },
   islamicRules: {
     description: {
-      en: `There are several points to consider in terms of sponsoring the orphans, which is often the case of "adopted children", due to some Muslims' misunderstanding of the rulings of Islamic law. Among them are:`,
-      ar: "هناك بعض النقاط والأحكام الشرعية التي يجب أخذها في الاعتبار عند كفالة الأيتام/تبني الأطفال",
+      en: "Points to consider regarding Kafala, which is often misunderstood due to confusion about Islamic rulings:",
+      ar: "نقاط يجب مراعاتها بشأن الكفالة، إذ غالبًا ما يُساء فهمها بسبب الالتباس حول الأحكام الإسلامية:",
     },
     rules: {
       en: [
-        "Prohibition of presenting a foster child / adopted child to other than his biological father, based on the word of Allah:",
-        "Adopted children are not entitled to the inheritance of the parents who nurtured them, in contrast to the customs of the time of Jahiliyyah who regarded adopted children as biological children who were entitled to inheritance when their adoptive parents died. [6]",
-        "Adopted child is not a mahram [7] , so it is obligatory for parents who nurture him/her and their children to wear a hijab in front of the adoption, as when they are in front of other non-mahram. This is contrary to the customs in the time of Jahiliyyah.",
+        {
+          title: "Preserving lineage:",
+          description:
+            "A child under Kafala should not be presented as the child of anyone other than their biological parents, based on the words of Allah:",
+        },
+        {
+          title: "Inheritance:",
+          description:
+            "Children under Kafala are not entitled to the inheritance of the family caring for them, in contrast to pre-Islamic customs that treated such children as biological heirs.",
+        },
+        {
+          title: "Mahram rules:",
+          description:
+            "Children under Kafala are not mahram to their caregivers. It is obligatory for the caregivers and their children to observe hijab in front of them, just as they would with any non-mahram, unlike pre-Islamic practices.",
+        },
       ],
       ar: [
-        "تحريم تغيير نسب الطفل لغير والده عملاً بالآية الكريمة:",
-        "٢-لا يحق للطفل المكفول/المتبنى أن يرث الآباء الكافلين الذين قاموا برعايتهم وتربيتهم بعكس ما كان متبعًا قبل الإسلام (الجاهلية) حيث كان للطفل المتبنى والطفل البيولوجي نفس الحقوق في الميراث بعد وفاة الأبوين.",
-        "٣-الطفل المتبنى غير محرم ولذلك وجب على الأبوين اللذين قاما برعايته (سواء كان الطفل ذكرًا أم أنثى) أن يراعيا عورتهما وكذلك وجب على الأبناء مراعاة العورة في وجود الآباء (بخلاف ما كان متبعًا قبل الإسلام أيضًا)",
+        {
+          title: "حفظ النسب:",
+          description:
+            "لا ينبغي تقديم الطفل المكفول على أنه ابن لأي شخص غير والديه البيولوجيين، استنادًا إلى كلام الله تعالى:",
+        },
+        {
+          title: "الميراث:",
+          description:
+            "لا يستحق الأطفال المكفولون ميراث الأسرة التي ترعاهم، خلافًا لعادات ما قبل الإسلام التي كانت تعاملهم كأبناء بيولوجيين مستحقين للميراث.",
+        },
+        {
+          title: "أحكام المحرمية:",
+          description:
+            "الأطفال المكفولون ليسوا محارم لكافليهم، ولذلك يجب على الكافلين وأبنائهم مراعاة الحجاب أمامهم كما هو الحال أمام أي شخص غير محرم، بخلاف ممارسات ما قبل الإسلام.",
+        },
       ],
     },
   },

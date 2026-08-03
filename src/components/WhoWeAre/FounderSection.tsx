@@ -1,35 +1,46 @@
-import React from "react";
+import Image from "next/image";
 import type { Locale } from "@/components/Providers/LocaleProvider";
 import { translations } from "./translations";
 
 export const FounderSection = ({ locale }: { locale: Locale }) => {
+  const founder = translations.founder;
+
   return (
-    <section className="py-16 bg-gray-50">
+    <section
+      className="bg-gray-50 py-16"
+      dir={locale === "ar" ? "rtl" : "ltr"}
+      aria-labelledby="founder-heading"
+    >
       <div className="container mx-auto px-6">
-        <h2 className="text-2xl font-semibold text-center text-primary mb-8">
-          {translations.founder.title[locale]}
+        <h2
+          id="founder-heading"
+          className="mb-8 text-center text-2xl font-semibold text-primary"
+        >
+          {founder.title[locale]}
         </h2>
-        <div className="max-w-4xl mx-auto">
-          <div className="flex flex-col md:flex-row items-center gap-8 bg-white rounded-lg shadow-sm p-8">
-            <div className="w-full md:w-1/3 flex justify-center">
-              <div className="relative w-64 h-64 rounded-full overflow-hidden border-4 border-primary/20">
-                <img
-                  src={translations.founder.image}
-                  alt={translations.founder.name[locale]}
-                  className="object-cover w-full h-full"
+        <div className="mx-auto max-w-4xl">
+          <div className="flex flex-col items-center gap-8 rounded-lg bg-white p-8 shadow-sm md:flex-row">
+            <div className="flex w-full justify-center md:w-1/3">
+              <div className="relative h-64 w-64 overflow-hidden rounded-full border-4 border-primary/20">
+                <Image
+                  src={founder.image}
+                  alt={founder.name[locale]}
+                  fill
+                  sizes="256px"
+                  className="object-cover"
                 />
               </div>
             </div>
             <div className="w-full md:w-2/3">
-              <h3 className="text-xl font-semibold text-primary mb-2">
-                {translations.founder.name[locale]}
+              <h3 className="mb-2 text-xl font-semibold text-primary">
+                {founder.name[locale]}
               </h3>
-              <p className="text-gray-600 italic mb-4">
-                {translations.founder.role[locale]}
+              <p className="mb-4 italic text-gray-600">
+                {founder.role[locale]}
               </p>
-              {translations.founder.bio.map((b, idx) => (
-                <p key={idx} className="text-gray-700 mb-4">
-                  {b[locale]}
+              {founder.bio.map((paragraph, index) => (
+                <p key={index} className="mb-4 text-gray-700 last:mb-0">
+                  {paragraph[locale]}
                 </p>
               ))}
             </div>

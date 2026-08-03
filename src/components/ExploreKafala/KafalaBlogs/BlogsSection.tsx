@@ -23,7 +23,7 @@ const BlogsContent = async () => {
 
 const BlogsSection = ({ locale }: { locale: Locale }) => {
   return (
-    <section className="py-24 bg-gray-50">
+    <section className="bg-gray-50 pb-24 pt-12 md:pt-16">
       <Suspense
         fallback={
           <div className="container mx-auto px-4">

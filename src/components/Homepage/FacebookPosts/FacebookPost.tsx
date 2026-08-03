@@ -7,6 +7,7 @@ import { cn } from "@/lib/utils";
 import type { FacebookPostType } from "@/lib/types";
 import Link from "next/link";
 import { useLocale } from "@/components/Providers/LocaleProvider";
+import ResilientImage from "@/components/ui/ResilientImage";
 interface FacebookPostProps {
   post: FacebookPostType;
   index: number;
@@ -50,7 +51,7 @@ export const FacebookPost: React.FC<FacebookPostProps> = ({ post, index }) => {
       style={{ transitionDelay: `${index * 150}ms` }}
     >
       <div className="aspect-video overflow-hidden">
-        <img
+        <ResilientImage
           src={post.image}
           alt="Facebook post"
           className="w-full h-full object-cover transition-transform duration-500 hover:scale-105"

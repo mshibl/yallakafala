@@ -15,7 +15,6 @@ const WhoWeAre = ({ locale }: { locale: Locale }) => {
         <TeamSection locale={locale} />
         <VideoSection locale={locale} />
       </main>
-
     </div>
   );
 };
