@@ -137,7 +137,7 @@ export default clerkMiddleware(async (auth, request) => {
 
 export const config = {
   matcher: [
-    "/((?!_next|api|docs|robots\\.txt|sitemap\\.xml|favicon\\.ico|.*\\.(?:png|jpg|jpeg|gif|webp|svg|pdf|txt|xml|ico)).*)",
+    "/((?!_next|api|docs|robots\\.txt|sitemap\\.xml|favicon\\.ico|.*\\.(?:html|png|jpg|jpeg|gif|webp|svg|pdf|txt|xml|ico)).*)",
     "/__clerk/:path*",
   ],
 };
